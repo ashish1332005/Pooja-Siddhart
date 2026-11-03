@@ -57,15 +57,15 @@
   --sidebar-border: 139 12% 32%;
   --sidebar-ring: 174 19% 41%;
 
-  /* Harmonious typography system with Morlisse as primary font and Blackendy for digits */
+  /* Royal Classic Typography System matching the PDF invitation */
   --font-couple: "Runethia", cursive, Georgia, serif;
-  --font-display: "Morlisse", Georgia, serif;
-  --font-body: "Morlisse", Georgia, serif;
-  --font-digit: "Blackendy", "Cinzel", Georgia, serif;
+  --font-display: "Cinzel", "Cinzel Decorative", Georgia, serif;
+  --font-body: "Cormorant Garamond", Georgia, serif;
+  --font-digit: "Cinzel", Georgia, serif;
   --font-hindi: "Rozha One", "Noto Serif Devanagari", serif;
   --font-script: "Runethia", cursive, serif;
-  --font-subtitle: "Morlisse", Georgia, serif;
-  --font-adorn: "Morlisse", Georgia, serif;
+  --font-subtitle: "Cinzel", Georgia, serif;
+  --font-adorn: "Cinzel", Georgia, serif;
 
   --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
