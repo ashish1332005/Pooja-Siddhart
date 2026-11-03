@@ -57,14 +57,14 @@
   --sidebar-border: 139 12% 32%;
   --sidebar-ring: 174 19% 41%;
 
-  /* Custom Fonts requested by user */
-  --font-couple: "Runethia", "adobe-caslon-pro", cursive, Georgia, serif;
-  --font-display: "MusticaPro", sans-serif;
-  --font-body: "MusticaPro", sans-serif;
-  --font-digit: "MusticaPro", sans-serif; /* Same font as para & heading per user request */
+  /* Authentic fonts matching the PDF invitation */
+  --font-couple: "Runethia", cursive, Georgia, serif;
+  --font-display: "Cinzel", "Cinzel Decorative", Georgia, serif;
+  --font-body: "Cormorant Garamond", "adobe-caslon-pro", Georgia, serif;
+  --font-digit: "Cinzel", "Cormorant Garamond", Georgia, serif;
   --font-hindi: "Rozha One", "Noto Serif Devanagari", serif;
   --font-script: "Runethia", cursive, serif;
-  --font-subtitle: "MusticaPro", sans-serif;
+  --font-subtitle: "Cinzel", Georgia, serif;
   --font-adorn: "adorn-garland", Georgia, serif;
 
   --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -94,8 +94,9 @@ body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   font-family: var(--font-body);
+  font-size: 1.05rem;
   font-weight: 400; /* Regular normal weight, not bold as requested */
-  letter-spacing: 0.012em;
+  letter-spacing: 0.02em;
   line-height: 1.7;
   font-feature-settings: "liga", "kern", "onum";
   -webkit-font-smoothing: antialiased;
