@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Runethia";
+  src: url("/fonts/Runethia.otf") format("opentype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "MusticaPro";
+  src: url("/fonts/MusticaPro.otf") format("opentype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Blackendy";
+  src: url("/fonts/Blackendy.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "adobe-caslon-pro";
+  src: url("/fonts/adobe-caslon-pro-n4.woff2") format("woff2");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "adobe-caslon-pro";
+  src: url("/fonts/adobe-caslon-pro-i4.woff2") format("woff2");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "adobe-caslon-pro";
+  src: url("/fonts/adobe-caslon-pro-n7.woff2") format("woff2");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "adobe-caslon-pro";
+  src: url("/fonts/adobe-caslon-pro-i7.woff2") format("woff2");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "adorn-garland";
+  src: url("/fonts/adorn-garland-n4.woff2") format("woff2");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "novantique-serif-display";
+  src: url("/fonts/novantique-serif-display-n4.woff2") format("woff2");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "novantique-serif-display";
+  src: url("/fonts/novantique-serif-display-i4.woff2") format("woff2");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "novantique-serif-display";
+  src: url("/fonts/novantique-serif-display-n7.woff2") format("woff2");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "novantique-serif-display";
+  src: url("/fonts/novantique-serif-display-i7.woff2") format("woff2");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: normal;
+}

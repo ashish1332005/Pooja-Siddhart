@@ -1,0 +1,186 @@
+import React, { useRef } from "react";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { MEDIA } from "../data/weddingConfig";
+
+export function TimelineSection() {
+  const timelineRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: timelineRef,
+    offset: ["start 70%", "end 60%"],
+  });
+
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 130,
+    damping: 18,
+    mass: 0.3,
+  });
+
+  const pearlTop = useTransform(smoothProgress, [0, 1], ["0%", "100%"]);
+
+  const events = [
+    {
+      date: "Tuesday, 01 Dec 2026",
+      time: "10:15 AM",
+      title: "Hathdhan",
+      note: "Followed by Lunch · Shree Govindam, Bhilwara",
+      image: MEDIA.timelineRings,
+      alt: "Painted gold wedding rings with blossoms",
+    },
+    {
+      date: "Tuesday, 01 Dec 2026",
+      time: "07:15 PM",
+      title: "Dine, Dance & Dazzle",
+      note: "Followed by Dinner · Shree Govindam, Bhilwara",
+      image: MEDIA.timelineDisco,
+      alt: "Painted disco ball with stars",
+    },
+    {
+      date: "Thursday, 03 Dec 2026",
+      time: "03:15 PM",
+      title: "Vinayak Sthapna & Mangal Kalash",
+      note: "Sacred Ceremonies (03:15 PM & 04:15 PM) · Ramee Royal Resort",
+      image: MEDIA.timelineChapel,
+      alt: "Painted stone chapel with flowers",
+    },
+    {
+      date: "Thursday, 03 Dec 2026",
+      time: "07:15 PM",
+      title: "Starry Mic Night",
+      note: "Music, Joy & Dinner · Amangiri Garden, Udaipur",
+      image: MEDIA.timelineCocktail,
+      alt: "Painted martini glass with olive",
+    },
+    {
+      date: "Friday, 04 Dec 2026",
+      time: "10:15 AM",
+      title: "The Sunshine Soiree",
+      note: "Haldi in Yellow Bloom & Lunch · Santorini Garden",
+      image: MEDIA.timelineChampagne,
+      alt: "Painted celebration toast",
+    },
+    {
+      date: "Friday, 04 Dec 2026",
+      time: "07:15 PM",
+      title: "Glam, Groove & Gala",
+      note: "Sangeet Night & Dinner · Aravali Garden, Udaipur",
+      image: MEDIA.timelineDisco,
+      alt: "Painted disco ball with stars",
+    },
+    {
+      date: "Saturday, 05 Dec 2026",
+      time: "09:15 AM",
+      title: "Sid Ki Baraat",
+      note: "Grand Baraat Procession · Amphitheatre Santorini Garden",
+      image: MEDIA.timelineChapel,
+      alt: "Painted stone chapel with flowers",
+    },
+    {
+      date: "Saturday, 05 Dec 2026",
+      time: "11:15 AM",
+      title: "Mangal Phere",
+      note: "Seven Sacred Vows & Lunch · Amphitheatre Santorini Garden",
+      image: MEDIA.timelineRings,
+      alt: "Painted gold wedding rings with blossoms",
+    },
+    {
+      date: "Saturday, 05 Dec 2026",
+      time: "07:15 PM",
+      title: "The Wedding Gala - Reception",
+      note: "Evening of Elegance & Dinner · Aravali Garden",
+      image: MEDIA.timelineChampagne,
+      alt: "Painted champagne glasses with moon and stars",
+    },
+  ];
+
+  return (
+    <section
+      id="day-program"
+      className="md:py-24 px-4 relative overflow-hidden bg-ivory py-16"
+    >
+      <div className="relative max-w-4xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12 md:mb-16"
+        >
+          <h2 className="section-heading whitespace-pre-line text-3xl sm:text-4xl md:text-5xl leading-tight pt-0">
+            Order of Events
+          </h2>
+          <span className="section-rule !my-3" />
+          <p className="section-eyebrow">The Wedding Celebrations</p>
+        </motion.div>
+
+        <div ref={timelineRef} className="relative mx-auto max-w-2xl px-2 sm:px-4">
+          {/* Dashed Vertical Needle Stitches Line */}
+          <div
+            className="absolute top-3 bottom-3 left-[36%] sm:left-[42%] md:left-[44%] w-[3px] -translate-x-1/2 pointer-events-none select-none"
+            aria-hidden="true"
+          >
+            <div
+              className="w-full h-full"
+              style={{
+                backgroundImage:
+                  "repeating-linear-gradient(to bottom, hsl(var(--olive)) 0px, hsl(var(--olive)) 4px, transparent 4px, transparent 12px)",
+              }}
+            />
+            <motion.img
+              src={MEDIA.timelinePearlLarge}
+              alt=""
+              aria-hidden="true"
+              style={{ top: pearlTop }}
+              className="absolute left-1/2 z-20 -translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full object-contain max-w-none filter drop-shadow"
+            />
+          </div>
+
+          {/* 2-Column Events Layout from original demo */}
+          <div className="relative space-y-10 sm:space-y-14">
+            {events.map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.04 + idx * 0.04 }}
+                className="relative grid grid-cols-[32%_1fr] sm:grid-cols-[38%_1fr] md:grid-cols-[40%_1fr] items-center gap-3 sm:gap-6 md:gap-8"
+              >
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  loading="lazy"
+                  className="w-full h-auto justify-self-center select-none pointer-events-none max-w-[80px] sm:max-w-[120px] md:max-w-[150px] object-contain"
+                />
+                <div className="pl-4 sm:pl-8 md:pl-10">
+                  <span className="font-display font-medium tracking-wide text-xs sm:text-sm text-gold-dark/90 block">
+                    {item.date}
+                  </span>
+                  <p className="font-display font-semibold tracking-wide text-base sm:text-xl md:text-2xl text-sage-dark mt-0.5">
+                    {item.time}
+                  </p>
+                  <h3 className="font-display font-medium text-sm sm:text-base md:text-lg text-sage-dark uppercase tracking-wide mt-1">
+                    {item.title}
+                  </h3>
+                  <p className="font-body font-normal text-xs sm:text-sm text-sage-dark/75 italic mt-0.5 leading-snug">
+                    {item.note}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center text-sage-dark/70 font-body font-normal italic text-xs sm:text-sm md:text-base leading-relaxed max-w-md mx-auto mt-14"
+        >
+          Your presence will fill our celebrations with warmth, joy, and blessings.
+        </motion.p>
+      </div>
+    </section>
+  );
+}
