@@ -4,17 +4,17 @@
 
 :root {
   --background: 38 32% 95%;
-  --foreground: 141 22% 21%;
+  --foreground: 150 35% 8%;
   --card: 38 30% 96%;
-  --card-foreground: 141 22% 21%;
+  --card-foreground: 150 35% 8%;
   --popover: 38 30% 97%;
-  --popover-foreground: 141 22% 21%;
+  --popover-foreground: 150 35% 8%;
   --primary: 80 26% 33%;
   --primary-foreground: 38 52% 93%;
   --secondary: 37 42% 73%;
-  --secondary-foreground: 141 22% 21%;
+  --secondary-foreground: 150 35% 8%;
   --muted: 37 40% 80%;
-  --muted-foreground: 80 24% 32%;
+  --muted-foreground: 150 28% 16%;
   --accent: 12 55% 48%;
   --accent-foreground: 38 52% 94%;
   --destructive: 10 58% 40%;
@@ -33,13 +33,13 @@
   --dusty-rose-soft: 4 44% 76%;
   --greige: 37 26% 58%;
   --greige-soft: 37 32% 71%;
-  --gold: 34 58% 50%;
+  --gold: 34 75% 32%;
   --gold-soft: 35 52% 63%;
-  --gold-dark: 141 22% 21%;
+  --gold-dark: 28 85% 16%;
   --sage: 103 26% 52%;
-  --sage-dark: 150 8% 32%;
+  --sage-dark: 150 35% 8%;
   --sage-light: 103 26% 63%;
-  --ink: 141 24% 16%;
+  --ink: 150 35% 8%;
   --countdown: 176 26% 35%;
   --limestone: 37 42% 73%;
   --olive: 80 26% 33%;
@@ -94,8 +94,8 @@ body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   font-family: var(--font-body);
-  font-size: 1.05rem;
-  font-weight: 400; /* Regular normal weight, not bold as requested */
+  font-size: 1.125rem;
+  font-weight: 500; /* Medium weight for crisp, clear readability */
   letter-spacing: 0.02em;
   line-height: 1.7;
   font-feature-settings: "liga", "kern", "onum";
@@ -122,27 +122,27 @@ body {
 .section-heading {
   font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 3.2rem);
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.15;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   color: hsl(var(--sage-dark));
 }
 
 .section-rule {
   display: block;
   width: 2.75rem;
-  height: 1px;
-  background-color: hsl(var(--gold) / 0.45);
+  height: 1.5px;
+  background-color: hsl(var(--gold));
   margin: 0.85rem auto;
 }
 
 .section-eyebrow {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: hsl(var(--gold-dark) / 0.8);
-  font-weight: 500;
+  color: hsl(var(--gold-dark));
+  font-weight: 700;
 }
 
 .section-padding {

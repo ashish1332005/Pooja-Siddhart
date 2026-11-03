@@ -35,14 +35,14 @@ export function GiftsSection({ enabled = true }: GiftsSectionProps) {
             </h2>
 
             {/* Delicate Golden Accent Divider */}
-            <span className="block w-10 sm:w-14 h-px bg-gold/45 mx-auto mb-3 sm:mb-5" />
+            <span className="block w-10 sm:w-14 h-px bg-gold/70 mx-auto mb-3 sm:mb-5" />
 
             {/* Graceful Poetic Lines with ample clearance */}
-            <div className="space-y-2 sm:space-y-3 px-2">
-              <p className="font-body font-normal text-xs sm:text-sm md:text-base text-sage-dark/90 leading-relaxed italic">
+            <div className="space-y-2.5 sm:space-y-3.5 px-2">
+              <p className="font-body font-semibold text-sm sm:text-base md:text-lg text-sage-dark leading-relaxed">
                 Your presence and blessings at our wedding are the greatest gift of all.
               </p>
-              <p className="font-body font-normal text-[11px] sm:text-xs md:text-sm text-sage-dark/75 leading-relaxed italic">
+              <p className="font-body font-semibold text-xs sm:text-sm md:text-base text-sage-dark leading-relaxed">
                 Should you wish to celebrate with a gift, a wishing well will be available at the reception.
               </p>
             </div>

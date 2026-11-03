@@ -24,7 +24,7 @@ export function SwansWelcome() {
         />
 
         {/* Shree Ganeshay Namah in Hindi Font */}
-        <p className="font-hindi text-[11px] sm:text-xs md:text-sm tracking-[0.2em] font-medium text-gold-dark/95 mb-1">
+        <p className="font-hindi text-xs sm:text-sm tracking-[0.2em] font-bold text-gold-dark mb-1">
           {WEDDING_CONFIG.ganesh_mantra}
         </p>
 
@@ -36,12 +36,12 @@ export function SwansWelcome() {
         />
 
         {/* Couple Names in Runethia Font */}
-        <h2 className="font-couple text-2xl sm:text-3xl md:text-4xl text-sage-dark tracking-normal mt-1 leading-snug">
-          {WEDDING_CONFIG.couple_name_1} <span className="font-serif italic text-dusty-rose text-xl sm:text-2xl">&amp;</span> {WEDDING_CONFIG.couple_name_2}
+        <h2 className="font-couple text-2xl sm:text-3xl md:text-4xl text-sage-dark tracking-normal mt-1 leading-snug font-normal">
+          {WEDDING_CONFIG.couple_name_1} <span className="font-serif italic text-dusty-rose text-xl sm:text-2xl font-bold">&amp;</span> {WEDDING_CONFIG.couple_name_2}
         </h2>
 
-        {/* Dates in Mustica Pro */}
-        <p className="mt-2 font-display text-[10px] sm:text-xs md:text-sm tracking-[0.25em] uppercase text-gold-dark font-medium">
+        {/* Dates in Cinzel / Roman */}
+        <p className="mt-2 font-display text-[11px] sm:text-xs md:text-sm tracking-[0.25em] uppercase text-gold-dark font-bold">
           DEC | 03RD - 05TH | 2026
         </p>
       </div>

@@ -36,9 +36,9 @@ export function RecoveryDaySection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-8"
         >
-          <h2 className="section-heading pt-6">Pre-Wedding Rituals</h2>
+          <h2 className="section-heading pt-6 font-bold">Pre-Wedding Rituals</h2>
           <span className="section-rule" />
-          <p className="section-eyebrow">Bhilwara Celebrations</p>
+          <p className="section-eyebrow font-bold">Bhilwara Celebrations</p>
         </motion.div>
 
         <motion.div
@@ -62,28 +62,28 @@ export function RecoveryDaySection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center max-w-md mx-auto"
         >
-          <h3 className="font-display text-2xl sm:text-3xl font-medium text-sage-dark mb-1 tracking-wide">
+          <h3 className="font-display text-2xl sm:text-3xl font-bold text-sage-dark mb-1 tracking-wide">
             {WEDDING_CONFIG.bhilwara_venue_name}
           </h3>
-          <p className="font-display text-[10px] sm:text-xs tracking-[0.3em] uppercase text-gold-dark/85 mb-4">
+          <p className="font-display text-xs tracking-[0.3em] uppercase text-gold-dark font-bold mb-4">
             R.C. Vyas Colony · Bhilwara
           </p>
 
           <div className="space-y-3 mb-6">
-            <p className="font-body font-normal text-xs sm:text-sm italic text-sage-dark/80">
-              Tuesday, <span className="font-digit not-italic font-medium">01</span> December <span className="font-digit not-italic font-medium">2026</span> · <span className="font-digit not-italic font-medium">10:15</span> AM Onwards
+            <p className="font-body font-semibold text-sm sm:text-base text-sage-dark">
+              Tuesday, <span className="font-digit font-bold">01</span> December <span className="font-digit font-bold">2026</span> · <span className="font-digit font-bold">10:15</span> AM Onwards
             </p>
 
-            <div className="w-10 h-px bg-gold/30 mx-auto" />
+            <div className="w-10 h-px bg-gold/70 mx-auto" />
 
-            <div className="flex flex-col items-center gap-1.5 text-sage-dark font-body font-normal text-xs sm:text-sm">
-              <span>Hathdhan · <span className="font-digit">10:15</span> AM (Followed by Lunch)</span>
-              <span>Dine, Dance &amp; Dazzle · <span className="font-digit">07:15</span> PM (Followed by Dinner)</span>
+            <div className="flex flex-col items-center gap-1.5 text-sage-dark font-body font-semibold text-xs sm:text-sm">
+              <span>Hathdhan · <span className="font-digit font-bold">10:15</span> AM (Followed by Lunch)</span>
+              <span>Dine, Dance &amp; Dazzle · <span className="font-digit font-bold">07:15</span> PM (Followed by Dinner)</span>
             </div>
 
-            <div className="w-10 h-px bg-gold/30 mx-auto" />
+            <div className="w-10 h-px bg-gold/70 mx-auto" />
 
-            <p className="text-sage-dark/75 font-body font-normal text-xs tracking-wide">
+            <p className="text-sage-dark font-body font-semibold text-xs sm:text-sm tracking-wide">
               10-B-18, R.C. Vyas Colony, Bhilwara (Rajasthan)
             </p>
           </div>
@@ -92,7 +92,7 @@ export function RecoveryDaySection() {
             <ActionMenu
               icon={<MapPin className="w-3.5 h-3.5" />}
               label="Bhilwara Map"
-              className="text-xs font-display font-medium tracking-wider"
+              className="text-xs font-display font-bold tracking-wider text-sage-dark"
               items={[
                 { label: "Google Maps", href: buildGoogleMapsUrl(address) },
                 { label: "Apple Maps", href: buildAppleMapsUrl(address) },
@@ -101,7 +101,7 @@ export function RecoveryDaySection() {
             <ActionMenu
               icon={<Calendar className="w-3.5 h-3.5" />}
               label="Add to Calendar"
-              className="text-xs font-display font-medium tracking-wider"
+              className="text-xs font-display font-semibold tracking-wider text-sage-dark"
               items={[
                 { label: "Google Calendar", href: buildGoogleCalendarUrl(calendarEvent) },
                 {

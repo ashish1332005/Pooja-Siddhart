@@ -86,10 +86,10 @@ function RsvpConfirmation({
           <h2 className="font-display text-4xl md:text-6xl text-sage-dark mb-6">
             {t("confirm.thankYou")}
           </h2>
-          <p className="text-sage-dark/80 font-body text-lg leading-relaxed">
+          <p className="text-sage-dark font-body font-semibold text-lg leading-relaxed">
             {t("confirm.cantMake")}
           </p>
-          <p className="text-sage-dark/60 font-display text-2xl mt-8">
+          <p className="text-sage-dark font-display text-2xl mt-8 font-bold">
             — {name1} &amp; {name2}
           </p>
         </motion.div>
@@ -129,10 +129,10 @@ function RsvpConfirmation({
             <p className="text-sage-dark font-body text-lg md:text-xl leading-relaxed">
               {t("confirm.thankPart")}
             </p>
-            <p className="text-sage-dark/90 font-body text-base md:text-lg font-medium mt-4">
+            <p className="text-sage-dark font-body text-base md:text-lg font-semibold mt-4">
               {t("confirm.lookForward")}
             </p>
-            <p className="text-sage-dark/80 font-body text-base md:text-lg">
+            <p className="text-sage-dark font-body font-semibold text-base md:text-lg">
               Saturday, 5 December 2026 · Ramee Royal Resort &amp; Spa, Udaipur
             </p>
           </motion.div>
@@ -140,7 +140,7 @@ function RsvpConfirmation({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-sage-dark/80 font-display text-3xl md:text-4xl mt-10"
+            className="text-sage-dark font-display font-bold text-3xl md:text-4xl mt-10"
           >
             — {name1} &amp; {name2}
           </motion.p>
@@ -240,19 +240,19 @@ export function RsvpSection() {
             loading="lazy"
             className="w-[55%] max-w-[260px] md:max-w-[300px] mx-auto mt-0 mb-4 select-none pointer-events-none"
           />
-          <h2 className="section-heading pt-[10px]">{t("rsvp.title")}</h2>
+          <h2 className="section-heading pt-[10px] font-bold">{t("rsvp.title")}</h2>
           <span className="section-rule" />
-          <p className="section-eyebrow leading-[1.9]">
-            Kindly respond by <span className="font-digit">15</span> November <span className="font-digit">2026</span>
+          <p className="section-eyebrow leading-[1.9] font-bold">
+            Kindly respond by <span className="font-digit font-semibold">15</span> November <span className="font-digit font-semibold">2026</span>
           </p>
-          <p className="font-body font-normal text-xs text-sage-dark/80 mt-2">
+          <p className="font-body font-semibold text-sm sm:text-base text-sage-dark mt-2">
             RSVP:{" "}
             {WEDDING_CONFIG.rsvp_phones.map((phone, i) => (
               <React.Fragment key={i}>
                 {i > 0 && " · "}
                 <a
                   href={`tel:${phone.replace(/\s+/g, "")}`}
-                  className="font-digit font-normal text-sage-dark hover:text-gold-dark transition-colors"
+                  className="font-digit font-bold text-sage-dark hover:text-gold-dark transition-colors"
                 >
                   {phone}
                 </a>

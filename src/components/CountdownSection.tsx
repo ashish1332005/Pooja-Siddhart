@@ -63,12 +63,12 @@ export function CountdownSection({ targetDate }: CountdownSectionProps) {
                   className="absolute inset-0 h-full w-full object-contain pointer-events-none select-none"
                 />
                 <div className="relative z-10 flex items-center justify-center">
-                  <span className="font-digit text-3xl sm:text-5xl md:text-6xl font-normal leading-none text-sage-dark pt-1">
+                  <span className="font-digit text-3xl sm:text-5xl md:text-6xl font-bold leading-none text-sage-dark pt-1">
                     {String(item.value).padStart(2, "0")}
                   </span>
                 </div>
               </div>
-              <span className="mt-2 font-body font-normal text-[10px] sm:text-xs md:text-sm uppercase tracking-widest text-sage-dark">
+              <span className="mt-2 font-display font-bold text-[11px] sm:text-xs md:text-sm uppercase tracking-widest text-sage-dark">
                 {item.label}
               </span>
             </div>

@@ -106,11 +106,11 @@ export function TimelineSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="section-heading whitespace-pre-line text-3xl sm:text-4xl md:text-5xl leading-tight pt-0">
+          <h2 className="section-heading whitespace-pre-line text-3xl sm:text-4xl md:text-5xl leading-tight pt-0 font-bold">
             Order of Events
           </h2>
           <span className="section-rule !my-3" />
-          <p className="section-eyebrow">The Wedding Celebrations</p>
+          <p className="section-eyebrow font-bold">The Wedding Celebrations</p>
         </motion.div>
 
         <div ref={timelineRef} className="relative mx-auto max-w-2xl px-2 sm:px-4">
@@ -135,7 +135,7 @@ export function TimelineSection() {
             />
           </div>
 
-          {/* 2-Column Events Layout from original demo */}
+          {/* 2-Column Events Layout */}
           <div className="relative space-y-10 sm:space-y-14">
             {events.map((item, idx) => (
               <motion.div
@@ -153,16 +153,16 @@ export function TimelineSection() {
                   className="w-full h-auto justify-self-center select-none pointer-events-none max-w-[80px] sm:max-w-[120px] md:max-w-[150px] object-contain"
                 />
                 <div className="pl-4 sm:pl-8 md:pl-10">
-                  <span className="font-display font-medium tracking-wide text-xs sm:text-sm text-gold-dark/90 block">
+                  <span className="font-display font-bold tracking-wide text-xs sm:text-sm text-gold-dark block">
                     {item.date}
                   </span>
-                  <p className="font-display font-semibold tracking-wide text-base sm:text-xl md:text-2xl text-sage-dark mt-0.5">
+                  <p className="font-display font-extrabold tracking-wide text-lg sm:text-2xl md:text-3xl text-sage-dark mt-0.5">
                     {item.time}
                   </p>
-                  <h3 className="font-display font-medium text-sm sm:text-base md:text-lg text-sage-dark uppercase tracking-wide mt-1">
+                  <h3 className="font-display font-bold text-sm sm:text-base md:text-xl text-sage-dark uppercase tracking-wide mt-1">
                     {item.title}
                   </h3>
-                  <p className="font-body font-normal text-xs sm:text-sm text-sage-dark/75 italic mt-0.5 leading-snug">
+                  <p className="font-body font-semibold text-xs sm:text-sm md:text-base text-sage-dark mt-0.5 leading-snug">
                     {item.note}
                   </p>
                 </div>
@@ -176,7 +176,7 @@ export function TimelineSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center text-sage-dark/70 font-body font-normal italic text-xs sm:text-sm md:text-base leading-relaxed max-w-md mx-auto mt-14"
+          className="text-center text-sage-dark font-body font-semibold text-sm md:text-lg leading-relaxed max-w-md mx-auto mt-14"
         >
           Your presence will fill our celebrations with warmth, joy, and blessings.
         </motion.p>

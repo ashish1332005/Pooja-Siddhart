@@ -78,15 +78,14 @@ export function IntroHero({
           style={{ mixBlendMode: "multiply" }}
         >
           <motion.p
-            className="font-hindi text-xs sm:text-sm tracking-[0.2em] mb-1 font-semibold"
-            style={{ color: "hsl(150 8% 32% / 0.85)" }}
+            className="font-hindi text-xs sm:text-sm tracking-[0.2em] mb-1 font-bold text-gold-dark"
             animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             transition={{ duration: 0.7 }}
           >
             {WEDDING_CONFIG.ganesh_mantra}
           </motion.p>
           <motion.div
-            className="font-couple text-[2.75rem] sm:text-[3.75rem] md:text-[4.75rem] leading-[1.1] text-sage-dark"
+            className="font-couple text-[2.75rem] sm:text-[3.75rem] md:text-[4.75rem] leading-[1.1] text-sage-dark font-normal"
             animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
@@ -95,8 +94,7 @@ export function IntroHero({
             <p>{coupleName2}</p>
           </motion.div>
           <motion.p
-            className="mt-3 sm:mt-4 font-display text-xs sm:text-sm md:text-base tracking-[0.25em] uppercase font-medium"
-            style={{ color: "hsl(150 7% 38% / 0.85)" }}
+            className="mt-3 sm:mt-4 font-display text-xs sm:text-sm md:text-base tracking-[0.25em] uppercase font-bold text-sage-dark"
             animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
