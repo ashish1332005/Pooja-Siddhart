@@ -37,10 +37,10 @@ export function SwansWelcome() {
 
         {/* Couple Names in Runethia Font */}
         <h2 className="font-couple text-2xl sm:text-3xl md:text-4xl text-sage-dark tracking-normal mt-1 leading-snug font-normal">
-          {WEDDING_CONFIG.couple_name_1} <span className="font-serif italic text-dusty-rose text-xl sm:text-2xl font-bold">&amp;</span> {WEDDING_CONFIG.couple_name_2}
+          {WEDDING_CONFIG.couple_name_1} <span className="font-display text-dusty-rose text-xl sm:text-2xl font-bold">&amp;</span> {WEDDING_CONFIG.couple_name_2}
         </h2>
 
-        {/* Dates in Cinzel / Roman */}
+        {/* Dates in Bayari */}
         <p className="mt-2 font-display text-[11px] sm:text-xs md:text-sm tracking-[0.25em] uppercase text-gold-dark font-bold">
           DEC | 03RD - 05TH | 2026
         </p>

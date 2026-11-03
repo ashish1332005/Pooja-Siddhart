@@ -1,4 +1,20 @@
 @font-face {
+  font-family: "Morlisse";
+  src: url("/fonts/Morlisse_Regular.otf") format("opentype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Bayari";
+  src: url("/fonts/Bayari-Regular.otf") format("opentype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
   font-family: "Runethia";
   src: url("/fonts/Runethia.otf") format("opentype");
   font-display: swap;

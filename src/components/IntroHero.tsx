@@ -90,7 +90,7 @@ export function IntroHero({
             transition={{ duration: 0.7, delay: 0.1 }}
           >
             <p>{coupleName1}</p>
-            <p className="text-xl sm:text-2xl font-serif italic text-dusty-rose my-0.5">&amp;</p>
+            <p className="text-xl sm:text-2xl font-display text-dusty-rose my-0.5">&amp;</p>
             <p>{coupleName2}</p>
           </motion.div>
           <motion.p

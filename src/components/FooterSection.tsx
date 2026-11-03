@@ -24,7 +24,7 @@ export function FooterSection({
         <div className="relative max-w-md mx-auto pt-12 pb-2 px-6">
           <div className="text-center px-4 py-6 -m-4">
             <p className="font-couple md:text-6xl text-sage-dark leading-tight text-5xl pb-0 pt-0 mb-0 font-normal">
-              {name1} <span className="font-serif italic text-dusty-rose text-3xl md:text-4xl">&amp;</span> {name2}
+              {name1} <span className="font-display text-dusty-rose text-3xl md:text-4xl">&amp;</span> {name2}
             </p>
             <p className="section-eyebrow mt-3 !text-xs md:!text-sm">
               <span className="font-digit">05</span> December <span className="font-digit">2026</span>
