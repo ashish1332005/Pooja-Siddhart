@@ -57,11 +57,11 @@
   --sidebar-border: 139 12% 32%;
   --sidebar-ring: 174 19% 41%;
 
-  /* Harmonious typography system with Morlisse as the balanced primary font */
+  /* Harmonious typography system with Morlisse as primary font and Blackendy for digits */
   --font-couple: "Runethia", cursive, Georgia, serif;
   --font-display: "Morlisse", Georgia, serif;
   --font-body: "Morlisse", Georgia, serif;
-  --font-digit: "Morlisse", Georgia, serif;
+  --font-digit: "Blackendy", "Cinzel", Georgia, serif;
   --font-hindi: "Rozha One", "Noto Serif Devanagari", serif;
   --font-script: "Runethia", cursive, serif;
   --font-subtitle: "Morlisse", Georgia, serif;

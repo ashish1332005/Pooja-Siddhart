@@ -156,7 +156,7 @@ export function TimelineSection() {
                   <span className="font-display font-bold tracking-wide text-xs sm:text-sm text-gold-dark block">
                     {item.date}
                   </span>
-                  <p className="font-display font-extrabold tracking-wide text-lg sm:text-2xl md:text-3xl text-sage-dark mt-0.5">
+                  <p className="font-digit font-extrabold tracking-wide text-lg sm:text-2xl md:text-3xl text-sage-dark mt-0.5">
                     {item.time}
                   </p>
                   <h3 className="font-display font-bold text-sm sm:text-base md:text-xl text-sage-dark uppercase tracking-wide mt-1">
