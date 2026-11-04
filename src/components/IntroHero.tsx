@@ -74,16 +74,16 @@ export function IntroHero({
           }`}
         />
         <div
-          className="absolute inset-0 flex flex-col items-center justify-center text-center px-8"
+          className="absolute inset-x-0 top-[25%] bottom-[48%] flex flex-col items-center justify-center text-center px-6 pointer-events-none select-none z-10"
           style={{ mixBlendMode: "multiply" }}
         >
           <motion.div
-            className="font-couple text-[3.25rem] sm:text-[4.5rem] md:text-[5.5rem] leading-[1.1] text-sage-dark font-normal"
-            animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
+            className="font-couple text-3xl sm:text-4xl md:text-5xl leading-tight text-sage-dark font-normal"
+            animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
             <p>{coupleName1}</p>
-            <p className="text-2xl sm:text-3xl font-display text-dusty-rose my-1">&amp;</p>
+            <p className="text-xl sm:text-2xl font-display text-dusty-rose my-0.5">&amp;</p>
             <p>{coupleName2}</p>
           </motion.div>
         </div>
