@@ -40,7 +40,7 @@ export function FooterSection({
           />
         </div>
 
-        <p className="text-xs sm:text-sm text-sage-dark mt-2 font-body font-semibold">
+        <p className="text-xs sm:text-sm text-sage-dark/85 mt-2 font-body font-normal">
           With Best Compliments from Malani &amp; Laddha Family
         </p>
       </motion.div>

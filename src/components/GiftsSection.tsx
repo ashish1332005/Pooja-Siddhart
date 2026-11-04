@@ -29,21 +29,15 @@ export function GiftsSection({ enabled = true }: GiftsSectionProps) {
 
           {/* Perfectly Centered Content Safe from all borders & roses */}
           <div className="absolute inset-x-[18%] top-[24%] bottom-[22%] sm:inset-x-[22%] flex flex-col items-center justify-center text-center">
-            {/* Calligraphy Title in Runethia */}
-            <h2 className="font-couple text-5xl sm:text-6xl md:text-7xl text-sage-dark leading-none mb-2 sm:mb-3">
+            {/* Title in Novantique Serif Display matching demo */}
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-sage-dark font-normal leading-tight mb-2 sm:mb-3">
               Gifts
             </h2>
 
-            {/* Delicate Golden Accent Divider */}
-            <span className="block w-10 sm:w-14 h-px bg-gold/70 mx-auto mb-3 sm:mb-5" />
-
             {/* Graceful Poetic Lines with ample clearance */}
-            <div className="space-y-2.5 sm:space-y-3.5 px-2">
-              <p className="font-body font-semibold text-sm sm:text-base md:text-lg text-sage-dark leading-relaxed">
-                Your presence and blessings at our wedding are the greatest gift of all.
-              </p>
-              <p className="font-body font-semibold text-xs sm:text-sm md:text-base text-sage-dark leading-relaxed">
-                Should you wish to celebrate with a gift, a wishing well will be available at the reception.
+            <div className="space-y-2 sm:space-y-3 px-3 max-w-xs sm:max-w-sm">
+              <p className="font-body italic text-xs sm:text-[13px] md:text-sm text-sage-dark/85 leading-relaxed">
+                Your presence at our wedding is the greatest gift of all. Should you wish to celebrate with a gift, a wishing well will be available at the reception.
               </p>
             </div>
           </div>

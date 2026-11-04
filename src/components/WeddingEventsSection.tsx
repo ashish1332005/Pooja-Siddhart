@@ -41,54 +41,51 @@ export function WeddingEventsSection() {
           />
 
           {/* Complete Details strictly inside the boundary and perfectly centered */}
-          <div className="absolute inset-x-[16%] top-[20%] bottom-[20%] sm:inset-x-[18%] flex flex-col items-center justify-center text-center px-2 sm:px-4">
-            <h2 className="font-display text-xl sm:text-2xl md:text-3xl text-sage-dark tracking-wide mb-1 leading-tight font-semibold">
-              Ceremony &amp; Reception
+          <div className="absolute inset-x-[16%] top-[19%] bottom-[19%] sm:inset-x-[18%] flex flex-col items-center justify-center text-center px-2 sm:px-4">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-sage-dark tracking-normal leading-[1.15] font-normal mb-1">
+              Ceremony<br />&amp; Reception
             </h2>
-            <span className="block w-8 sm:w-10 h-px bg-gold mx-auto my-1.5 sm:my-2" />
-            <p className="font-display text-[10px] sm:text-xs tracking-[0.28em] uppercase text-gold-dark font-semibold mb-2 sm:mb-3">
+            <p className="font-body text-[9px] sm:text-[10.5px] tracking-[0.28em] uppercase text-gold-dark font-medium my-2 sm:my-2.5">
               Where We Celebrate
             </p>
 
             {/* Venue from PDF */}
-            <h3 className="font-display text-base sm:text-xl md:text-2xl text-sage-dark mb-0.5 sm:mb-1 tracking-wide font-semibold leading-snug">
+            <h3 className="font-display text-base sm:text-lg md:text-xl text-sage-dark mb-0.5 tracking-wide font-normal">
               {WEDDING_CONFIG.main_venue_name}
             </h3>
-            <p className="font-display text-[10px] sm:text-xs tracking-[0.22em] uppercase text-gold-dark font-semibold mb-2 sm:mb-3">
+            <p className="font-body text-[8.5px] sm:text-[9.5px] tracking-[0.22em] uppercase text-gold-dark/90 mb-2 sm:mb-3">
               NH 8, Udaipur (Rajasthan)
             </p>
 
             <div className="space-y-1.5 sm:space-y-2 mb-3 sm:mb-4">
-              <p className="font-body font-semibold text-xs sm:text-sm md:text-base text-sage-dark">
-                Saturday, <span className="font-digit font-semibold">05</span> December <span className="font-digit font-semibold">2026</span>
+              <p className="font-body italic text-xs sm:text-sm text-sage-dark/85">
+                Saturday, 05 December 2026
               </p>
-              <div className="w-8 h-px bg-gold/70 mx-auto" />
-              <div className="flex flex-col items-center gap-1 sm:gap-1.5 text-sage-dark font-body font-semibold text-[11px] sm:text-xs md:text-sm leading-relaxed">
+              <div className="flex flex-col items-center gap-1 text-sage-dark font-body text-[10.5px] sm:text-xs leading-relaxed">
                 <span>
-                  Mangal Phere · Santorini Garden · <span className="font-digit font-semibold">11:15 AM</span>
+                  Mangal Phere · Santorini Garden · 11:15 AM
                 </span>
                 <span>
-                  The Wedding Gala · Aravali Garden · <span className="font-digit font-semibold">07:15 PM</span>
+                  The Wedding Gala · Aravali Garden · 07:15 PM
                 </span>
               </div>
-              <div className="w-8 h-px bg-gold/70 mx-auto" />
             </div>
 
-            {/* Maps & Calendar Actions */}
-            <div className="flex flex-col items-center gap-1.5 sm:gap-2 pt-0.5">
+            {/* Maps & Calendar Actions - Matching Demo UI */}
+            <div className="flex flex-col items-center gap-2 pt-1">
               <ActionMenu
-                icon={<MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5" />}
-                label="Udaipur Venue Map"
-                className="text-[10px] sm:text-xs font-display font-semibold tracking-[0.14em] text-sage-dark"
+                icon={<MapPin className="w-3 h-3 text-gold-dark" />}
+                label="OPEN IN MAPS"
+                className="text-[9.5px] sm:text-[10.5px] font-body tracking-[0.22em] text-sage-dark uppercase hover:text-gold-dark transition-colors"
                 items={[
                   { label: "Google Maps", href: buildGoogleMapsUrl(address) },
                   { label: "Apple Maps", href: buildAppleMapsUrl(address) },
                 ]}
               />
               <ActionMenu
-                icon={<Calendar className="w-3 h-3 sm:w-3.5 sm:h-3.5" />}
-                label="Add to Calendar"
-                className="text-[10px] sm:text-xs font-display font-semibold tracking-[0.14em] text-sage-dark"
+                icon={<Calendar className="w-3 h-3 text-gold-dark" />}
+                label="ADD TO CALENDAR"
+                className="text-[9.5px] sm:text-[10.5px] font-body tracking-[0.22em] text-sage-dark uppercase hover:text-gold-dark transition-colors"
                 items={[
                   { label: "Google Calendar", href: buildGoogleCalendarUrl(calendarEvent) },
                   {

@@ -117,13 +117,13 @@ export function TimelineSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-10 md:mb-14"
         >
-          <h2 className="section-heading whitespace-pre-line text-3xl sm:text-4xl md:text-5xl leading-tight pt-0 font-bold">
-            Order of Events
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-sage-dark font-normal tracking-wide">
+            Timeline
           </h2>
-          <span className="section-rule !my-3" />
-          <p className="section-eyebrow font-bold">The Wedding Celebrations</p>
+          <span className="section-rule !my-2.5" />
+          <p className="section-eyebrow">The Wedding Celebrations</p>
         </motion.div>
 
         <div ref={timelineRef} className="relative mx-auto max-w-2xl px-2 sm:px-4">
@@ -166,17 +166,17 @@ export function TimelineSection() {
                   className="w-full h-auto justify-self-center select-none pointer-events-none max-w-[80px] sm:max-w-[120px] md:max-w-[150px] object-contain"
                 />
                 <div className="pl-4 sm:pl-8 md:pl-10">
-                  <span className="font-display font-semibold tracking-wide text-xs sm:text-sm text-gold-dark block">
-                    {renderWithLiningDigits(item.date)}
+                  <span className="font-body text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-gold-dark block mb-0.5">
+                    {item.date}
                   </span>
-                  <p className="font-digit font-semibold tracking-wide text-lg sm:text-2xl md:text-3xl text-sage-dark mt-0.5">
+                  <p className="font-display font-normal text-sm sm:text-base md:text-lg text-sage-dark tracking-wide">
                     {item.time}
                   </p>
-                  <h3 className="font-display font-semibold text-sm sm:text-base md:text-xl text-sage-dark uppercase tracking-wide mt-1">
+                  <h3 className="font-body uppercase tracking-[0.14em] text-[11px] sm:text-xs text-sage-dark font-medium mt-0.5">
                     {item.title}
                   </h3>
-                  <p className="font-body font-semibold text-xs sm:text-sm md:text-base text-sage-dark mt-0.5 leading-snug">
-                    {renderWithLiningDigits(item.note)}
+                  <p className="font-body italic text-[11px] sm:text-xs text-sage-dark/75 mt-0.5 leading-relaxed">
+                    {item.note}
                   </p>
                 </div>
               </motion.div>

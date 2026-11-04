@@ -32,11 +32,13 @@ export function FamilySection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-10 md:mb-14"
         >
-          <h2 className="section-heading font-bold">With Love &amp; Blessings</h2>
-          <span className="section-rule" />
-          <p className="section-eyebrow font-bold">Our Families &amp; Well Wishers</p>
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-sage-dark font-normal tracking-wide">
+            With Love &amp; Blessings
+          </h2>
+          <span className="section-rule !my-2.5" />
+          <p className="section-eyebrow">Our Families &amp; Well Wishers</p>
         </motion.div>
 
         {/* 1. Sweet Request from Misshkaa Dad */}
@@ -68,11 +70,11 @@ export function FamilySection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="p-6 md:p-8 rounded-2xl bg-white/95 border border-gold/40 shadow-sm text-center"
           >
-            <h3 className="font-display text-lg sm:text-xl md:text-2xl text-sage-dark mb-2 text-center tracking-wide font-semibold">
+            <h3 className="font-display text-lg sm:text-xl md:text-2xl text-sage-dark mb-2 text-center tracking-wide font-normal">
               With Best Compliments
             </h3>
             <div className="w-8 h-px bg-gold/60 mx-auto mb-4" />
-            <p className="font-body font-semibold text-sm md:text-base text-sage-dark leading-relaxed">
+            <p className="font-body text-sm md:text-base text-sage-dark/90 leading-relaxed">
               {renderNonBreakingNames(FAMILY_DETAILS.compliments)}
             </p>
           </motion.div>
@@ -85,11 +87,11 @@ export function FamilySection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="p-6 md:p-8 rounded-2xl bg-white/95 border border-gold/40 shadow-sm text-center"
           >
-            <h3 className="font-display text-lg sm:text-xl md:text-2xl text-sage-dark mb-2 text-center tracking-wide font-semibold">
+            <h3 className="font-display text-lg sm:text-xl md:text-2xl text-sage-dark mb-2 text-center tracking-wide font-normal">
               Welcome By
             </h3>
             <div className="w-8 h-px bg-gold/60 mx-auto mb-4" />
-            <p className="font-body font-semibold text-sm md:text-base text-sage-dark leading-relaxed">
+            <p className="font-body text-sm md:text-base text-sage-dark/90 leading-relaxed">
               {renderNonBreakingNames(FAMILY_DETAILS.welcome_by)}
             </p>
           </motion.div>
@@ -105,11 +107,11 @@ export function FamilySection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="p-6 rounded-2xl bg-white/95 border border-gold/40 shadow-sm text-center"
           >
-            <h3 className="font-display text-base sm:text-lg md:text-xl text-sage-dark mb-2 tracking-wide font-bold">
+            <h3 className="font-display text-base sm:text-lg md:text-xl text-sage-dark mb-2 tracking-wide font-normal">
               Sharing The Joy
             </h3>
             <div className="w-8 h-px bg-gold/60 mx-auto mb-3" />
-            <p className="font-body font-semibold text-sm md:text-base text-sage-dark leading-relaxed">
+            <p className="font-body text-sm md:text-base text-sage-dark/90 leading-relaxed">
               {renderNonBreakingNames(FAMILY_DETAILS.sharing_the_joy)}
             </p>
           </motion.div>
@@ -122,11 +124,11 @@ export function FamilySection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="p-6 rounded-2xl bg-white/95 border border-gold/40 shadow-sm text-center"
           >
-            <h3 className="font-display text-base sm:text-lg md:text-xl text-sage-dark mb-2 tracking-wide font-bold">
+            <h3 className="font-display text-base sm:text-lg md:text-xl text-sage-dark mb-2 tracking-wide font-normal">
               Warm Regards
             </h3>
             <div className="w-8 h-px bg-gold/60 mx-auto mb-3" />
-            <p className="font-body font-semibold text-sm md:text-base text-sage-dark leading-relaxed">
+            <p className="font-body text-sm md:text-base text-sage-dark/90 leading-relaxed">
               {renderNonBreakingNames(FAMILY_DETAILS.warm_regards, ",")}
             </p>
           </motion.div>
@@ -142,19 +144,19 @@ export function FamilySection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="p-6 rounded-2xl bg-white/95 border border-gold/40 shadow-sm text-center"
           >
-            <h3 className="font-display text-base sm:text-lg md:text-xl text-sage-dark mb-1 tracking-wide font-bold">
+            <h3 className="font-display text-base sm:text-lg md:text-xl text-sage-dark mb-1 tracking-wide font-normal">
               Maternal Side (Nanihal)
             </h3>
             <div className="w-8 h-px bg-gold/60 mx-auto mb-3" />
-            <p className="font-body font-bold text-sm text-gold-dark mb-1">
+            <p className="font-body font-medium text-sm text-gold-dark mb-1">
               <span className="inline-block whitespace-nowrap">
                 {FAMILY_DETAILS.maternal_side.elders.replace(/-/g, "\u2011")}
               </span>
             </p>
-            <p className="font-body font-semibold text-sm md:text-base text-sage-dark leading-relaxed">
+            <p className="font-body text-sm md:text-base text-sage-dark/90 leading-relaxed">
               {FAMILY_DETAILS.maternal_side.family}
             </p>
-            <p className="font-body font-semibold text-xs sm:text-sm text-sage-dark mt-2">
+            <p className="font-body text-xs sm:text-sm text-sage-dark/80 mt-2">
               {renderNonBreakingNames(FAMILY_DETAILS.maternal_side.others)}
             </p>
           </motion.div>
@@ -167,11 +169,11 @@ export function FamilySection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="p-6 rounded-2xl bg-white/95 border border-gold/40 shadow-sm text-center flex flex-col justify-center"
           >
-            <h3 className="font-display text-base sm:text-lg md:text-xl text-sage-dark mb-1 tracking-wide font-bold">
+            <h3 className="font-display text-base sm:text-lg md:text-xl text-sage-dark mb-1 tracking-wide font-normal">
               Samdhi Pravar
             </h3>
             <div className="w-8 h-px bg-gold/60 mx-auto mb-3" />
-            <p className="font-body font-semibold text-sm md:text-base text-sage-dark leading-relaxed">
+            <p className="font-body text-sm md:text-base text-sage-dark/90 leading-relaxed">
               {FAMILY_DETAILS.samdhi_pravar}
             </p>
           </motion.div>
@@ -185,11 +187,11 @@ export function FamilySection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="p-6 md:p-8 rounded-2xl bg-white/95 border border-gold/40 shadow-sm text-center"
         >
-          <h3 className="font-display text-base sm:text-lg md:text-xl text-sage-dark mb-1 tracking-wide font-semibold">
+          <h3 className="font-display text-base sm:text-lg md:text-xl text-sage-dark mb-1 tracking-wide font-normal">
             Business Concerns
           </h3>
           <div className="w-8 h-px bg-gold/60 mx-auto mb-4" />
-          <p className="font-body font-semibold text-xs sm:text-sm text-sage-dark leading-relaxed">
+          <p className="font-body text-xs sm:text-sm text-sage-dark/90 leading-relaxed">
             {renderNonBreakingNames(FAMILY_DETAILS.business_concerns)}
           </p>
         </motion.div>

@@ -36,9 +36,11 @@ export function RecoveryDaySection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-8"
         >
-          <h2 className="section-heading pt-6 font-bold">Pre-Wedding Rituals</h2>
-          <span className="section-rule" />
-          <p className="section-eyebrow font-bold">Bhilwara Celebrations</p>
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-sage-dark font-normal tracking-wide pt-6">
+            Pre-Wedding Rituals
+          </h2>
+          <span className="section-rule !my-2.5" />
+          <p className="section-eyebrow">Bhilwara Celebrations</p>
         </motion.div>
 
         <motion.div
@@ -62,46 +64,42 @@ export function RecoveryDaySection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center max-w-md mx-auto"
         >
-          <h3 className="font-display text-2xl sm:text-3xl font-semibold text-sage-dark mb-1 tracking-wide">
+          <h3 className="font-display text-xl sm:text-2xl font-normal text-sage-dark mb-0.5 tracking-wide">
             {WEDDING_CONFIG.bhilwara_venue_name}
           </h3>
-          <p className="font-display text-xs tracking-[0.3em] uppercase text-gold-dark font-semibold mb-4">
+          <p className="font-body text-[9.5px] sm:text-[10.5px] tracking-[0.25em] uppercase text-gold-dark font-medium mb-3">
             R.C. Vyas Colony · Bhilwara
           </p>
 
-          <div className="space-y-3 mb-6">
-            <p className="font-body font-semibold text-sm sm:text-base text-sage-dark">
-              Tuesday, <span className="font-digit font-semibold">01</span> December <span className="font-digit font-semibold">2026</span> · <span className="font-digit font-semibold">10:15 AM</span> Onwards
+          <div className="space-y-2 mb-6">
+            <p className="font-body italic text-xs sm:text-sm text-sage-dark/85">
+              Tuesday, 01 December 2026 · From 10:15 AM
             </p>
 
-            <div className="w-10 h-px bg-gold/70 mx-auto" />
-
-            <div className="flex flex-col items-center gap-1.5 text-sage-dark font-body font-semibold text-xs sm:text-sm">
-              <span>Hathdhan · <span className="font-digit font-semibold">10:15 AM</span> (Followed by Lunch)</span>
-              <span>Dine, Dance &amp; Dazzle · <span className="font-digit font-semibold">07:15 PM</span> (Followed by Dinner)</span>
+            <div className="flex flex-col items-center gap-1 text-sage-dark font-body text-[11px] sm:text-xs">
+              <span>Hathdhan · 10:15 AM (Followed by Lunch)</span>
+              <span>Dine, Dance &amp; Dazzle · 07:15 PM (Followed by Dinner)</span>
             </div>
 
-            <div className="w-10 h-px bg-gold/70 mx-auto" />
-
-            <p className="text-sage-dark font-body font-semibold text-xs sm:text-sm tracking-wide">
+            <p className="text-sage-dark/75 font-body italic text-[10.5px] sm:text-xs pt-1">
               10-B-18, R.C. Vyas Colony, Bhilwara (Rajasthan)
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
+          <div className="flex flex-col items-center gap-2 pt-1">
             <ActionMenu
-              icon={<MapPin className="w-3.5 h-3.5" />}
-              label="Bhilwara Map"
-              className="text-xs font-display font-bold tracking-wider text-sage-dark"
+              icon={<MapPin className="w-3 h-3 text-gold-dark" />}
+              label="OPEN IN MAPS"
+              className="text-[9.5px] sm:text-[10.5px] font-body tracking-[0.22em] text-sage-dark uppercase hover:text-gold-dark transition-colors"
               items={[
                 { label: "Google Maps", href: buildGoogleMapsUrl(address) },
                 { label: "Apple Maps", href: buildAppleMapsUrl(address) },
               ]}
             />
             <ActionMenu
-              icon={<Calendar className="w-3.5 h-3.5" />}
-              label="Add to Calendar"
-              className="text-xs font-display font-semibold tracking-wider text-sage-dark"
+              icon={<Calendar className="w-3 h-3 text-gold-dark" />}
+              label="ADD TO CALENDAR"
+              className="text-[9.5px] sm:text-[10.5px] font-body tracking-[0.22em] text-sage-dark uppercase hover:text-gold-dark transition-colors"
               items={[
                 { label: "Google Calendar", href: buildGoogleCalendarUrl(calendarEvent) },
                 {

@@ -74,32 +74,18 @@ export function IntroHero({
           }`}
         />
         <div
-          className="absolute inset-0 flex flex-col items-center text-center px-8 pt-[24vh]"
+          className="absolute inset-0 flex flex-col items-center justify-center text-center px-8"
           style={{ mixBlendMode: "multiply" }}
         >
-          <motion.p
-            className="font-hindi text-xs sm:text-sm tracking-[0.2em] mb-1 font-bold text-gold-dark"
-            animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-            transition={{ duration: 0.7 }}
-          >
-            {WEDDING_CONFIG.ganesh_mantra}
-          </motion.p>
           <motion.div
-            className="font-couple text-[2.75rem] sm:text-[3.75rem] md:text-[4.75rem] leading-[1.1] text-sage-dark font-normal"
+            className="font-couple text-[3.25rem] sm:text-[4.5rem] md:text-[5.5rem] leading-[1.1] text-sage-dark font-normal"
             animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
             <p>{coupleName1}</p>
-            <p className="text-xl sm:text-2xl font-display text-dusty-rose my-0.5">&amp;</p>
+            <p className="text-2xl sm:text-3xl font-display text-dusty-rose my-1">&amp;</p>
             <p>{coupleName2}</p>
           </motion.div>
-          <motion.p
-            className="mt-3 sm:mt-4 font-display text-xs sm:text-sm md:text-base tracking-[0.25em] uppercase font-semibold text-sage-dark"
-            animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-          >
-            DEC | <span className="font-digit text-sm sm:text-base font-semibold">03</span>RD - <span className="font-digit text-sm sm:text-base font-semibold">05</span>TH | <span className="font-digit text-sm sm:text-base font-semibold">2026</span>
-          </motion.p>
         </div>
       </section>
 

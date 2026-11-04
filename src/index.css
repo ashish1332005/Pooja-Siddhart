@@ -4,17 +4,17 @@
 
 :root {
   --background: 38 32% 95%;
-  --foreground: 150 35% 8%;
+  --foreground: 145 22% 22%;
   --card: 38 30% 96%;
-  --card-foreground: 150 35% 8%;
+  --card-foreground: 145 22% 22%;
   --popover: 38 30% 97%;
-  --popover-foreground: 150 35% 8%;
+  --popover-foreground: 145 22% 22%;
   --primary: 80 26% 33%;
   --primary-foreground: 38 52% 93%;
   --secondary: 37 42% 73%;
-  --secondary-foreground: 150 35% 8%;
+  --secondary-foreground: 145 22% 22%;
   --muted: 37 40% 80%;
-  --muted-foreground: 150 28% 16%;
+  --muted-foreground: 145 18% 28%;
   --accent: 12 55% 48%;
   --accent-foreground: 38 52% 94%;
   --destructive: 10 58% 40%;
@@ -33,13 +33,13 @@
   --dusty-rose-soft: 4 44% 76%;
   --greige: 37 26% 58%;
   --greige-soft: 37 32% 71%;
-  --gold: 34 75% 32%;
-  --gold-soft: 35 52% 63%;
-  --gold-dark: 28 85% 16%;
-  --sage: 103 26% 52%;
-  --sage-dark: 150 35% 8%;
-  --sage-light: 103 26% 63%;
-  --ink: 150 35% 8%;
+  --gold: 35 35% 55%;
+  --gold-soft: 35 45% 68%;
+  --gold-dark: 35 40% 36%;
+  --sage: 140 18% 44%;
+  --sage-dark: 145 22% 22%;
+  --sage-light: 140 18% 58%;
+  --ink: 145 22% 22%;
   --countdown: 176 26% 35%;
   --limestone: 37 42% 73%;
   --olive: 80 26% 33%;
@@ -57,15 +57,15 @@
   --sidebar-border: 139 12% 32%;
   --sidebar-ring: 174 19% 41%;
 
-  /* Harmonious typography system with Playfair Display for headings, subheadings, paragraphs, and digits */
+  /* Authentic Embroidered Garden Typography System */
   --font-couple: "Runethia", cursive, Georgia, serif;
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-body: "Playfair Display", Georgia, serif;
-  --font-digit: "Playfair Display", Georgia, serif;
+  --font-display: "novantique-serif-display", "adobe-caslon-pro", Georgia, serif;
+  --font-body: "adobe-caslon-pro", Georgia, serif;
+  --font-digit: "novantique-serif-display", "adobe-caslon-pro", Georgia, serif;
   --font-hindi: "Rozha One", "Noto Serif Devanagari", serif;
   --font-script: "Runethia", cursive, serif;
-  --font-subtitle: "Playfair Display", Georgia, serif;
-  --font-adorn: "Playfair Display", Georgia, serif;
+  --font-subtitle: "adobe-caslon-pro", Georgia, serif;
+  --font-adorn: "adorn-garland", "novantique-serif-display", Georgia, serif;
 
   --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -94,10 +94,10 @@ body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   font-family: var(--font-body);
-  font-size: 1.125rem;
-  font-weight: 500; /* Medium weight for crisp, clear readability */
-  letter-spacing: 0.02em;
-  line-height: 1.7;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.015em;
+  line-height: 1.65;
   font-feature-settings: "liga", "kern", "lnum";
   font-variant-numeric: lining-nums proportional-nums;
   -webkit-font-smoothing: antialiased;
@@ -111,10 +111,18 @@ body {
   font-family: var(--font-couple) !important;
 }
 
+.font-display {
+  font-family: var(--font-display) !important;
+}
+
+.font-body {
+  font-family: var(--font-body) !important;
+}
+
 .font-digit {
   font-family: var(--font-digit) !important;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-variant-numeric: lining-nums proportional-nums;
+  letter-spacing: 0.02em;
 }
 
 .font-hindi {
@@ -123,28 +131,29 @@ body {
 
 .section-heading {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
+  font-size: clamp(1.6rem, 3.8vw, 2.35rem);
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
   color: hsl(var(--sage-dark));
 }
 
 .section-rule {
   display: block;
-  width: 2.75rem;
-  height: 1.5px;
+  width: 2.25rem;
+  height: 1px;
   background-color: hsl(var(--gold));
-  margin: 0.85rem auto;
+  margin: 0.75rem auto;
+  opacity: 0.8;
 }
 
 .section-eyebrow {
-  font-family: var(--font-display);
-  font-size: 0.8rem;
-  letter-spacing: 0.28em;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   color: hsl(var(--gold-dark));
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .section-padding {

@@ -40,7 +40,7 @@ export function ActionMenu({ icon, label, items, className }: ActionMenuProps) {
       <button
         type="button"
         onClick={() => setOpen((prev) => !prev)}
-        className={`inline-flex items-center gap-2 whitespace-nowrap font-body text-sm tracking-[0.15em] uppercase text-sage-dark hover:text-gold-dark transition-colors border-b border-sage-dark/50 hover:border-gold-dark pb-1 focus:outline-none font-bold ${className ?? ""}`}
+        className={`inline-flex items-center gap-1.5 whitespace-nowrap font-body text-xs tracking-[0.2em] uppercase text-sage-dark hover:text-gold-dark transition-colors border-b border-sage-dark/40 hover:border-gold-dark pb-0.5 focus:outline-none font-medium ${className ?? ""}`}
       >
         {icon}
         {label}

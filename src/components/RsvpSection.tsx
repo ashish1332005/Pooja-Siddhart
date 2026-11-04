@@ -240,19 +240,21 @@ export function RsvpSection() {
             loading="lazy"
             className="w-[55%] max-w-[260px] md:max-w-[300px] mx-auto mt-0 mb-4 select-none pointer-events-none"
           />
-          <h2 className="section-heading pt-[10px] font-bold">{t("rsvp.title")}</h2>
-          <span className="section-rule" />
-          <p className="section-eyebrow leading-[1.9] font-semibold">
-            Kindly respond by <span className="font-digit font-semibold">15</span> November <span className="font-digit font-semibold">2026</span>
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-sage-dark font-normal tracking-wide pt-2">
+            {t("rsvp.title")}
+          </h2>
+          <span className="section-rule !my-2.5" />
+          <p className="font-body text-[10px] sm:text-xs tracking-[0.2em] uppercase text-gold-dark font-medium">
+            Kindly respond by 15 November 2026
           </p>
-          <p className="font-body font-semibold text-sm sm:text-base text-sage-dark mt-2">
+          <p className="font-body text-xs sm:text-sm text-sage-dark/85 mt-2">
             RSVP:{" "}
             {WEDDING_CONFIG.rsvp_phones.map((phone, i) => (
               <React.Fragment key={i}>
                 {i > 0 && " · "}
                 <a
                   href={`tel:${phone.replace(/\s+/g, "")}`}
-                  className="font-digit font-semibold text-sage-dark hover:text-gold-dark transition-colors"
+                  className="font-digit text-sage-dark hover:text-gold-dark transition-colors"
                 >
                   {phone}
                 </a>
