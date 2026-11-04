@@ -2,6 +2,19 @@ import React, { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { MEDIA } from "../data/weddingConfig";
 
+function renderWithLiningDigits(text: string) {
+  const parts = text.split(/(\d+)/);
+  return parts.map((part, i) =>
+    /^\d+$/.test(part) ? (
+      <span key={i} className="font-digit not-italic inline-block">
+        {part}
+      </span>
+    ) : (
+      part
+    )
+  );
+}
+
 export function TimelineSection() {
   const timelineRef = useRef<HTMLDivElement>(null);
 
@@ -154,7 +167,7 @@ export function TimelineSection() {
                 />
                 <div className="pl-4 sm:pl-8 md:pl-10">
                   <span className="font-display font-bold tracking-wide text-xs sm:text-sm text-gold-dark block">
-                    {item.date}
+                    {renderWithLiningDigits(item.date)}
                   </span>
                   <p className="font-digit font-extrabold tracking-wide text-lg sm:text-2xl md:text-3xl text-sage-dark mt-0.5">
                     {item.time}
@@ -163,7 +176,7 @@ export function TimelineSection() {
                     {item.title}
                   </h3>
                   <p className="font-body font-semibold text-xs sm:text-sm md:text-base text-sage-dark mt-0.5 leading-snug">
-                    {item.note}
+                    {renderWithLiningDigits(item.note)}
                   </p>
                 </div>
               </motion.div>

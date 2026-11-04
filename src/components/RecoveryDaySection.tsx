@@ -71,14 +71,14 @@ export function RecoveryDaySection() {
 
           <div className="space-y-3 mb-6">
             <p className="font-body font-semibold text-sm sm:text-base text-sage-dark">
-              Tuesday, <span className="font-digit font-bold">01</span> December <span className="font-digit font-bold">2026</span> · <span className="font-digit font-bold">10:15</span> AM Onwards
+              Tuesday, <span className="font-digit font-bold">01</span> December <span className="font-digit font-bold">2026</span> · <span className="font-digit font-bold">10:15 AM</span> Onwards
             </p>
 
             <div className="w-10 h-px bg-gold/70 mx-auto" />
 
             <div className="flex flex-col items-center gap-1.5 text-sage-dark font-body font-semibold text-xs sm:text-sm">
-              <span>Hathdhan · <span className="font-digit font-bold">10:15</span> AM (Followed by Lunch)</span>
-              <span>Dine, Dance &amp; Dazzle · <span className="font-digit font-bold">07:15</span> PM (Followed by Dinner)</span>
+              <span>Hathdhan · <span className="font-digit font-bold">10:15 AM</span> (Followed by Lunch)</span>
+              <span>Dine, Dance &amp; Dazzle · <span className="font-digit font-bold">07:15 PM</span> (Followed by Dinner)</span>
             </div>
 
             <div className="w-10 h-px bg-gold/70 mx-auto" />

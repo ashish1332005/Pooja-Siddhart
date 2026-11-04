@@ -65,10 +65,10 @@ export function WeddingEventsSection() {
               <div className="w-8 h-px bg-gold/70 mx-auto" />
               <div className="flex flex-col items-center gap-1 sm:gap-1.5 text-sage-dark font-body font-semibold text-[11px] sm:text-xs md:text-sm leading-relaxed">
                 <span>
-                  Mangal Phere · Santorini Garden · <span className="font-digit font-bold">11:15</span> AM
+                  Mangal Phere · Santorini Garden · <span className="font-digit font-bold">11:15 AM</span>
                 </span>
                 <span>
-                  The Wedding Gala · Aravali Garden · <span className="font-digit font-bold">07:15</span> PM
+                  The Wedding Gala · Aravali Garden · <span className="font-digit font-bold">07:15 PM</span>
                 </span>
               </div>
               <div className="w-8 h-px bg-gold/70 mx-auto" />

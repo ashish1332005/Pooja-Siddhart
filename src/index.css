@@ -57,11 +57,11 @@
   --sidebar-border: 139 12% 32%;
   --sidebar-ring: 174 19% 41%;
 
-  /* Harmonious typography system with Madosh for headings, subheadings, paragraphs, and digits */
+  /* Harmonious typography system with Madosh for text and Cinzel for uniform lining digits */
   --font-couple: "Runethia", cursive, Georgia, serif;
   --font-display: "Madosh", Georgia, serif;
   --font-body: "Madosh", Georgia, serif;
-  --font-digit: "Madosh", Georgia, serif;
+  --font-digit: "Cinzel", "MusticaPro", Georgia, serif;
   --font-hindi: "Rozha One", "Noto Serif Devanagari", serif;
   --font-script: "Runethia", cursive, serif;
   --font-subtitle: "Madosh", Georgia, serif;
@@ -98,7 +98,8 @@ body {
   font-weight: 500; /* Medium weight for crisp, clear readability */
   letter-spacing: 0.02em;
   line-height: 1.7;
-  font-feature-settings: "liga", "kern", "onum";
+  font-feature-settings: "liga", "kern", "lnum";
+  font-variant-numeric: lining-nums proportional-nums;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -112,7 +113,10 @@ body {
 
 .font-digit {
   font-family: var(--font-digit) !important;
+  font-feature-settings: "lnum" 1, "tnum" 1 !important;
+  font-variant-numeric: lining-nums tabular-nums !important;
   letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .font-hindi {
