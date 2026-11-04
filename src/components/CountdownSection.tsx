@@ -46,7 +46,7 @@ export function CountdownSection({ targetDate }: CountdownSectionProps) {
         transition={{ duration: 0.75 }}
         className="relative z-10 flex flex-col items-center max-w-2xl mx-auto px-4"
       >
-        <h2 className="mb-6 md:mb-10 text-center font-display text-3xl sm:text-4xl md:text-5xl font-medium tracking-wide text-sage-dark">
+        <h2 className="mb-6 md:mb-10 text-center font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wide text-sage-dark">
           {t("countdown.title")}
         </h2>
         <div className="flex w-full items-center justify-center gap-2 sm:gap-4 md:gap-8">
@@ -63,12 +63,12 @@ export function CountdownSection({ targetDate }: CountdownSectionProps) {
                   className="absolute inset-0 h-full w-full object-contain pointer-events-none select-none"
                 />
                 <div className="relative z-10 flex items-center justify-center">
-                  <span className="font-digit text-3xl sm:text-5xl md:text-6xl font-bold leading-none text-sage-dark pt-1">
+                  <span className="font-digit text-3xl sm:text-5xl md:text-6xl font-semibold leading-none text-sage-dark pt-1">
                     {String(item.value).padStart(2, "0")}
                   </span>
                 </div>
               </div>
-              <span className="mt-2 font-display font-bold text-[11px] sm:text-xs md:text-sm uppercase tracking-widest text-sage-dark">
+              <span className="mt-2 font-display font-semibold text-[11px] sm:text-xs md:text-sm uppercase tracking-widest text-sage-dark">
                 {item.label}
               </span>
             </div>

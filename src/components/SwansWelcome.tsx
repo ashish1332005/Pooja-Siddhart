@@ -40,9 +40,9 @@ export function SwansWelcome() {
           {WEDDING_CONFIG.couple_name_1} <span className="font-display text-dusty-rose text-xl sm:text-2xl font-bold">&amp;</span> {WEDDING_CONFIG.couple_name_2}
         </h2>
 
-        {/* Dates in Cinzel */}
-        <p className="mt-2 font-display text-[11px] sm:text-xs md:text-sm tracking-[0.25em] uppercase text-gold-dark font-bold">
-          DEC | <span className="font-digit text-xs sm:text-sm">03</span>RD - <span className="font-digit text-xs sm:text-sm">05</span>TH | <span className="font-digit text-xs sm:text-sm">2026</span>
+        {/* Dates in Bayari */}
+        <p className="mt-2 font-display text-[11px] sm:text-xs md:text-sm tracking-[0.25em] uppercase text-gold-dark font-semibold">
+          DEC | <span className="font-digit text-xs sm:text-sm font-semibold">03</span>RD - <span className="font-digit text-xs sm:text-sm font-semibold">05</span>TH | <span className="font-digit text-xs sm:text-sm font-semibold">2026</span>
         </p>
       </div>
     </section>

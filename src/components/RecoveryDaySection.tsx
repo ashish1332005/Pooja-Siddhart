@@ -62,23 +62,23 @@ export function RecoveryDaySection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center max-w-md mx-auto"
         >
-          <h3 className="font-display text-2xl sm:text-3xl font-bold text-sage-dark mb-1 tracking-wide">
+          <h3 className="font-display text-2xl sm:text-3xl font-semibold text-sage-dark mb-1 tracking-wide">
             {WEDDING_CONFIG.bhilwara_venue_name}
           </h3>
-          <p className="font-display text-xs tracking-[0.3em] uppercase text-gold-dark font-bold mb-4">
+          <p className="font-display text-xs tracking-[0.3em] uppercase text-gold-dark font-semibold mb-4">
             R.C. Vyas Colony · Bhilwara
           </p>
 
           <div className="space-y-3 mb-6">
             <p className="font-body font-semibold text-sm sm:text-base text-sage-dark">
-              Tuesday, <span className="font-digit font-bold">01</span> December <span className="font-digit font-bold">2026</span> · <span className="font-digit font-bold">10:15 AM</span> Onwards
+              Tuesday, <span className="font-digit font-semibold">01</span> December <span className="font-digit font-semibold">2026</span> · <span className="font-digit font-semibold">10:15 AM</span> Onwards
             </p>
 
             <div className="w-10 h-px bg-gold/70 mx-auto" />
 
             <div className="flex flex-col items-center gap-1.5 text-sage-dark font-body font-semibold text-xs sm:text-sm">
-              <span>Hathdhan · <span className="font-digit font-bold">10:15 AM</span> (Followed by Lunch)</span>
-              <span>Dine, Dance &amp; Dazzle · <span className="font-digit font-bold">07:15 PM</span> (Followed by Dinner)</span>
+              <span>Hathdhan · <span className="font-digit font-semibold">10:15 AM</span> (Followed by Lunch)</span>
+              <span>Dine, Dance &amp; Dazzle · <span className="font-digit font-semibold">07:15 PM</span> (Followed by Dinner)</span>
             </div>
 
             <div className="w-10 h-px bg-gold/70 mx-auto" />

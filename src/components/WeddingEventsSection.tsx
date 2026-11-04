@@ -42,33 +42,33 @@ export function WeddingEventsSection() {
 
           {/* Complete Details strictly inside the boundary and perfectly centered */}
           <div className="absolute inset-x-[16%] top-[20%] bottom-[20%] sm:inset-x-[18%] flex flex-col items-center justify-center text-center px-2 sm:px-4">
-            <h2 className="font-display text-xl sm:text-2xl md:text-3xl text-sage-dark tracking-wide mb-1 leading-tight font-bold">
+            <h2 className="font-display text-xl sm:text-2xl md:text-3xl text-sage-dark tracking-wide mb-1 leading-tight font-semibold">
               Ceremony &amp; Reception
             </h2>
             <span className="block w-8 sm:w-10 h-px bg-gold mx-auto my-1.5 sm:my-2" />
-            <p className="font-display text-[10px] sm:text-xs tracking-[0.28em] uppercase text-gold-dark font-bold mb-2 sm:mb-3">
+            <p className="font-display text-[10px] sm:text-xs tracking-[0.28em] uppercase text-gold-dark font-semibold mb-2 sm:mb-3">
               Where We Celebrate
             </p>
 
             {/* Venue from PDF */}
-            <h3 className="font-display text-base sm:text-xl md:text-2xl text-sage-dark mb-0.5 sm:mb-1 tracking-wide font-bold leading-snug">
+            <h3 className="font-display text-base sm:text-xl md:text-2xl text-sage-dark mb-0.5 sm:mb-1 tracking-wide font-semibold leading-snug">
               {WEDDING_CONFIG.main_venue_name}
             </h3>
-            <p className="font-display text-[10px] sm:text-xs tracking-[0.22em] uppercase text-gold-dark font-bold mb-2 sm:mb-3">
+            <p className="font-display text-[10px] sm:text-xs tracking-[0.22em] uppercase text-gold-dark font-semibold mb-2 sm:mb-3">
               NH 8, Udaipur (Rajasthan)
             </p>
 
             <div className="space-y-1.5 sm:space-y-2 mb-3 sm:mb-4">
               <p className="font-body font-semibold text-xs sm:text-sm md:text-base text-sage-dark">
-                Saturday, <span className="font-digit font-bold">05</span> December <span className="font-digit font-bold">2026</span>
+                Saturday, <span className="font-digit font-semibold">05</span> December <span className="font-digit font-semibold">2026</span>
               </p>
               <div className="w-8 h-px bg-gold/70 mx-auto" />
               <div className="flex flex-col items-center gap-1 sm:gap-1.5 text-sage-dark font-body font-semibold text-[11px] sm:text-xs md:text-sm leading-relaxed">
                 <span>
-                  Mangal Phere · Santorini Garden · <span className="font-digit font-bold">11:15 AM</span>
+                  Mangal Phere · Santorini Garden · <span className="font-digit font-semibold">11:15 AM</span>
                 </span>
                 <span>
-                  The Wedding Gala · Aravali Garden · <span className="font-digit font-bold">07:15 PM</span>
+                  The Wedding Gala · Aravali Garden · <span className="font-digit font-semibold">07:15 PM</span>
                 </span>
               </div>
               <div className="w-8 h-px bg-gold/70 mx-auto" />
@@ -79,7 +79,7 @@ export function WeddingEventsSection() {
               <ActionMenu
                 icon={<MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5" />}
                 label="Udaipur Venue Map"
-                className="text-[10px] sm:text-xs font-display font-bold tracking-[0.14em] text-sage-dark"
+                className="text-[10px] sm:text-xs font-display font-semibold tracking-[0.14em] text-sage-dark"
                 items={[
                   { label: "Google Maps", href: buildGoogleMapsUrl(address) },
                   { label: "Apple Maps", href: buildAppleMapsUrl(address) },
@@ -88,7 +88,7 @@ export function WeddingEventsSection() {
               <ActionMenu
                 icon={<Calendar className="w-3 h-3 sm:w-3.5 sm:h-3.5" />}
                 label="Add to Calendar"
-                className="text-[10px] sm:text-xs font-display font-bold tracking-[0.14em] text-sage-dark"
+                className="text-[10px] sm:text-xs font-display font-semibold tracking-[0.14em] text-sage-dark"
                 items={[
                   { label: "Google Calendar", href: buildGoogleCalendarUrl(calendarEvent) },
                   {

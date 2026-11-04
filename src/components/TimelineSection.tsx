@@ -166,13 +166,13 @@ export function TimelineSection() {
                   className="w-full h-auto justify-self-center select-none pointer-events-none max-w-[80px] sm:max-w-[120px] md:max-w-[150px] object-contain"
                 />
                 <div className="pl-4 sm:pl-8 md:pl-10">
-                  <span className="font-display font-bold tracking-wide text-xs sm:text-sm text-gold-dark block">
+                  <span className="font-display font-semibold tracking-wide text-xs sm:text-sm text-gold-dark block">
                     {renderWithLiningDigits(item.date)}
                   </span>
-                  <p className="font-digit font-extrabold tracking-wide text-lg sm:text-2xl md:text-3xl text-sage-dark mt-0.5">
+                  <p className="font-digit font-semibold tracking-wide text-lg sm:text-2xl md:text-3xl text-sage-dark mt-0.5">
                     {item.time}
                   </p>
-                  <h3 className="font-display font-bold text-sm sm:text-base md:text-xl text-sage-dark uppercase tracking-wide mt-1">
+                  <h3 className="font-display font-semibold text-sm sm:text-base md:text-xl text-sage-dark uppercase tracking-wide mt-1">
                     {item.title}
                   </h3>
                   <p className="font-body font-semibold text-xs sm:text-sm md:text-base text-sage-dark mt-0.5 leading-snug">

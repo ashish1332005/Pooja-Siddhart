@@ -242,7 +242,7 @@ export function RsvpSection() {
           />
           <h2 className="section-heading pt-[10px] font-bold">{t("rsvp.title")}</h2>
           <span className="section-rule" />
-          <p className="section-eyebrow leading-[1.9] font-bold">
+          <p className="section-eyebrow leading-[1.9] font-semibold">
             Kindly respond by <span className="font-digit font-semibold">15</span> November <span className="font-digit font-semibold">2026</span>
           </p>
           <p className="font-body font-semibold text-sm sm:text-base text-sage-dark mt-2">
@@ -252,7 +252,7 @@ export function RsvpSection() {
                 {i > 0 && " · "}
                 <a
                   href={`tel:${phone.replace(/\s+/g, "")}`}
-                  className="font-digit font-bold text-sage-dark hover:text-gold-dark transition-colors"
+                  className="font-digit font-semibold text-sage-dark hover:text-gold-dark transition-colors"
                 >
                   {phone}
                 </a>

@@ -111,10 +111,10 @@ export function WelcomeSection() {
             Cordially invite you to grace the auspicious occasion of the wedding of their children
           </p>
           <div className="pt-2 flex flex-col items-center gap-1.5">
-            <p className="font-display text-base md:text-xl text-sage-dark tracking-wide font-bold">
-              <span className="font-digit font-bold">03</span>RD - <span className="font-digit font-bold">05</span>TH DECEMBER <span className="font-digit font-bold">2026</span>
+            <p className="font-display text-base md:text-xl text-sage-dark tracking-wide font-semibold">
+              <span className="font-digit font-semibold">03</span>RD - <span className="font-digit font-semibold">05</span>TH DECEMBER <span className="font-digit font-semibold">2026</span>
             </p>
-            <p className="font-display text-xs sm:text-sm tracking-[0.25em] uppercase text-gold-dark font-bold">
+            <p className="font-display text-xs sm:text-sm tracking-[0.25em] uppercase text-gold-dark font-semibold">
               {WEDDING_CONFIG.main_venue_name} · Udaipur
             </p>
           </div>

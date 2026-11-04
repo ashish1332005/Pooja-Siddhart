@@ -94,11 +94,11 @@ export function IntroHero({
             <p>{coupleName2}</p>
           </motion.div>
           <motion.p
-            className="mt-3 sm:mt-4 font-display text-xs sm:text-sm md:text-base tracking-[0.25em] uppercase font-bold text-sage-dark"
+            className="mt-3 sm:mt-4 font-display text-xs sm:text-sm md:text-base tracking-[0.25em] uppercase font-semibold text-sage-dark"
             animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            DEC | <span className="font-digit text-sm sm:text-base">03</span>RD - <span className="font-digit text-sm sm:text-base">05</span>TH | <span className="font-digit text-sm sm:text-base">2026</span>
+            DEC | <span className="font-digit text-sm sm:text-base font-semibold">03</span>RD - <span className="font-digit text-sm sm:text-base font-semibold">05</span>TH | <span className="font-digit text-sm sm:text-base font-semibold">2026</span>
           </motion.p>
         </div>
       </section>
