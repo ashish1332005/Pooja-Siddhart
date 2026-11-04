@@ -57,15 +57,15 @@
   --sidebar-border: 139 12% 32%;
   --sidebar-ring: 174 19% 41%;
 
-  /* Royal Classic Typography System matching the PDF invitation */
+  /* Harmonious typography system with Madosh for headings, subheadings, paragraphs, and digits */
   --font-couple: "Runethia", cursive, Georgia, serif;
-  --font-display: "Cinzel", "Cinzel Decorative", Georgia, serif;
-  --font-body: "Cormorant Garamond", Georgia, serif;
-  --font-digit: "Cinzel", Georgia, serif;
+  --font-display: "Madosh", Georgia, serif;
+  --font-body: "Madosh", Georgia, serif;
+  --font-digit: "Madosh", Georgia, serif;
   --font-hindi: "Rozha One", "Noto Serif Devanagari", serif;
   --font-script: "Runethia", cursive, serif;
-  --font-subtitle: "Cinzel", Georgia, serif;
-  --font-adorn: "Cinzel", Georgia, serif;
+  --font-subtitle: "Madosh", Georgia, serif;
+  --font-adorn: "Madosh", Georgia, serif;
 
   --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);

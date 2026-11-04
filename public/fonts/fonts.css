@@ -1,4 +1,12 @@
 @font-face {
+  font-family: "Madosh";
+  src: url("/fonts/Madosh-Regular.otf") format("opentype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
   font-family: "Morlisse";
   src: url("/fonts/Morlisse_Regular.otf") format("opentype");
   font-display: swap;
