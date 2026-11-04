@@ -57,15 +57,15 @@
   --sidebar-border: 139 12% 32%;
   --sidebar-ring: 174 19% 41%;
 
-  /* Harmonious typography system with Bayari for headings, subheadings, paragraphs, and digits */
+  /* Harmonious typography system with Playfair Display for headings, subheadings, paragraphs, and digits */
   --font-couple: "Runethia", cursive, Georgia, serif;
-  --font-display: "Bayari", Georgia, serif;
-  --font-body: "Bayari", Georgia, serif;
-  --font-digit: "Bayari", Georgia, serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Playfair Display", Georgia, serif;
+  --font-digit: "Playfair Display", Georgia, serif;
   --font-hindi: "Rozha One", "Noto Serif Devanagari", serif;
   --font-script: "Runethia", cursive, serif;
-  --font-subtitle: "Bayari", Georgia, serif;
-  --font-adorn: "Bayari", Georgia, serif;
+  --font-subtitle: "Playfair Display", Georgia, serif;
+  --font-adorn: "Playfair Display", Georgia, serif;
 
   --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);

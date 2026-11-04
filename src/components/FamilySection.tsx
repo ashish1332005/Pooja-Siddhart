@@ -54,22 +54,15 @@ export function FamilySection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="p-6 md:p-8 rounded-2xl bg-white/95 border border-gold/40 shadow-sm"
+            className="p-6 md:p-8 rounded-2xl bg-white/95 border border-gold/40 shadow-sm text-center"
           >
-            <h3 className="font-display text-lg sm:text-xl md:text-2xl text-sage-dark mb-2 text-center tracking-wide font-bold">
+            <h3 className="font-display text-lg sm:text-xl md:text-2xl text-sage-dark mb-2 text-center tracking-wide font-semibold">
               With Best Compliments
             </h3>
             <div className="w-8 h-px bg-gold/60 mx-auto mb-4" />
-            <div className="flex flex-wrap justify-center gap-2 text-xs md:text-sm text-sage-dark font-body font-semibold leading-relaxed text-center">
-              {FAMILY_DETAILS.compliments.map((item, idx) => (
-                <span
-                  key={idx}
-                  className="inline-block px-3 py-1.5 rounded-full bg-ivory border border-gold/40 text-sage-dark font-bold shadow-2xs"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
+            <p className="font-body font-semibold text-sm md:text-base text-sage-dark leading-relaxed">
+              {FAMILY_DETAILS.compliments.join(" · ")}
+            </p>
           </motion.div>
 
           {/* Welcome By */}
@@ -78,22 +71,15 @@ export function FamilySection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="p-6 md:p-8 rounded-2xl bg-white/95 border border-gold/40 shadow-sm"
+            className="p-6 md:p-8 rounded-2xl bg-white/95 border border-gold/40 shadow-sm text-center"
           >
-            <h3 className="font-display text-lg sm:text-xl md:text-2xl text-sage-dark mb-2 text-center tracking-wide font-bold">
+            <h3 className="font-display text-lg sm:text-xl md:text-2xl text-sage-dark mb-2 text-center tracking-wide font-semibold">
               Welcome By
             </h3>
             <div className="w-8 h-px bg-gold/60 mx-auto mb-4" />
-            <div className="flex flex-wrap justify-center gap-2 text-xs md:text-sm text-sage-dark font-body font-semibold leading-relaxed text-center">
-              {FAMILY_DETAILS.welcome_by.map((item, idx) => (
-                <span
-                  key={idx}
-                  className="inline-block px-3 py-1.5 rounded-full bg-ivory border border-gold/40 text-sage-dark font-bold shadow-2xs"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
+            <p className="font-body font-semibold text-sm md:text-base text-sage-dark leading-relaxed">
+              {FAMILY_DETAILS.welcome_by.join(" · ")}
+            </p>
           </motion.div>
         </div>
 
@@ -185,20 +171,13 @@ export function FamilySection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="p-6 md:p-8 rounded-2xl bg-white/95 border border-gold/40 shadow-sm text-center"
         >
-          <h3 className="font-display text-base sm:text-lg md:text-xl text-sage-dark mb-1 tracking-wide font-bold">
+          <h3 className="font-display text-base sm:text-lg md:text-xl text-sage-dark mb-1 tracking-wide font-semibold">
             Business Concerns
           </h3>
           <div className="w-8 h-px bg-gold/60 mx-auto mb-4" />
-          <div className="flex flex-wrap justify-center gap-2">
-            {FAMILY_DETAILS.business_concerns.map((concern, idx) => (
-              <span
-                key={idx}
-                className="inline-block text-xs md:text-sm px-3.5 py-1.5 rounded-md bg-ivory border border-gold/30 text-sage-dark font-body font-bold"
-              >
-                {concern}
-              </span>
-            ))}
-          </div>
+          <p className="font-body font-semibold text-xs sm:text-sm text-sage-dark leading-relaxed">
+            {FAMILY_DETAILS.business_concerns.join(" · ")}
+          </p>
         </motion.div>
       </div>
     </section>
