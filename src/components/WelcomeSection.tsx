@@ -2,6 +2,20 @@ import React from "react";
 import { motion } from "framer-motion";
 import { WEDDING_CONFIG } from "../data/weddingConfig";
 
+function formatLineagePair(text: string) {
+  if (text.includes(" - ")) {
+    const [first, second] = text.split(" - ");
+    return (
+      <>
+        <span className="inline-block whitespace-nowrap">{first}</span>
+        <span className="mx-1 text-gold-dark/70">-</span>
+        <span className="inline-block whitespace-nowrap">{second}</span>
+      </>
+    );
+  }
+  return <span className="inline-block whitespace-nowrap">{text}</span>;
+}
+
 export function WelcomeSection() {
   return (
     <section
@@ -28,7 +42,7 @@ export function WelcomeSection() {
             With The Blessings Of
             <br />
             <span className="font-display font-bold text-sage-dark text-base md:text-lg mt-0.5 block">
-              {WEDDING_CONFIG.blessings_of}
+              {formatLineagePair(WEDDING_CONFIG.blessings_of)}
             </span>
           </p>
           <p className="font-body font-semibold text-sm md:text-base text-sage-dark pt-1">
@@ -57,13 +71,13 @@ export function WelcomeSection() {
                 <span className="font-display text-xs tracking-wider uppercase text-gold-dark font-bold block mb-0.5">
                   Grandson of
                 </span>
-                <p className="font-semibold text-base text-sage-dark">{WEDDING_CONFIG.groom_grand_parents}</p>
+                <p className="font-semibold text-base text-sage-dark">{formatLineagePair(WEDDING_CONFIG.groom_grand_parents)}</p>
               </div>
               <div className="pt-1">
                 <span className="font-display text-xs tracking-wider uppercase text-gold-dark font-bold block mb-0.5">
                   Son of
                 </span>
-                <p className="font-semibold text-base text-sage-dark">{WEDDING_CONFIG.groom_parents}</p>
+                <p className="font-semibold text-base text-sage-dark">{formatLineagePair(WEDDING_CONFIG.groom_parents)}</p>
               </div>
             </div>
           </motion.div>
@@ -87,13 +101,13 @@ export function WelcomeSection() {
                 <span className="font-display text-xs tracking-wider uppercase text-gold-dark font-bold block mb-0.5">
                   Granddaughter of
                 </span>
-                <p className="font-semibold text-base text-sage-dark">{WEDDING_CONFIG.bride_grand_parents}</p>
+                <p className="font-semibold text-base text-sage-dark">{formatLineagePair(WEDDING_CONFIG.bride_grand_parents)}</p>
               </div>
               <div className="pt-1">
                 <span className="font-display text-xs tracking-wider uppercase text-gold-dark font-bold block mb-0.5">
                   Daughter of
                 </span>
-                <p className="font-semibold text-base text-sage-dark">{WEDDING_CONFIG.bride_parents}</p>
+                <p className="font-semibold text-base text-sage-dark">{formatLineagePair(WEDDING_CONFIG.bride_parents)}</p>
               </div>
             </div>
           </motion.div>

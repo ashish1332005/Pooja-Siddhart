@@ -2,6 +2,18 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FAMILY_DETAILS, MEDIA } from "../data/weddingConfig";
 
+function renderNonBreakingNames(names: string[], separator: string = "·") {
+  return names.map((item, idx) => {
+    const safeName = item.replace(/-/g, "\u2011");
+    return (
+      <React.Fragment key={idx}>
+        {idx > 0 && <span className="mx-1.5 text-gold-dark/60">{separator}</span>}
+        <span className="inline-block whitespace-nowrap">{safeName}</span>
+      </React.Fragment>
+    );
+  });
+}
+
 export function FamilySection() {
   return (
     <section id="family-blessings" className="bg-ivory py-16 md:py-24 relative overflow-hidden">
@@ -61,7 +73,7 @@ export function FamilySection() {
             </h3>
             <div className="w-8 h-px bg-gold/60 mx-auto mb-4" />
             <p className="font-body font-semibold text-sm md:text-base text-sage-dark leading-relaxed">
-              {FAMILY_DETAILS.compliments.join(" · ")}
+              {renderNonBreakingNames(FAMILY_DETAILS.compliments)}
             </p>
           </motion.div>
 
@@ -78,7 +90,7 @@ export function FamilySection() {
             </h3>
             <div className="w-8 h-px bg-gold/60 mx-auto mb-4" />
             <p className="font-body font-semibold text-sm md:text-base text-sage-dark leading-relaxed">
-              {FAMILY_DETAILS.welcome_by.join(" · ")}
+              {renderNonBreakingNames(FAMILY_DETAILS.welcome_by)}
             </p>
           </motion.div>
         </div>
@@ -98,7 +110,7 @@ export function FamilySection() {
             </h3>
             <div className="w-8 h-px bg-gold/60 mx-auto mb-3" />
             <p className="font-body font-semibold text-sm md:text-base text-sage-dark leading-relaxed">
-              {FAMILY_DETAILS.sharing_the_joy.join(" · ")}
+              {renderNonBreakingNames(FAMILY_DETAILS.sharing_the_joy)}
             </p>
           </motion.div>
 
@@ -115,7 +127,7 @@ export function FamilySection() {
             </h3>
             <div className="w-8 h-px bg-gold/60 mx-auto mb-3" />
             <p className="font-body font-semibold text-sm md:text-base text-sage-dark leading-relaxed">
-              {FAMILY_DETAILS.warm_regards.join(", ")}
+              {renderNonBreakingNames(FAMILY_DETAILS.warm_regards, ",")}
             </p>
           </motion.div>
         </div>
@@ -135,13 +147,15 @@ export function FamilySection() {
             </h3>
             <div className="w-8 h-px bg-gold/60 mx-auto mb-3" />
             <p className="font-body font-bold text-sm text-gold-dark mb-1">
-              {FAMILY_DETAILS.maternal_side.elders}
+              <span className="inline-block whitespace-nowrap">
+                {FAMILY_DETAILS.maternal_side.elders.replace(/-/g, "\u2011")}
+              </span>
             </p>
             <p className="font-body font-semibold text-sm md:text-base text-sage-dark leading-relaxed">
               {FAMILY_DETAILS.maternal_side.family}
             </p>
             <p className="font-body font-semibold text-xs sm:text-sm text-sage-dark mt-2">
-              {FAMILY_DETAILS.maternal_side.others.join(" · ")}
+              {renderNonBreakingNames(FAMILY_DETAILS.maternal_side.others)}
             </p>
           </motion.div>
 
@@ -176,7 +190,7 @@ export function FamilySection() {
           </h3>
           <div className="w-8 h-px bg-gold/60 mx-auto mb-4" />
           <p className="font-body font-semibold text-xs sm:text-sm text-sage-dark leading-relaxed">
-            {FAMILY_DETAILS.business_concerns.join(" · ")}
+            {renderNonBreakingNames(FAMILY_DETAILS.business_concerns)}
           </p>
         </motion.div>
       </div>
