@@ -14,7 +14,7 @@ export const WEDDING_CONFIG = {
 
   blessings_of: "Late Shri Bankatlal Ji - Late Smt. Vidhyadevi Malani",
   groom_grand_parents: "Smt. Chandrakala - Late Shri Manohar Lal Ji Malani",
-  groom_parents: "Smt. Hemlataa - Pankaaj Mallani",
+  groom_parents: "Smt. Hemlataa - Pankaaj Malani",
   bride_grand_parents: "Late Smt. Kamla Devi - Shri Rampal Ji Laddha",
   bride_parents: "Smt. Kavita - Bharat Kumar Ji Laddha",
 
