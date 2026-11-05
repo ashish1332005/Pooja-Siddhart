@@ -201,6 +201,7 @@ export const FAMILY_DETAILS = {
 
 export const MEDIA = {
   ganeshLogo: "/media/ganesh-ji-icon.png",
+  coupleMonogram: "/media/ps-monogram-logo.png",
   shubhVivahCalligraphy: "/media/shubh-vivah-calligraphy.png",
   introDoorsPoster: "/media/intro-doors.jpg",
   introDoorsVideo: "/media/intro-doors-open.mp4",
