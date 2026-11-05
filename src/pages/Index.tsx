@@ -1,6 +1,7 @@
 import React from "react";
 import { WEDDING_CONFIG } from "../data/weddingConfig";
 import { IntroHero } from "../components/IntroHero";
+import { SwansWelcome } from "../components/SwansWelcome";
 import { CountdownSection } from "../components/CountdownSection";
 import { WelcomeSection } from "../components/WelcomeSection";
 import { WeddingEventsSection } from "../components/WeddingEventsSection";
@@ -20,25 +21,28 @@ export function Index() {
         weddingDate={WEDDING_CONFIG.wedding_date}
       />
 
-      {/* 2. Live Countdown Medallions */}
-      <CountdownSection targetDate={WEDDING_CONFIG.wedding_date} />
+      {/* 2. Embroidered Swans Welcome (Blessings & Invitation) */}
+      <SwansWelcome />
 
       {/* 3. Welcome & Parents Details */}
       <WelcomeSection />
 
-      {/* 4. Interactive Timeline with Scroll Pearl */}
+      {/* 4. Live Countdown Medallions */}
+      <CountdownSection targetDate={WEDDING_CONFIG.wedding_date} />
+
+      {/* 5. Interactive Timeline with Scroll Pearl */}
       <TimelineSection />
 
-      {/* 5. Venue 1: Pre-Wedding Rituals (Bhilwara Venue) */}
+      {/* 6. Venue 1: Pre-Wedding Rituals (Bhilwara Venue) */}
       <RecoveryDaySection />
 
-      {/* 6. Venue 2: Main Wedding Venue (Udaipur Venue & Swinging Garland) */}
+      {/* 7. Venue 2: Main Wedding Venue (Udaipur Venue & Swinging Garland) */}
       <WeddingEventsSection />
 
-      {/* 7. Family Lineage, Compliments & Sweet Request */}
+      {/* 8. Family Lineage, Compliments & Sweet Request */}
       <FamilySection />
 
-      {/* 8. RSVP Envelope & Form (Connected to WhatsApp) */}
+      {/* 9. RSVP Envelope & Form (Connected to WhatsApp) */}
       <RsvpSection />
 
       {/* 9. Footer Chateau */}

@@ -23,7 +23,7 @@ export function WeddingEventsSection() {
   return (
     <section
       id="wedding-events"
-      className="relative bg-ivory overflow-visible pt-6 md:pt-12 pb-0"
+      className="relative z-10 bg-ivory overflow-visible pt-6 md:pt-12 pb-0"
     >
       <div className="relative z-10 w-full max-w-xl mx-auto px-0">
         <motion.div

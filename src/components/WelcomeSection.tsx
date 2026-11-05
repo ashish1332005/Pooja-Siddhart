@@ -46,20 +46,6 @@ export function WelcomeSection() {
             <span className="w-2 h-2 rotate-45 bg-[#a3702c]" />
             <span className="h-px flex-1 bg-gradient-to-l from-transparent to-[#a3702c]/80" />
           </div>
-
-          <p className="font-serif text-sm sm:text-base md:text-lg tracking-[0.06em] text-[#a3702c] font-normal">
-            With The Blessings Of
-          </p>
-
-          <p className="font-serif text-base sm:text-xl md:text-2xl text-[#1e3a2f] font-medium leading-[1.4]">
-            Late Shri Bankatlal Ji -<br />
-            Late Smt. Vidhyadevi Malani
-          </p>
-
-          <p className="font-serif text-xs sm:text-sm md:text-base text-[#1e3a2f] max-w-md mx-auto leading-[1.5] pt-0.5 px-2 font-medium">
-            Invite you to share their joy at the wedding<br />
-            celebrations of their great grandson
-          </p>
         </motion.div>
 
         {/* 2-Column Couple Lineage Presentation - Open on Ivory BG */}
