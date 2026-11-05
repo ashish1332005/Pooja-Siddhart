@@ -105,13 +105,13 @@ export function IntroHero({
 
         {/* Monogram and Authentic Calligraphy - Strictly in Blank Linen Canvas */}
         <div
-          className="absolute inset-x-0 top-[24%] h-[29%] flex flex-col items-center justify-center text-center px-4 pointer-events-none select-none z-10"
+          className="absolute inset-x-0 top-[19%] h-[34%] flex flex-col items-center justify-center text-center px-4 pointer-events-none select-none z-10"
         >
           {/* Pure Metallic Gold P S Monogram Logo */}
           <motion.img
             src={MEDIA.coupleMonogram}
             alt="Pooja & Siddhart monogram"
-            className="h-[7.5vh] max-h-[85px] sm:max-h-[105px] w-auto object-contain mb-1 drop-shadow-sm select-none"
+            className="h-[9.5vh] sm:h-[11vh] max-h-[95px] sm:max-h-[120px] w-auto object-contain mb-1.5 sm:mb-2 drop-shadow-sm select-none"
             animate={showText ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 12, scale: 0.95 }}
             transition={{ duration: 0.6 }}
           />
@@ -123,38 +123,23 @@ export function IntroHero({
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             {/* Siddhart */}
-            <div className="h-8 sm:h-11 md:h-13 lg:h-15 flex items-center justify-center my-0.5">
-              <img
-                src={MEDIA.pdfSiddhart}
-                alt={coupleName1}
-                className="h-full w-auto object-contain select-none filter contrast-125"
-              />
-            </div>
+            <h1 className="font-couple text-[#7c2635] text-4xl sm:text-5xl md:text-6xl font-normal leading-tight tracking-wide drop-shadow-sm my-0">
+              {coupleName1}
+            </h1>
 
             {/* Gold Ampersand with Lateral Divider Lines */}
-            <div className="flex items-center justify-center w-full max-w-[180px] sm:max-w-[220px] my-0.5 sm:my-1">
+            <div className="flex items-center justify-center w-full max-w-[190px] sm:max-w-[230px] my-1 sm:my-1.5">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[#b88e44]/70 to-[#b88e44]/90" />
-              <span className="font-display text-[#b88e44] text-base sm:text-lg md:text-xl font-light px-3 leading-none">
+              <span className="font-display text-[#b88e44] text-lg sm:text-xl md:text-2xl font-light px-3 leading-none">
                 &amp;
               </span>
               <div className="h-px flex-1 bg-gradient-to-l from-transparent via-[#b88e44]/70 to-[#b88e44]/90" />
             </div>
 
             {/* Pooja */}
-            <div className="h-8 sm:h-11 md:h-13 lg:h-15 flex items-center justify-center my-0.5">
-              <img
-                src={MEDIA.pdfPooja}
-                alt={coupleName2}
-                className="h-full w-auto object-contain select-none filter contrast-125"
-              />
-            </div>
-
-            {/* Subtle Floral Flourish below Pooja */}
-            <div className="flex items-center justify-center gap-1.5 mt-1 sm:mt-1.5 opacity-70">
-              <span className="h-px w-6 sm:w-8 bg-gradient-to-r from-transparent to-[#b88e44]" />
-              <span className="w-1.5 h-1.5 rotate-45 border border-[#b88e44] bg-[#b88e44]/40" />
-              <span className="h-px w-6 sm:w-8 bg-gradient-to-l from-transparent to-[#b88e44]" />
-            </div>
+            <h1 className="font-couple text-[#7c2635] text-4xl sm:text-5xl md:text-6xl font-normal leading-tight tracking-wide drop-shadow-sm my-0">
+              {coupleName2}
+            </h1>
           </motion.div>
         </div>
 

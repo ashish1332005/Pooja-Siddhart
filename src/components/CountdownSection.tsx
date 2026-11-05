@@ -38,29 +38,29 @@ export function CountdownSection({ targetDate }: CountdownSectionProps) {
       />
 
       {/* Countdown Content - Large Prominent Medallions Matching Reference Sample */}
-      <div className="absolute inset-x-0 top-[29%] h-[38%] flex flex-col items-center justify-center text-center px-2 sm:px-6 max-w-sm sm:max-w-lg md:max-w-2xl mx-auto pointer-events-none select-none z-10">
-        <h2 className="mb-4 sm:mb-6 md:mb-8 text-center font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-wide text-sage-dark">
+      <div className="absolute inset-x-0 top-[27%] h-[42%] flex flex-col items-center justify-center text-center px-3 sm:px-8 max-w-md sm:max-w-xl md:max-w-2xl mx-auto pointer-events-none select-none z-10">
+        <h2 className="mb-6 sm:mb-8 md:mb-10 text-center font-display text-4xl sm:text-5xl md:text-6xl font-normal tracking-wide text-sage-dark">
           Countdown
         </h2>
 
-        {/* 3 Large Pearl Medallions - Spanning Broad Width with Big Numbers */}
-        <div className="flex w-full items-center justify-center gap-3 sm:gap-6 md:gap-8 px-2">
+        {/* 3 Large Pearl Medallions - Spanning Full Width with Big Numbers */}
+        <div className="flex w-full items-center justify-between gap-3 sm:gap-6 md:gap-10 px-1 sm:px-2">
           {items.map((item) => (
-            <div key={item.label} className="flex flex-col items-center flex-1 max-w-[110px] sm:max-w-[145px] md:max-w-[175px]">
+            <div key={item.label} className="flex flex-col items-center flex-1 max-w-[115px] sm:max-w-[150px] md:max-w-[180px]">
               <div className="relative aspect-square w-full flex items-center justify-center drop-shadow-md">
                 <img
                   src={MEDIA.countdownPearlMedallion}
                   alt=""
                   aria-hidden="true"
-                  className="absolute inset-0 h-full w-full object-contain pointer-events-none select-none scale-105"
+                  className="absolute inset-0 h-full w-full object-contain pointer-events-none select-none"
                 />
                 <div className="relative z-10 flex items-center justify-center">
-                  <span className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-none text-sage-dark drop-shadow-sm">
+                  <span className="font-display text-3xl sm:text-5xl md:text-6xl font-normal leading-none text-sage-dark">
                     {String(item.value).padStart(2, "0")}
                   </span>
                 </div>
               </div>
-              <span className="mt-2.5 sm:mt-3 font-serif font-medium text-[10px] sm:text-xs md:text-sm uppercase tracking-[0.22em] text-sage-dark/85">
+              <span className="mt-3 sm:mt-5 font-serif font-semibold text-xs sm:text-sm md:text-base uppercase tracking-[0.2em] text-sage-dark">
                 {item.label}
               </span>
             </div>

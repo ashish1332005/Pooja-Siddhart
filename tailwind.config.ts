@@ -13,6 +13,7 @@ export default {
     },
     extend: {
       fontFamily: {
+        serif: ["Cormorant Garamond", "adobe-caslon-pro", "Playfair Display", "Georgia", "serif"],
         couple: ["var(--font-couple)"],
         display: ["var(--font-display)"],
         body: ["var(--font-body)"],
