@@ -20,10 +20,10 @@ export function WelcomeSection() {
   return (
     <section
       id="welcome"
-      className="section-padding bg-ivory pt-8 md:pt-14 relative pb-14 md:pb-20 overflow-hidden"
+      className="section-padding bg-ivory pt-10 md:pt-16 relative pb-14 md:pb-20 overflow-hidden"
     >
-      <div className="max-w-3xl w-full mx-auto text-center relative z-10 px-3 sm:px-6">
-        {/* Divine Invocation & Quote - Open Layout, Zero Box */}
+      <div className="max-w-3xl w-full mx-auto text-center relative z-10 px-4 sm:px-6">
+        {/* Divine Invocation & Quote - Open Natural Layout */}
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -62,9 +62,9 @@ export function WelcomeSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="mt-6 md:mt-10 pt-5 relative"
+          className="mt-8 md:mt-12 pt-6 relative"
         >
-          <div className="relative grid grid-cols-2 gap-2 sm:gap-6 md:gap-8 items-start max-w-2xl mx-auto">
+          <div className="relative grid grid-cols-2 gap-3 sm:gap-6 md:gap-8 items-start max-w-2xl mx-auto">
             {/* Center Vertical Gold Divider Line with Diamond */}
             <div
               className="absolute left-1/2 top-1 bottom-1 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-[#b88e44]/50 to-transparent pointer-events-none"
@@ -75,7 +75,6 @@ export function WelcomeSection() {
 
             {/* Groom Column */}
             <div className="flex flex-col items-center text-center px-1 sm:px-3 space-y-2">
-              {/* Groom Name in Runethia Script */}
               <h3 className="font-couple text-[#7c2635] text-2xl sm:text-3xl md:text-4xl font-normal leading-tight drop-shadow-sm my-0">
                 {WEDDING_CONFIG.couple_name_1}
               </h3>
@@ -83,7 +82,7 @@ export function WelcomeSection() {
                 G R O O M
               </span>
 
-              <div className="space-y-2.5 pt-1 w-full">
+              <div className="space-y-3 pt-1 w-full">
                 <div>
                   <span className="font-serif text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-[#b88e44] font-medium block">
                     S / O
@@ -106,7 +105,6 @@ export function WelcomeSection() {
 
             {/* Bride Column */}
             <div className="flex flex-col items-center text-center px-1 sm:px-3 space-y-2">
-              {/* Bride Name in Runethia Script - 100% Equal Size */}
               <h3 className="font-couple text-[#7c2635] text-2xl sm:text-3xl md:text-4xl font-normal leading-tight drop-shadow-sm my-0">
                 {WEDDING_CONFIG.couple_name_2}
               </h3>
@@ -114,7 +112,7 @@ export function WelcomeSection() {
                 B R I D E
               </span>
 
-              <div className="space-y-2.5 pt-1 w-full">
+              <div className="space-y-3 pt-1 w-full">
                 <div>
                   <span className="font-serif text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-[#b88e44] font-medium block">
                     D / O
@@ -143,7 +141,7 @@ export function WelcomeSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.25 }}
-          className="mt-7 md:mt-10 pt-4 space-y-2.5"
+          className="mt-8 md:mt-12 pt-4 space-y-2.5"
         >
           <p className="font-serif text-xs sm:text-sm md:text-base text-sage-dark font-medium max-w-md mx-auto leading-relaxed px-2">
             Cordially invite you to grace the auspicious occasion of the wedding of their children

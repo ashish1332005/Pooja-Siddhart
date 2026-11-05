@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { useLanguage } from "../i18n/LanguageContext";
 import { calculateCountdown } from "../utils/calendarAndMaps";
 import { MEDIA } from "../data/weddingConfig";
 
@@ -9,7 +7,6 @@ interface CountdownSectionProps {
 }
 
 export function CountdownSection({ targetDate }: CountdownSectionProps) {
-  const { t } = useLanguage();
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
@@ -22,40 +19,35 @@ export function CountdownSection({ targetDate }: CountdownSectionProps) {
   }, [targetDate]);
 
   const items = [
-    { value: timeLeft.days, label: t("countdown.days") },
-    { value: timeLeft.hours, label: t("countdown.hours") },
-    { value: timeLeft.minutes, label: t("countdown.minutes") },
+    { value: timeLeft.days, label: "DAYS" },
+    { value: timeLeft.hours, label: "HOURS" },
+    { value: timeLeft.minutes, label: "MINUTES" },
   ];
 
   return (
     <section
       id="countdown"
-      className="relative flex min-h-[580px] md:min-h-[680px] flex-col items-center justify-center overflow-hidden bg-ivory px-4 py-16 md:py-24"
+      className="relative w-full bg-ivory overflow-hidden"
+      aria-label="Wedding Countdown"
     >
+      {/* Authentic Embroidered Floral Garland & Pearl Sash Frame */}
       <img
         src={MEDIA.countdownFrame}
-        alt=""
-        aria-hidden="true"
-        loading="lazy"
-        className="pointer-events-none absolute inset-0 h-full w-full select-none object-fill opacity-95"
+        alt="Countdown embroidery frame"
+        className="block h-auto w-full select-none pointer-events-none"
       />
-      <motion.div
-        initial={{ opacity: 0, y: 18 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.75 }}
-        className="relative z-10 flex flex-col items-center max-w-xl mx-auto px-4 my-auto"
-      >
-        <h2 className="mb-6 sm:mb-8 md:mb-10 text-center font-display text-2xl sm:text-3xl md:text-4xl font-normal tracking-wide text-sage-dark">
-          {t("countdown.title")}
+
+      {/* Countdown Content - Prominent Medallions & Bold Elegant Digits Matching Reference */}
+      <div className="absolute inset-x-0 top-[31%] h-[34%] flex flex-col items-center justify-center text-center px-4 max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl mx-auto pointer-events-none select-none z-10">
+        <h2 className="mb-4 sm:mb-7 md:mb-9 text-center font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal tracking-wide text-sage-dark">
+          Countdown
         </h2>
+
+        {/* 3 Prominent Pearl Medallions - Large Circles & Clear Numbers */}
         <div className="flex w-full items-center justify-center gap-3 sm:gap-6 md:gap-8">
           {items.map((item) => (
-            <div
-              key={item.label}
-              className="flex flex-col items-center"
-            >
-              <div className="relative aspect-square w-20 sm:w-24 md:w-28 flex items-center justify-center">
+            <div key={item.label} className="flex flex-col items-center">
+              <div className="relative aspect-square w-20 sm:w-26 md:w-32 lg:w-36 flex items-center justify-center drop-shadow-sm">
                 <img
                   src={MEDIA.countdownPearlMedallion}
                   alt=""
@@ -63,18 +55,18 @@ export function CountdownSection({ targetDate }: CountdownSectionProps) {
                   className="absolute inset-0 h-full w-full object-contain pointer-events-none select-none"
                 />
                 <div className="relative z-10 flex items-center justify-center">
-                  <span className="font-digit text-2xl sm:text-3xl md:text-4xl font-normal leading-none text-sage-dark">
+                  <span className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-none text-sage-dark">
                     {String(item.value).padStart(2, "0")}
                   </span>
                 </div>
               </div>
-              <span className="mt-2 font-body font-normal text-[9px] sm:text-[10px] md:text-xs uppercase tracking-[0.25em] text-sage-dark/80">
+              <span className="mt-2.5 font-serif font-medium text-[10px] sm:text-xs md:text-sm uppercase tracking-[0.25em] text-sage-dark/85">
                 {item.label}
               </span>
             </div>
           ))}
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }
