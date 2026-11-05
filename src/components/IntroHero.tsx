@@ -74,24 +74,23 @@ export function IntroHero({
           }`}
         />
         <div
-          className="absolute inset-x-0 top-[19%] bottom-[47%] flex flex-col items-center justify-center text-center px-6 pointer-events-none select-none z-10"
-          style={{ mixBlendMode: "multiply" }}
+          className="absolute inset-x-0 top-[20%] bottom-[48%] flex flex-col items-center justify-center text-center px-6 pointer-events-none select-none z-10"
         >
-          {/* P S Monogram Logo (transparent background) */}
+          {/* Pure Metallic Gold P S Monogram Logo */}
           <motion.img
             src={MEDIA.coupleMonogram}
             alt="Pooja & Siddhart monogram"
-            className="h-[12vh] max-h-[150px] w-auto object-contain mb-1"
+            className="h-[11vh] max-h-[130px] w-auto object-contain mb-1 drop-shadow-sm select-none"
             animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             transition={{ duration: 0.7 }}
           />
           <motion.div
-            className="font-couple text-[min(2.6rem,5vh)] sm:text-[min(3rem,5.4vh)] md:text-[min(3.75rem,5.8vh)] leading-[1.1] text-sage-dark font-normal"
+            className="font-couple text-[min(2.5rem,4.8vh)] sm:text-[min(3rem,5.2vh)] md:text-[min(3.5rem,5.6vh)] leading-[1.1] text-sage-dark font-normal"
             animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
             <p>{coupleName1}</p>
-            <p className="text-[min(1.5rem,3vh)] sm:text-[min(1.875rem,3.4vh)] font-display text-dusty-rose my-0 leading-tight">&amp;</p>
+            <p className="text-[min(1.4rem,2.8vh)] sm:text-[min(1.75rem,3.2vh)] font-display text-dusty-rose my-0 leading-tight">&amp;</p>
             <p>{coupleName2}</p>
           </motion.div>
         </div>

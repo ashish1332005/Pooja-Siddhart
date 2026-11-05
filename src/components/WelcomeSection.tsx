@@ -50,68 +50,73 @@ export function WelcomeSection() {
           </p>
         </motion.div>
 
-        {/* Family & Couple Details - Two Balanced Cards */}
-        <div className="mt-10 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 relative items-stretch">
-          {/* Groom's Lineage */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="p-6 sm:p-8 rounded-2xl bg-white/95 border border-gold/40 shadow-sm flex flex-col justify-between"
-          >
-            <div>
-              <h3 className="font-couple text-4xl sm:text-5xl md:text-6xl text-sage-dark font-normal leading-tight">
-                {WEDDING_CONFIG.couple_name_1}
-              </h3>
-              <div className="w-10 h-px bg-gold/60 mx-auto my-4" />
-            </div>
-            <div className="space-y-3.5 text-sm sm:text-base text-sage-dark font-body">
+        {/* Family & Couple Details - Unified Single-Screen Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="mt-8 md:mt-12 p-5 sm:p-8 rounded-3xl bg-white/95 border border-gold/40 shadow-sm max-w-3xl mx-auto"
+        >
+          {/* Couple Names */}
+          <div className="text-center mb-5 sm:mb-6">
+            <h3 className="font-couple text-3xl sm:text-4xl md:text-5xl text-sage-dark font-normal leading-tight">
+              {WEDDING_CONFIG.couple_name_1}{" "}
+              <span className="font-display text-dusty-rose text-2xl sm:text-3xl">&amp;</span>{" "}
+              {WEDDING_CONFIG.couple_name_2}
+            </h3>
+            <div className="w-12 h-px bg-gold/60 mx-auto mt-3" />
+          </div>
+
+          {/* 2-Column Side-by-Side Lineage (Together on Single Screen) */}
+          <div className="grid grid-cols-2 gap-2 sm:gap-6 text-center divide-x divide-gold/30">
+            {/* Groom's Lineage */}
+            <div className="px-1 sm:px-3 space-y-3">
+              <span className="font-display text-xs sm:text-sm font-semibold tracking-wider uppercase text-gold-dark block pb-1 border-b border-gold/25">
+                Groom
+              </span>
               <div>
-                <span className="font-display text-xs tracking-wider uppercase text-gold-dark font-bold block mb-0.5">
+                <span className="font-body text-[10px] sm:text-xs tracking-wider uppercase text-gold-dark font-medium block">
                   Grandson of
                 </span>
-                <p className="font-semibold text-base text-sage-dark">{formatLineagePair(WEDDING_CONFIG.groom_grand_parents)}</p>
+                <p className="font-body text-[11px] sm:text-sm text-sage-dark font-medium mt-0.5 leading-snug">
+                  {formatLineagePair(WEDDING_CONFIG.groom_grand_parents)}
+                </p>
               </div>
-              <div className="pt-1">
-                <span className="font-display text-xs tracking-wider uppercase text-gold-dark font-bold block mb-0.5">
+              <div className="pt-0.5">
+                <span className="font-body text-[10px] sm:text-xs tracking-wider uppercase text-gold-dark font-medium block">
                   Son of
                 </span>
-                <p className="font-semibold text-base text-sage-dark">{formatLineagePair(WEDDING_CONFIG.groom_parents)}</p>
+                <p className="font-body text-[11px] sm:text-sm text-sage-dark font-medium mt-0.5 leading-snug">
+                  {formatLineagePair(WEDDING_CONFIG.groom_parents)}
+                </p>
               </div>
             </div>
-          </motion.div>
 
-          {/* Bride's Lineage */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="p-6 sm:p-8 rounded-2xl bg-white/95 border border-gold/40 shadow-sm flex flex-col justify-between"
-          >
-            <div>
-              <h3 className="font-couple text-4xl sm:text-5xl md:text-6xl text-sage-dark font-normal leading-tight">
-                {WEDDING_CONFIG.couple_name_2}
-              </h3>
-              <div className="w-10 h-px bg-gold/60 mx-auto my-4" />
-            </div>
-            <div className="space-y-3.5 text-sm sm:text-base text-sage-dark font-body">
+            {/* Bride's Lineage */}
+            <div className="px-1 sm:px-3 space-y-3">
+              <span className="font-display text-xs sm:text-sm font-semibold tracking-wider uppercase text-gold-dark block pb-1 border-b border-gold/25">
+                Bride
+              </span>
               <div>
-                <span className="font-display text-xs tracking-wider uppercase text-gold-dark font-bold block mb-0.5">
+                <span className="font-body text-[10px] sm:text-xs tracking-wider uppercase text-gold-dark font-medium block">
                   Granddaughter of
                 </span>
-                <p className="font-semibold text-base text-sage-dark">{formatLineagePair(WEDDING_CONFIG.bride_grand_parents)}</p>
+                <p className="font-body text-[11px] sm:text-sm text-sage-dark font-medium mt-0.5 leading-snug">
+                  {formatLineagePair(WEDDING_CONFIG.bride_grand_parents)}
+                </p>
               </div>
-              <div className="pt-1">
-                <span className="font-display text-xs tracking-wider uppercase text-gold-dark font-bold block mb-0.5">
+              <div className="pt-0.5">
+                <span className="font-body text-[10px] sm:text-xs tracking-wider uppercase text-gold-dark font-medium block">
                   Daughter of
                 </span>
-                <p className="font-semibold text-base text-sage-dark">{formatLineagePair(WEDDING_CONFIG.bride_parents)}</p>
+                <p className="font-body text-[11px] sm:text-sm text-sage-dark font-medium mt-0.5 leading-snug">
+                  {formatLineagePair(WEDDING_CONFIG.bride_parents)}
+                </p>
               </div>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
 
         {/* Invitation Message & Date */}
         <motion.div
