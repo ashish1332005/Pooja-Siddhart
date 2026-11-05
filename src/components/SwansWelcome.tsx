@@ -20,12 +20,20 @@ export function SwansWelcome() {
           We Are Getting Married
         </p>
 
-        {/* Couple Names in Runethia Font */}
-        <h2 className="font-couple text-3xl sm:text-4xl md:text-5xl text-sage-dark tracking-normal my-1 sm:my-1.5 leading-snug font-normal">
-          {WEDDING_CONFIG.couple_name_1}{" "}
-          <span className="font-display text-dusty-rose text-2xl sm:text-3xl">&amp;</span>{" "}
-          {WEDDING_CONFIG.couple_name_2}
-        </h2>
+        {/* Authentic Couple Names from PDF */}
+        <div className="flex items-center justify-center gap-2 sm:gap-3 my-1.5 sm:my-2.5">
+          <img
+            src={MEDIA.pdfSiddhart}
+            alt={WEDDING_CONFIG.couple_name_1}
+            className="h-9 sm:h-12 md:h-14 w-auto object-contain select-none"
+          />
+          <span className="font-display text-dusty-rose text-xl sm:text-2xl font-light">&amp;</span>
+          <img
+            src={MEDIA.pdfPooja}
+            alt={WEDDING_CONFIG.couple_name_2}
+            className="h-9 sm:h-12 md:h-14 w-auto object-contain select-none"
+          />
+        </div>
 
         {/* High-Visibility Wedding Dates */}
         <p className="mt-2 sm:mt-3 font-display text-xs sm:text-sm md:text-base tracking-[0.25em] uppercase text-sage-dark font-bold">

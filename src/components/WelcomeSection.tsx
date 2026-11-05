@@ -50,69 +50,87 @@ export function WelcomeSection() {
           </p>
         </motion.div>
 
-        {/* Family & Couple Details - Unified Single-Screen Card */}
+        {/* Family & Couple Details - Elegant Open Layout Matching Sample */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="mt-8 md:mt-12 p-5 sm:p-8 rounded-3xl bg-white/95 border border-gold/40 shadow-sm max-w-3xl mx-auto"
+          className="mt-8 md:mt-12 max-w-2xl mx-auto"
         >
-          {/* Couple Names */}
-          <div className="text-center mb-5 sm:mb-6">
-            <h3 className="font-couple text-3xl sm:text-4xl md:text-5xl text-sage-dark font-normal leading-tight">
-              {WEDDING_CONFIG.couple_name_1}{" "}
-              <span className="font-display text-dusty-rose text-2xl sm:text-3xl">&amp;</span>{" "}
-              {WEDDING_CONFIG.couple_name_2}
-            </h3>
-            <div className="w-12 h-px bg-gold/60 mx-auto mt-3" />
-          </div>
+          {/* 2-Column Side-by-Side Presentation with Center Divider */}
+          <div className="relative grid grid-cols-2 gap-4 sm:gap-8 items-start">
+            {/* Center Vertical Gold Divider Line */}
+            <div
+              className="absolute left-1/2 top-4 bottom-4 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-gold/60 to-transparent pointer-events-none"
+              aria-hidden="true"
+            >
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rotate-45 border border-gold/70 bg-ivory" />
+            </div>
 
-          {/* 2-Column Side-by-Side Lineage (Together on Single Screen) */}
-          <div className="grid grid-cols-2 gap-2 sm:gap-6 text-center divide-x divide-gold/30">
-            {/* Groom's Lineage */}
-            <div className="px-1 sm:px-3 space-y-3">
-              <span className="font-display text-xs sm:text-sm font-semibold tracking-wider uppercase text-gold-dark block pb-1 border-b border-gold/25">
-                Groom
+            {/* Groom Column */}
+            <div className="flex flex-col items-center text-center px-1 sm:px-4 space-y-3">
+              {/* Authentic Groom Calligraphy from PDF */}
+              <img
+                src={MEDIA.pdfSiddhart}
+                alt={WEDDING_CONFIG.couple_name_1}
+                className="h-9 sm:h-12 md:h-14 w-auto object-contain select-none"
+              />
+              <span className="font-body text-[10px] sm:text-xs tracking-[0.25em] uppercase text-gold-dark font-semibold">
+                G R O O M
               </span>
-              <div>
-                <span className="font-body text-[10px] sm:text-xs tracking-wider uppercase text-gold-dark font-medium block">
-                  Grandson of
-                </span>
-                <p className="font-body text-[11px] sm:text-sm text-sage-dark font-medium mt-0.5 leading-snug">
-                  {formatLineagePair(WEDDING_CONFIG.groom_grand_parents)}
-                </p>
-              </div>
-              <div className="pt-0.5">
-                <span className="font-body text-[10px] sm:text-xs tracking-wider uppercase text-gold-dark font-medium block">
-                  Son of
-                </span>
-                <p className="font-body text-[11px] sm:text-sm text-sage-dark font-medium mt-0.5 leading-snug">
-                  {formatLineagePair(WEDDING_CONFIG.groom_parents)}
-                </p>
+
+              <div className="space-y-3 pt-1 w-full">
+                <div>
+                  <span className="font-body text-[9.5px] sm:text-[11px] tracking-[0.2em] uppercase text-gold-dark font-medium block">
+                    S / O
+                  </span>
+                  <p className="font-body text-xs sm:text-sm text-sage-dark font-medium mt-0.5 leading-snug">
+                    {formatLineagePair(WEDDING_CONFIG.groom_parents)}
+                  </p>
+                </div>
+
+                <div>
+                  <span className="font-body text-[9.5px] sm:text-[11px] tracking-[0.2em] uppercase text-gold-dark font-medium block">
+                    G S / O
+                  </span>
+                  <p className="font-body text-xs sm:text-sm text-sage-dark font-medium mt-0.5 leading-snug">
+                    {formatLineagePair(WEDDING_CONFIG.groom_grand_parents)}
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Bride's Lineage */}
-            <div className="px-1 sm:px-3 space-y-3">
-              <span className="font-display text-xs sm:text-sm font-semibold tracking-wider uppercase text-gold-dark block pb-1 border-b border-gold/25">
-                Bride
+            {/* Bride Column */}
+            <div className="flex flex-col items-center text-center px-1 sm:px-4 space-y-3">
+              {/* Authentic Bride Calligraphy from PDF */}
+              <img
+                src={MEDIA.pdfPooja}
+                alt={WEDDING_CONFIG.couple_name_2}
+                className="h-9 sm:h-12 md:h-14 w-auto object-contain select-none"
+              />
+              <span className="font-body text-[10px] sm:text-xs tracking-[0.25em] uppercase text-gold-dark font-semibold">
+                B R I D E
               </span>
-              <div>
-                <span className="font-body text-[10px] sm:text-xs tracking-wider uppercase text-gold-dark font-medium block">
-                  Granddaughter of
-                </span>
-                <p className="font-body text-[11px] sm:text-sm text-sage-dark font-medium mt-0.5 leading-snug">
-                  {formatLineagePair(WEDDING_CONFIG.bride_grand_parents)}
-                </p>
-              </div>
-              <div className="pt-0.5">
-                <span className="font-body text-[10px] sm:text-xs tracking-wider uppercase text-gold-dark font-medium block">
-                  Daughter of
-                </span>
-                <p className="font-body text-[11px] sm:text-sm text-sage-dark font-medium mt-0.5 leading-snug">
-                  {formatLineagePair(WEDDING_CONFIG.bride_parents)}
-                </p>
+
+              <div className="space-y-3 pt-1 w-full">
+                <div>
+                  <span className="font-body text-[9.5px] sm:text-[11px] tracking-[0.2em] uppercase text-gold-dark font-medium block">
+                    D / O
+                  </span>
+                  <p className="font-body text-xs sm:text-sm text-sage-dark font-medium mt-0.5 leading-snug">
+                    {formatLineagePair(WEDDING_CONFIG.bride_parents)}
+                  </p>
+                </div>
+
+                <div>
+                  <span className="font-body text-[9.5px] sm:text-[11px] tracking-[0.2em] uppercase text-gold-dark font-medium block">
+                    G D / O
+                  </span>
+                  <p className="font-body text-xs sm:text-sm text-sage-dark font-medium mt-0.5 leading-snug">
+                    {formatLineagePair(WEDDING_CONFIG.bride_grand_parents)}
+                  </p>
+                </div>
               </div>
             </div>
           </div>

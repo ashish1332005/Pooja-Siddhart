@@ -84,14 +84,23 @@ export function IntroHero({
             animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             transition={{ duration: 0.7 }}
           />
+          {/* Authentic Groom & Bride Names from PDF */}
           <motion.div
-            className="font-couple text-[min(2.5rem,4.8vh)] sm:text-[min(3rem,5.2vh)] md:text-[min(3.5rem,5.6vh)] leading-[1.1] text-sage-dark font-normal"
+            className="flex flex-col items-center justify-center my-0"
             animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            <p>{coupleName1}</p>
-            <p className="text-[min(1.4rem,2.8vh)] sm:text-[min(1.75rem,3.2vh)] font-display text-dusty-rose my-0 leading-tight">&amp;</p>
-            <p>{coupleName2}</p>
+            <img
+              src={MEDIA.pdfSiddhart}
+              alt={coupleName1}
+              className="h-[4.2vh] max-h-[46px] w-auto object-contain select-none"
+            />
+            <p className="text-[min(1.2rem,2.2vh)] font-display text-dusty-rose my-0 leading-tight font-light">&amp;</p>
+            <img
+              src={MEDIA.pdfPooja}
+              alt={coupleName2}
+              className="h-[4.2vh] max-h-[46px] w-auto object-contain select-none"
+            />
           </motion.div>
         </div>
       </section>
