@@ -209,6 +209,7 @@ export const MEDIA = {
   shubhVivahCalligraphy: "/media/shubh-vivah-calligraphy.png",
   introDoorsPoster: "/media/intro-doors.jpg",
   introDoorsVideo: "/media/intro-doors-open.mp4",
+  introDoorsFinalFrame: "/media/intro-doors-final-frame.jpg",
   swansHero: "/media/embroidered-swans-hero-v2.png",
   countdownFrame: "/media/countdown-embroidery-frame.webp",
   countdownPearlMedallion: "/media/countdown-pearl-medallion.webp",
