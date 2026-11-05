@@ -112,28 +112,15 @@ export function TimelineSection() {
       className="pt-6 sm:pt-10 pb-12 md:pb-16 px-3 sm:px-4 relative z-20 overflow-hidden bg-transparent"
     >
       <div className="relative max-w-4xl mx-auto">
-        {/* User-Uploaded Embroidered Floral Arch Framing the Timeline */}
+        {/* Timeline Events */}
         <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl mx-auto">
-          {/* Background Arch Graphic */}
-          <div className="absolute top-0 inset-x-0 w-full pointer-events-none select-none z-0 flex justify-center">
-            <motion.img
-              src={MEDIA.timelineFloralArch}
-              alt="Timeline Floral Arch Frame"
-              initial={{ opacity: 0, scale: 0.96 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="w-full max-w-sm sm:max-w-md md:max-w-lg h-auto block drop-shadow-sm opacity-95"
-            />
-          </div>
-
-          {/* Heading nestled within the top curve of the Arch */}
+          {/* Heading */}
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative z-10 text-center pt-8 sm:pt-12 md:pt-14 mb-10 sm:mb-14"
+            className="relative z-10 text-center mb-10 sm:mb-14"
           >
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-sage-dark font-normal tracking-wide">
               Timeline
