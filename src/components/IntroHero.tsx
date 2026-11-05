@@ -122,15 +122,15 @@ export function IntroHero({
           />
         )}
 
-        {/* Monogram, Couple Names & Wedding Date - Strictly in Blank Linen Canvas */}
+        {/* Monogram, Couple Names & Wedding Date - Shifted up for optimal balance */}
         <div
-          className="absolute inset-x-0 top-[17.5%] h-[38%] flex flex-col items-center justify-center text-center px-4 pointer-events-none select-none z-10"
+          className="absolute inset-x-0 top-[14%] sm:top-[14.5%] h-[42%] flex flex-col items-center justify-center text-center px-4 pointer-events-none select-none z-10"
         >
           {/* Original P S Monogram Logo */}
           <motion.img
             src={MEDIA.coupleMonogram}
             alt="Pooja & Siddhart monogram"
-            className="h-[9vh] sm:h-[10.5vh] max-h-[90px] sm:max-h-[115px] w-auto object-contain mb-1 sm:mb-1.5 drop-shadow-sm select-none"
+            className="h-[9.5vh] sm:h-[11vh] max-h-[95px] sm:max-h-[120px] w-auto object-contain mb-1 sm:mb-1.5 drop-shadow-sm select-none"
             animate={showText ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 12, scale: 0.95 }}
             transition={{ duration: 0.6 }}
           />
@@ -160,9 +160,9 @@ export function IntroHero({
               {coupleName2}
             </h1>
 
-            {/* Wedding Date directly on 1st Page */}
-            <p className="font-serif text-[11px] sm:text-xs md:text-sm tracking-[0.22em] uppercase text-[#7c2635] font-semibold mt-2 sm:mt-2.5">
-              03<sup className="text-[8px] sm:text-[9px] font-normal align-super ml-0.5">RD</sup> &ndash; 05<sup className="text-[8px] sm:text-[9px] font-normal align-super ml-0.5">TH</sup> DECEMBER 2026
+            {/* Wedding Date directly on 1st Page - Increased Size */}
+            <p className="font-serif text-xs sm:text-sm md:text-base tracking-[0.24em] uppercase text-[#7c2635] font-semibold mt-2.5 sm:mt-3">
+              03<sup className="text-[9px] sm:text-[10px] font-normal align-super ml-0.5">RD</sup> &ndash; 05<sup className="text-[9px] sm:text-[10px] font-normal align-super ml-0.5">TH</sup> DECEMBER 2026
             </p>
           </motion.div>
         </div>
