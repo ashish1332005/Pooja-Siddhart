@@ -123,9 +123,13 @@ export function IntroHero({
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             {/* Siddhart */}
-            <h1 className="font-couple text-[#7c2635] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-wide drop-shadow-sm my-0">
-              {coupleName1}
-            </h1>
+            <div className="h-8 sm:h-11 md:h-13 lg:h-15 flex items-center justify-center my-0.5">
+              <img
+                src={MEDIA.pdfSiddhart}
+                alt={coupleName1}
+                className="h-full w-auto object-contain select-none filter contrast-125"
+              />
+            </div>
 
             {/* Gold Ampersand with Lateral Divider Lines */}
             <div className="flex items-center justify-center w-full max-w-[180px] sm:max-w-[220px] my-0.5 sm:my-1">
@@ -137,9 +141,13 @@ export function IntroHero({
             </div>
 
             {/* Pooja */}
-            <h1 className="font-couple text-[#7c2635] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-wide drop-shadow-sm my-0">
-              {coupleName2}
-            </h1>
+            <div className="h-8 sm:h-11 md:h-13 lg:h-15 flex items-center justify-center my-0.5">
+              <img
+                src={MEDIA.pdfPooja}
+                alt={coupleName2}
+                className="h-full w-auto object-contain select-none filter contrast-125"
+              />
+            </div>
 
             {/* Subtle Floral Flourish below Pooja */}
             <div className="flex items-center justify-center gap-1.5 mt-1 sm:mt-1.5 opacity-70">

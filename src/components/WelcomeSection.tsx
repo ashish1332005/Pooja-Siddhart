@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { WEDDING_CONFIG } from "../data/weddingConfig";
+import { MEDIA, WEDDING_CONFIG } from "../data/weddingConfig";
 
 function formatLineageColumn(text: string) {
   if (text.includes(" - ")) {
@@ -75,9 +75,13 @@ export function WelcomeSection() {
 
             {/* Groom Column */}
             <div className="flex flex-col items-center text-center px-1 sm:px-3 space-y-2">
-              <h3 className="font-couple text-[#7c2635] text-2xl sm:text-3xl md:text-4xl font-normal leading-tight drop-shadow-sm my-0">
-                {WEDDING_CONFIG.couple_name_1}
-              </h3>
+              <div className="h-10 sm:h-12 md:h-14 flex items-center justify-center">
+                <img
+                  src={MEDIA.pdfSiddhart}
+                  alt={WEDDING_CONFIG.couple_name_1}
+                  className="h-full w-auto object-contain select-none filter contrast-125"
+                />
+              </div>
               <span className="font-serif text-[9.5px] sm:text-[11px] tracking-[0.25em] uppercase text-[#b88e44] font-semibold">
                 G R O O M
               </span>
@@ -105,9 +109,13 @@ export function WelcomeSection() {
 
             {/* Bride Column */}
             <div className="flex flex-col items-center text-center px-1 sm:px-3 space-y-2">
-              <h3 className="font-couple text-[#7c2635] text-2xl sm:text-3xl md:text-4xl font-normal leading-tight drop-shadow-sm my-0">
-                {WEDDING_CONFIG.couple_name_2}
-              </h3>
+              <div className="h-10 sm:h-12 md:h-14 flex items-center justify-center">
+                <img
+                  src={MEDIA.pdfPooja}
+                  alt={WEDDING_CONFIG.couple_name_2}
+                  className="h-full w-auto object-contain select-none filter contrast-125"
+                />
+              </div>
               <span className="font-serif text-[9.5px] sm:text-[11px] tracking-[0.25em] uppercase text-[#b88e44] font-semibold">
                 B R I D E
               </span>

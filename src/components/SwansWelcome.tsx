@@ -21,16 +21,12 @@ export function SwansWelcome() {
         </p>
 
         {/* Authentic Couple Names - Grand, Equal Size & Baseline Aligned */}
-        <div className="flex items-baseline justify-center gap-2 sm:gap-3 my-1 sm:my-2">
-          <span className="font-couple text-[#7c2635] text-3xl sm:text-4xl md:text-5xl leading-none font-normal drop-shadow-sm">
-            {WEDDING_CONFIG.couple_name_1}
-          </span>
-          <span className="font-display text-[#b88e44] text-xl sm:text-2xl md:text-3xl font-light px-1 leading-none">
-            &amp;
-          </span>
-          <span className="font-couple text-[#7c2635] text-3xl sm:text-4xl md:text-5xl leading-none font-normal drop-shadow-sm">
-            {WEDDING_CONFIG.couple_name_2}
-          </span>
+        <div className="h-8 sm:h-11 md:h-14 flex items-center justify-center my-1 sm:my-2 px-2 max-w-full">
+          <img
+            src={MEDIA.pdfCouplePerfect}
+            alt={`${WEDDING_CONFIG.couple_name_1} & ${WEDDING_CONFIG.couple_name_2}`}
+            className="h-full w-auto max-w-[85vw] object-contain select-none filter contrast-125"
+          />
         </div>
 
         {/* High-Visibility Wedding Dates - Larger Font Size, Refined Weight (Not Overly Bold) */}
