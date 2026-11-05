@@ -103,65 +103,83 @@ export function IntroHero({
           />
         )}
 
-        {/* Monogram and Authentic Calligraphy - Strictly in Blank Linen Canvas */}
+        {/* Monogram, Couple Names & Wedding Date - Strictly in Blank Linen Canvas */}
         <div
-          className="absolute inset-x-0 top-[19%] h-[34%] flex flex-col items-center justify-center text-center px-4 pointer-events-none select-none z-10"
+          className="absolute inset-x-0 top-[17.5%] h-[38%] flex flex-col items-center justify-center text-center px-4 pointer-events-none select-none z-10"
         >
-          {/* Pure Metallic Gold P S Monogram Logo */}
+          {/* Original P S Monogram Logo */}
           <motion.img
             src={MEDIA.coupleMonogram}
             alt="Pooja & Siddhart monogram"
-            className="h-[9.5vh] sm:h-[11vh] max-h-[95px] sm:max-h-[120px] w-auto object-contain mb-1.5 sm:mb-2 drop-shadow-sm select-none"
+            className="h-[9vh] sm:h-[10.5vh] max-h-[90px] sm:max-h-[115px] w-auto object-contain mb-1 sm:mb-1.5 drop-shadow-sm select-none"
             animate={showText ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 12, scale: 0.95 }}
             transition={{ duration: 0.6 }}
           />
 
-          {/* Groom & Bride Names - Exact PDF Calligraphy, Large & Equal Size */}
+          {/* Groom & Bride Names + Wedding Date */}
           <motion.div
             className="flex flex-col items-center justify-center w-full max-w-sm sm:max-w-md"
             animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             {/* Siddhart */}
-            <div className="h-11 sm:h-14 md:h-16 lg:h-20 flex items-center justify-center my-0.5">
-              <img
-                src={MEDIA.pdfSiddhart}
-                alt={coupleName1}
-                className="h-full w-auto object-contain select-none"
-              />
-            </div>
+            <h1 className="font-couple text-[#7c2635] text-4xl sm:text-5xl md:text-6xl font-normal leading-[1.08] tracking-wide drop-shadow-sm my-0">
+              {coupleName1}
+            </h1>
 
             {/* Gold Ampersand with Lateral Divider Lines */}
-            <div className="flex items-center justify-center w-44 sm:w-56 md:w-64 my-1 sm:my-1.5">
+            <div className="flex items-center justify-center w-40 sm:w-52 md:w-60 my-0.5 sm:my-1">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[#b88e44]/75 to-[#b88e44]" />
-              <span className="font-display text-[#b88e44] text-lg sm:text-xl md:text-2xl font-light px-3 leading-none">
+              <span className="font-display text-[#b88e44] text-base sm:text-lg md:text-xl font-light px-2.5 leading-none">
                 &amp;
               </span>
               <div className="h-px flex-1 bg-gradient-to-l from-transparent via-[#b88e44]/75 to-[#b88e44]" />
             </div>
 
             {/* Pooja */}
-            <div className="h-11 sm:h-14 md:h-16 lg:h-20 flex items-center justify-center my-0.5">
-              <img
-                src={MEDIA.pdfPooja}
-                alt={coupleName2}
-                className="h-full w-auto object-contain select-none"
-              />
-            </div>
+            <h1 className="font-couple text-[#7c2635] text-4xl sm:text-5xl md:text-6xl font-normal leading-[1.08] tracking-wide drop-shadow-sm my-0">
+              {coupleName2}
+            </h1>
+
+            {/* Wedding Date directly on 1st Page */}
+            <p className="font-serif text-[11px] sm:text-xs md:text-sm tracking-[0.22em] uppercase text-[#7c2635] font-semibold mt-2 sm:mt-2.5">
+              03<sup className="text-[8px] sm:text-[9px] font-normal align-super ml-0.5">RD</sup> &ndash; 05<sup className="text-[8px] sm:text-[9px] font-normal align-super ml-0.5">TH</sup> DECEMBER 2026
+            </p>
           </motion.div>
         </div>
 
-        {/* Scroll hint once done */}
-        {status === "done" && (
+        {/* Prominent Interactive Scroll Down Button */}
+        {(showText || status === "done") && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: [0.4, 0.85, 0.4] }}
-            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute inset-x-0 bottom-6 text-center pointer-events-none select-none z-10"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="absolute inset-x-0 bottom-5 sm:bottom-7 flex justify-center z-20"
           >
-            <p className="font-body text-[10px] md:text-xs tracking-[0.35em] uppercase text-sage-dark font-medium">
-              Scroll to explore ↓
-            </p>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                setStatus("done");
+                setShowText(true);
+                setTimeout(() => {
+                  document.getElementById("countdown")?.scrollIntoView({ behavior: "smooth" });
+                }, 50);
+              }}
+              className="group flex flex-col items-center gap-1.5 px-5 py-2 rounded-full bg-ivory/90 backdrop-blur-sm border border-[#b88e44]/60 shadow-md hover:bg-ivory transition-all cursor-pointer"
+              aria-label="Scroll down to invitation details"
+            >
+              <span className="font-serif text-[10px] sm:text-xs tracking-[0.28em] uppercase text-[#1e3a2f] font-semibold">
+                Scroll Down
+              </span>
+              <motion.span
+                animate={{ y: [0, 4, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                className="text-[#b88e44] text-sm leading-none font-bold"
+              >
+                &#8595;
+              </motion.span>
+            </button>
           </motion.div>
         )}
       </section>

@@ -16,15 +16,7 @@ function renderNonBreakingNames(names: string[], separator: string = "·") {
 
 export function FamilySection() {
   return (
-    <section id="family-blessings" className="bg-ivory py-16 md:py-24 relative overflow-hidden">
-      {/* Decorative divider at top */}
-      <img
-        src={MEDIA.recoveryDayDivider}
-        alt=""
-        aria-hidden="true"
-        className="w-full h-auto block mb-12 opacity-80 select-none pointer-events-none"
-      />
-
+    <section id="family-blessings" className="bg-ivory -mt-20 sm:-mt-28 md:-mt-36 pt-6 pb-16 md:pb-24 relative z-20 overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Section Heading */}
         <motion.div

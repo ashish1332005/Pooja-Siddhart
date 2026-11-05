@@ -109,7 +109,7 @@ export function TimelineSection() {
   return (
     <section
       id="day-program"
-      className="-mt-24 sm:-mt-32 md:-mt-40 pt-0 pb-16 md:pb-24 px-4 relative z-20 overflow-hidden bg-transparent"
+      className="pt-6 sm:pt-10 pb-12 md:pb-16 px-4 relative z-20 overflow-hidden bg-transparent"
     >
       <div className="relative max-w-4xl mx-auto">
         <motion.div

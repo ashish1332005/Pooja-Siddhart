@@ -48,6 +48,7 @@ interface RsvpConfirmationProps {
   name1: string;
   name2: string;
   venueLocation: string;
+  whatsappUrl?: string;
 }
 
 function RsvpConfirmation({
@@ -55,6 +56,7 @@ function RsvpConfirmation({
   name1,
   name2,
   venueLocation,
+  whatsappUrl,
 }: RsvpConfirmationProps) {
   const { t } = useLanguage();
 
@@ -92,6 +94,18 @@ function RsvpConfirmation({
           <p className="text-sage-dark font-display text-2xl mt-8 font-bold">
             — {name1} &amp; {name2}
           </p>
+          {whatsappUrl && (
+            <div className="mt-8">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-10 px-6 py-2 items-center justify-center rounded-md border border-gold/40 gap-2 text-primary-foreground font-medium tracking-[0.18em] uppercase text-xs bg-sage-dark hover:bg-sage-dark/90 transition-colors"
+              >
+                Confirm via WhatsApp
+              </a>
+            </div>
+          )}
         </motion.div>
       </section>
     );
@@ -133,7 +147,7 @@ function RsvpConfirmation({
               {t("confirm.lookForward")}
             </p>
             <p className="text-sage-dark font-body font-semibold text-base md:text-lg">
-              Saturday, 5 December 2026 · Ramee Royal Resort &amp; Spa, Udaipur
+              3rd – 5th December 2026 · Ramee Royal Resort &amp; Spa, Udaipur
             </p>
           </motion.div>
           <motion.p
@@ -150,6 +164,16 @@ function RsvpConfirmation({
             transition={{ duration: 0.8, delay: 1 }}
             className="mt-12 flex flex-col items-center gap-4"
           >
+            {whatsappUrl && (
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-10 px-6 py-2 items-center justify-center rounded-md border border-gold/40 gap-2 text-primary-foreground font-medium tracking-[0.18em] uppercase text-xs bg-sage-dark hover:bg-sage-dark/90 transition-colors"
+              >
+                Send RSVP on WhatsApp
+              </a>
+            )}
             <ActionMenu
               icon={<CalendarPlus className="w-5 h-5" />}
               label={t("confirm.addCalendar")}
@@ -176,6 +200,7 @@ export function RsvpSection() {
   const { t } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
   const [isSending, setIsSending] = useState(false);
+  const [whatsappUrl, setWhatsappUrl] = useState<string>("");
   const [formData, setFormData] = useState<{
     attendance: "yes" | "no";
     fullName: string;
@@ -196,9 +221,10 @@ export function RsvpSection() {
     e.preventDefault();
     if (formData.website) return;
     setIsSending(true);
-    await new Promise((r) => setTimeout(r, 400));
-    saveGuestRsvp({
-      full_name: formData.fullName.trim() || "Guest",
+
+    const guestName = formData.fullName.trim() || "Guest";
+    const rsvpEntry = {
+      full_name: guestName,
       attendance: formData.attendance,
       guest_count: 1,
       adult_count: 1,
@@ -207,7 +233,54 @@ export function RsvpSection() {
         formData.attendance === "yes" && formData.dietary ? formData.dietary : undefined,
       message: formData.message || undefined,
       transportation: formData.attendance === "yes" ? formData.transportation : undefined,
-    });
+    };
+
+    saveGuestRsvp(rsvpEntry);
+
+    // Optional Google Sheets / Webhook submission if configured
+    const webhookUrl = import.meta.env.VITE_RSVP_WEBHOOK_URL;
+    if (webhookUrl) {
+      try {
+        await fetch(webhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(rsvpEntry),
+          mode: "no-cors",
+        });
+      } catch {
+        // Ignore network errors and proceed to WhatsApp confirmation
+      }
+    }
+
+    // Build pre-formatted WhatsApp RSVP message for 8949-674449
+    const rsvpPhone = (WEDDING_CONFIG.rsvp_phones[0] || "8949-674449").replace(/\D/g, "");
+    const lines = [
+      `*Wedding RSVP – Siddhart & Pooja (3rd–5th Dec 2026)*`,
+      `• *Name:* ${guestName}`,
+      `• *Attending:* ${formData.attendance === "yes" ? "Yes, joyfully attending!" : "Regretfully unable to attend"}`,
+    ];
+    if (formData.attendance === "yes") {
+      lines.push(
+        `• *Transport in Udaipur:* ${
+          formData.transportation === "shuttle"
+            ? "Station / Airport Pickup & Resort Transfers"
+            : "Arriving by Own Vehicle (Valet Parking)"
+        }`
+      );
+      if (formData.dietary.trim()) {
+        lines.push(`• *Dietary / Jain Notes:* ${formData.dietary.trim()}`);
+      }
+    }
+    if (formData.message.trim()) {
+      lines.push(`• *Wishes / Note:* ${formData.message.trim()}`);
+    }
+
+    const waLink = `https://wa.me/91${rsvpPhone}?text=${encodeURIComponent(lines.join("\n"))}`;
+    setWhatsappUrl(waLink);
+
+    // Open WhatsApp automatically so the host receives the RSVP right away
+    window.open(waLink, "_blank", "noopener,noreferrer");
+
     setIsSending(false);
     setSubmitted(true);
   };
@@ -219,6 +292,7 @@ export function RsvpSection() {
         name1={WEDDING_CONFIG.couple_name_1}
         name2={WEDDING_CONFIG.couple_name_2}
         venueLocation={WEDDING_CONFIG.main_venue_address}
+        whatsappUrl={whatsappUrl}
       />
     );
   }
@@ -244,9 +318,6 @@ export function RsvpSection() {
             {t("rsvp.title")}
           </h2>
           <span className="section-rule !my-2.5" />
-          <p className="font-body text-[10px] sm:text-xs tracking-[0.2em] uppercase text-gold-dark font-medium">
-            Kindly respond by 15 November 2026
-          </p>
           <p className="font-body text-xs sm:text-sm text-sage-dark/85 mt-2">
             RSVP:{" "}
             {WEDDING_CONFIG.rsvp_phones.map((phone, i) => (
@@ -254,7 +325,7 @@ export function RsvpSection() {
                 {i > 0 && " · "}
                 <a
                   href={`tel:+91${phone.replace(/[\s-]+/g, "")}`}
-                  className="font-digit text-sage-dark hover:text-gold-dark transition-colors"
+                  className="font-digit text-sage-dark hover:text-gold-dark transition-colors font-semibold"
                 >
                   {phone}
                 </a>

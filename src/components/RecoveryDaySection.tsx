@@ -1,24 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Calendar, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { MEDIA, WEDDING_CONFIG } from "../data/weddingConfig";
 import {
   buildAppleMapsUrl,
-  buildGoogleCalendarUrl,
   buildGoogleMapsUrl,
-  buildIcsDataUrl,
 } from "../utils/calendarAndMaps";
 import { ActionMenu } from "./ActionMenu";
 
 export function RecoveryDaySection() {
   const address = WEDDING_CONFIG.bhilwara_venue_address;
-  const calendarEvent = {
-    title: "Siddhart & Pooja – Pre-Wedding Rituals (Hathdhan & Sangeet)",
-    location: address,
-    startLocal: "20261201T101500",
-    endLocal: "20261201T230000",
-    timezone: "Asia/Kolkata",
-  };
 
   return (
     <section id="bhilwara-venue" className="bg-ivory relative overflow-hidden">
@@ -28,13 +19,13 @@ export function RecoveryDaySection() {
         aria-hidden="true"
         className="w-full h-auto block select-none pointer-events-none"
       />
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 pb-16 md:pb-24">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 pb-8 md:pb-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-8"
+          className="text-center mb-6"
         >
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-sage-dark font-normal tracking-wide pt-6">
             Pre-Wedding Rituals
@@ -48,7 +39,7 @@ export function RecoveryDaySection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="relative w-full max-w-sm mx-auto mb-6 px-4"
+          className="relative w-full max-w-sm mx-auto mb-5 px-4"
         >
           <img
             src={MEDIA.recoveryVenue}
@@ -64,49 +55,21 @@ export function RecoveryDaySection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center max-w-md mx-auto"
         >
-          <h3 className="font-display text-xl sm:text-2xl font-normal text-sage-dark mb-0.5 tracking-wide">
+          <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-normal text-sage-dark mb-1 tracking-wide">
             {WEDDING_CONFIG.bhilwara_venue_name}
           </h3>
-          <p className="font-body text-[9.5px] sm:text-[10.5px] tracking-[0.25em] uppercase text-gold-dark font-medium mb-3">
-            R.C. Vyas Colony · Bhilwara
+          <p className="font-body text-xs sm:text-sm tracking-[0.18em] uppercase text-gold-dark font-semibold mb-4">
+            10-B-18, R.C. Vyas Colony, Bhilwara (Rajasthan)
           </p>
-
-          <div className="space-y-2 mb-6">
-            <p className="font-body italic text-xs sm:text-sm text-sage-dark/85">
-              Tuesday, 01 December 2026 · From 10:15 AM
-            </p>
-
-            <div className="flex flex-col items-center gap-1 text-sage-dark font-body text-[11px] sm:text-xs">
-              <span>Hathdhan · 10:15 AM (Followed by Lunch)</span>
-              <span>Dine, Dance &amp; Dazzle · 07:15 PM (Followed by Dinner)</span>
-            </div>
-
-            <p className="text-sage-dark/75 font-body italic text-[10.5px] sm:text-xs pt-1">
-              10-B-18, R.C. Vyas Colony, Bhilwara (Rajasthan)
-            </p>
-          </div>
 
           <div className="flex flex-col items-center gap-2 pt-1">
             <ActionMenu
-              icon={<MapPin className="w-3 h-3 text-gold-dark" />}
+              icon={<MapPin className="w-3.5 h-3.5 text-gold-dark" />}
               label="OPEN IN MAPS"
-              className="text-[9.5px] sm:text-[10.5px] font-body tracking-[0.22em] text-sage-dark uppercase hover:text-gold-dark transition-colors"
+              className="text-[11px] sm:text-xs font-body tracking-[0.22em] text-sage-dark uppercase hover:text-gold-dark transition-colors font-semibold"
               items={[
                 { label: "Google Maps", href: buildGoogleMapsUrl(address) },
                 { label: "Apple Maps", href: buildAppleMapsUrl(address) },
-              ]}
-            />
-            <ActionMenu
-              icon={<Calendar className="w-3 h-3 text-gold-dark" />}
-              label="ADD TO CALENDAR"
-              className="text-[9.5px] sm:text-[10.5px] font-body tracking-[0.22em] text-sage-dark uppercase hover:text-gold-dark transition-colors"
-              items={[
-                { label: "Google Calendar", href: buildGoogleCalendarUrl(calendarEvent) },
-                {
-                  label: "Apple Calendar",
-                  href: buildIcsDataUrl(calendarEvent),
-                  download: "bhilwara-rituals.ics",
-                },
               ]}
             />
           </div>

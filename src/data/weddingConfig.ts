@@ -14,7 +14,7 @@ export const WEDDING_CONFIG = {
 
   blessings_of: "Late Shri Bankatlal Ji - Late Smt. Vidhyadevi Malani",
   groom_grand_parents: "Smt. Chandrakala - Late Shri Manohar Lal Ji Malani",
-  groom_parents: "Smt. Hemlataa - Pankaaj Malani",
+  groom_parents: "Smt. Hemlataa - Pankaaj Mallani",
   bride_grand_parents: "Late Smt. Kamla Devi - Shri Rampal Ji Laddha",
   bride_parents: "Smt. Kavita - Bharat Kumar Ji Laddha",
 
@@ -201,7 +201,7 @@ export const FAMILY_DETAILS = {
 
 export const MEDIA = {
   ganeshLogo: "/media/ganesh-ji-icon.png",
-  coupleMonogram: "/media/ps-monogram-gold.png",
+  coupleMonogram: "/media/ps-monogram-original.png?v=6",
   pdfSiddhart: "/media/pdf-siddhart-normalized.png?v=5",
   pdfPooja: "/media/pdf-pooja-normalized.png?v=5",
   pdfCouplePerfect: "/media/pdf-couple-script-perfect.png?v=5",
