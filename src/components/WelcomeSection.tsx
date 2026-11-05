@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { WEDDING_CONFIG } from "../data/weddingConfig";
+import { MEDIA, WEDDING_CONFIG } from "../data/weddingConfig";
 
 function formatLineagePair(text: string) {
   if (text.includes(" - ")) {

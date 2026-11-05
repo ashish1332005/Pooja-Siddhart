@@ -30,16 +30,16 @@ export function IntroHero({
 
   useEffect(() => {
     if (status === "playing") {
-      // Show text once doors swing open
+      // Show text ONLY after curtains have fully opened (at ~6.8s)
       const textTimer = setTimeout(() => {
         setShowText(true);
-      }, 2400);
+      }, 6800);
 
-      // Auto-unlock page scroll and finalize view after 5.5s
+      // Auto-unlock page scroll and finalize view after video ends
       const finishTimer = setTimeout(() => {
         setStatus("done");
         setShowText(true);
-      }, 5500);
+      }, 9800);
 
       return () => {
         clearTimeout(textTimer);
@@ -51,7 +51,8 @@ export function IntroHero({
   const handleTimeUpdate = () => {
     const vid = videoRef.current;
     if (!vid) return;
-    if (vid.currentTime >= 2.2) {
+    // Curtains fully part at 6.5 seconds
+    if (vid.currentTime >= 6.5) {
       setShowText(true);
     }
   };
