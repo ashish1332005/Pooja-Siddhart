@@ -226,6 +226,7 @@ export const MEDIA = {
   timelineDisco: "/media/timeline-disco-v2.png",
   timelineChampagne: "/media/timeline-champagne-v2.png",
   timelinePearlLarge: "/media/timeline-pearl-large.png",
+  timelineFloralArch: "/media/timeline-floral-arch.png",
   recoveryDayDivider: "/media/recovery-day-divider.png",
   recoveryVenue: "/media/recovery-venue-v2.png",
   giftFrame: "/media/gift-frame-v3.png",

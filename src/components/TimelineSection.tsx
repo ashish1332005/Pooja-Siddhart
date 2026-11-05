@@ -109,78 +109,98 @@ export function TimelineSection() {
   return (
     <section
       id="day-program"
-      className="pt-6 sm:pt-10 pb-12 md:pb-16 px-4 relative z-20 overflow-hidden bg-transparent"
+      className="pt-6 sm:pt-10 pb-12 md:pb-16 px-3 sm:px-4 relative z-20 overflow-hidden bg-transparent"
     >
       <div className="relative max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-10 md:mb-14"
-        >
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-sage-dark font-normal tracking-wide">
-            Timeline
-          </h2>
-          <span className="section-rule !my-2.5" />
-          <p className="section-eyebrow">The Wedding Celebrations</p>
-        </motion.div>
-
-        <div ref={timelineRef} className="relative mx-auto max-w-2xl px-2 sm:px-4">
-          {/* Dashed Vertical Needle Stitches Line */}
-          <div
-            className="absolute top-3 bottom-3 left-[36%] sm:left-[42%] md:left-[44%] w-[3px] -translate-x-1/2 pointer-events-none select-none"
-            aria-hidden="true"
-          >
-            <div
-              className="w-full h-full"
-              style={{
-                backgroundImage:
-                  "repeating-linear-gradient(to bottom, hsl(var(--olive)) 0px, hsl(var(--olive)) 4px, transparent 4px, transparent 12px)",
-              }}
-            />
+        {/* User-Uploaded Embroidered Floral Arch Framing the Timeline */}
+        <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl mx-auto">
+          {/* Background Arch Graphic */}
+          <div className="absolute top-0 inset-x-0 w-full pointer-events-none select-none z-0 flex justify-center">
             <motion.img
-              src={MEDIA.timelinePearlLarge}
-              alt=""
-              aria-hidden="true"
-              style={{ top: pearlTop }}
-              className="absolute left-1/2 z-20 -translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full object-contain max-w-none filter drop-shadow"
+              src={MEDIA.timelineFloralArch}
+              alt="Timeline Floral Arch Frame"
+              initial={{ opacity: 0, scale: 0.96 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="w-full max-w-sm sm:max-w-md md:max-w-lg h-auto block drop-shadow-sm opacity-95"
             />
           </div>
 
-          {/* 2-Column Events Layout */}
-          <div className="relative space-y-10 sm:space-y-14">
-            {events.map((item, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 14 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.04 + idx * 0.04 }}
-                className="relative grid grid-cols-[32%_1fr] sm:grid-cols-[38%_1fr] md:grid-cols-[40%_1fr] items-center gap-3 sm:gap-6 md:gap-8"
-              >
-                <img
-                  src={item.image}
-                  alt={item.alt}
-                  loading="lazy"
-                  className="w-full h-auto justify-self-center select-none pointer-events-none max-w-[80px] sm:max-w-[120px] md:max-w-[150px] object-contain"
-                />
-                <div className="pl-4 sm:pl-8 md:pl-10">
-                  <span className="font-body text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-gold-dark block mb-0.5">
-                    {item.date}
-                  </span>
-                  <p className="font-display font-normal text-sm sm:text-base md:text-lg text-sage-dark tracking-wide">
-                    {item.time}
-                  </p>
-                  <h3 className="font-body uppercase tracking-[0.14em] text-[11px] sm:text-xs text-sage-dark font-medium mt-0.5">
-                    {item.title}
-                  </h3>
-                  <p className="font-body italic text-[11px] sm:text-xs text-sage-dark/75 mt-0.5 leading-relaxed">
-                    {item.note}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+          {/* Heading nestled within the top curve of the Arch */}
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative z-10 text-center pt-8 sm:pt-12 md:pt-14 mb-10 sm:mb-14"
+          >
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-sage-dark font-normal tracking-wide">
+              Timeline
+            </h2>
+            <span className="section-rule !my-2.5" />
+            <p className="section-eyebrow text-[9.5px] sm:text-xs tracking-[0.22em]">
+              The Wedding Celebrations
+            </p>
+          </motion.div>
+
+          {/* 2-Column Events Layout Starting Inside the Arch */}
+          <div ref={timelineRef} className="relative z-10 mx-auto max-w-2xl px-2 sm:px-6">
+            {/* Dashed Vertical Needle Stitches Line */}
+            <div
+              className="absolute top-3 bottom-3 left-[36%] sm:left-[42%] md:left-[44%] w-[3px] -translate-x-1/2 pointer-events-none select-none"
+              aria-hidden="true"
+            >
+              <div
+                className="w-full h-full"
+                style={{
+                  backgroundImage:
+                    "repeating-linear-gradient(to bottom, hsl(var(--olive)) 0px, hsl(var(--olive)) 4px, transparent 4px, transparent 12px)",
+                }}
+              />
+              <motion.img
+                src={MEDIA.timelinePearlLarge}
+                alt=""
+                aria-hidden="true"
+                style={{ top: pearlTop }}
+                className="absolute left-1/2 z-20 -translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full object-contain max-w-none filter drop-shadow"
+              />
+            </div>
+
+            {/* Events */}
+            <div className="relative space-y-10 sm:space-y-14">
+              {events.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 14 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.04 + idx * 0.04 }}
+                  className="relative grid grid-cols-[32%_1fr] sm:grid-cols-[38%_1fr] md:grid-cols-[40%_1fr] items-center gap-3 sm:gap-6 md:gap-8"
+                >
+                  <img
+                    src={item.image}
+                    alt={item.alt}
+                    loading="lazy"
+                    className="w-full h-auto justify-self-center select-none pointer-events-none max-w-[80px] sm:max-w-[120px] md:max-w-[150px] object-contain drop-shadow-sm"
+                  />
+                  <div className="pl-4 sm:pl-8 md:pl-10">
+                    <span className="font-body text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-gold-dark block mb-0.5">
+                      {item.date}
+                    </span>
+                    <p className="font-display font-normal text-sm sm:text-base md:text-lg text-sage-dark tracking-wide">
+                      {item.time}
+                    </p>
+                    <h3 className="font-body uppercase tracking-[0.14em] text-[11px] sm:text-xs text-sage-dark font-medium mt-0.5">
+                      {item.title}
+                    </h3>
+                    <p className="font-body italic text-[11px] sm:text-xs text-sage-dark/75 mt-0.5 leading-relaxed">
+                      {item.note}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
 

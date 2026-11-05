@@ -15,6 +15,23 @@ export function IntroHero({
   const [status, setStatus] = useState<"idle" | "playing" | "done">("idle");
   const [showText, setShowText] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const touchStartY = useRef<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartY.current === null) return;
+    const diff = touchStartY.current - e.changedTouches[0].clientY;
+    // Swiped up by > 40px
+    if (diff > 40) {
+      setStatus("done");
+      setShowText(true);
+      document.getElementById("countdown")?.scrollIntoView({ behavior: "smooth" });
+    }
+    touchStartY.current = null;
+  };
 
   useEffect(() => {
     if (status === "done") {
@@ -77,6 +94,8 @@ export function IntroHero({
       <section
         className="relative w-full min-h-screen bg-ivory overflow-hidden cursor-pointer"
         onClick={status === "playing" ? handleSkip : undefined}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
       >
         {/* Permanent Fallback & High-Res Finished Frame */}
         <img
@@ -148,13 +167,13 @@ export function IntroHero({
           </motion.div>
         </div>
 
-        {/* Prominent Interactive Scroll Down Button */}
+        {/* Prominent Interactive Swipe Up Indicator - Exact Reference Design */}
         {(showText || status === "done") && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="absolute inset-x-0 bottom-5 sm:bottom-7 flex justify-center z-20"
+            className="absolute inset-x-0 bottom-4 sm:bottom-6 flex justify-center z-20 pointer-events-auto"
           >
             <button
               type="button"
@@ -166,19 +185,43 @@ export function IntroHero({
                   document.getElementById("countdown")?.scrollIntoView({ behavior: "smooth" });
                 }, 50);
               }}
-              className="group flex flex-col items-center gap-1.5 px-5 py-2 rounded-full bg-ivory/90 backdrop-blur-sm border border-[#b88e44]/60 shadow-md hover:bg-ivory transition-all cursor-pointer"
-              aria-label="Scroll down to invitation details"
+              className="group flex flex-col items-center gap-1 px-4 py-2 bg-transparent cursor-pointer select-none transition-transform active:scale-95"
+              aria-label="Swipe up to explore invitation"
             >
-              <span className="font-serif text-[10px] sm:text-xs tracking-[0.28em] uppercase text-[#1e3a2f] font-semibold">
-                Scroll Down
-              </span>
-              <motion.span
-                animate={{ y: [0, 4, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                className="text-[#b88e44] text-sm leading-none font-bold"
+              {/* Stacked Double Chevron Up Arrow */}
+              <motion.div
+                animate={{ y: [0, -6, 0], opacity: [0.75, 1, 0.75] }}
+                transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                className="flex flex-col items-center -space-y-1.5 text-[#544d2e] drop-shadow-sm"
               >
-                &#8595;
-              </motion.span>
+                <svg
+                  className="w-5 h-5 sm:w-6 sm:h-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M18 15l-6-6-6 6" />
+                </svg>
+                <svg
+                  className="w-5 h-5 sm:w-6 sm:h-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M18 15l-6-6-6 6" />
+                </svg>
+              </motion.div>
+
+              {/* SWIPE UP Serif Text */}
+              <span className="font-serif text-[11px] sm:text-xs tracking-[0.38em] uppercase text-[#34301d] font-bold drop-shadow-sm mt-0.5">
+                SWIPE UP
+              </span>
             </button>
           </motion.div>
         )}

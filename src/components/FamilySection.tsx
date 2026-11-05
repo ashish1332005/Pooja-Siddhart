@@ -16,7 +16,7 @@ function renderNonBreakingNames(names: string[], separator: string = "·") {
 
 export function FamilySection() {
   return (
-    <section id="family-blessings" className="bg-ivory -mt-20 sm:-mt-28 md:-mt-36 pt-6 pb-16 md:pb-24 relative z-20 overflow-hidden">
+    <section id="family-blessings" className="bg-ivory pt-8 sm:pt-12 pb-16 md:pb-24 relative z-10 overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Section Heading */}
         <motion.div
