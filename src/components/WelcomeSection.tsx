@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { WEDDING_CONFIG } from "../data/weddingConfig";
+import { MEDIA, WEDDING_CONFIG } from "../data/weddingConfig";
 
 function formatLineageColumn(text: string) {
   if (text.includes(" - ")) {
@@ -82,9 +82,11 @@ export function WelcomeSection() {
             {/* Groom Column */}
             <div className="flex flex-col items-center text-center px-0.5 sm:px-3 space-y-1.5">
               <div className="h-12 sm:h-16 md:h-20 flex items-center justify-center">
-                <h3 className="font-couple text-[#6e1d2a] text-4xl sm:text-5xl md:text-6xl font-normal leading-none tracking-normal select-none my-0">
-                  {WEDDING_CONFIG.couple_name_1}
-                </h3>
+                <img
+                  src={MEDIA.pdfSiddhart}
+                  alt={WEDDING_CONFIG.couple_name_1}
+                  className="h-full w-auto object-contain select-none"
+                />
               </div>
               <span className="font-serif text-[11px] sm:text-xs md:text-sm tracking-[0.28em] uppercase text-[#a3702c] font-medium">
                 G R O O M
@@ -114,9 +116,11 @@ export function WelcomeSection() {
             {/* Bride Column */}
             <div className="flex flex-col items-center text-center px-0.5 sm:px-3 space-y-1.5">
               <div className="h-12 sm:h-16 md:h-20 flex items-center justify-center">
-                <h3 className="font-couple text-[#6e1d2a] text-4xl sm:text-5xl md:text-6xl font-normal leading-none tracking-normal select-none my-0 translate-y-[2px]">
-                  {WEDDING_CONFIG.couple_name_2}
-                </h3>
+                <img
+                  src={MEDIA.pdfPooja}
+                  alt={WEDDING_CONFIG.couple_name_2}
+                  className="h-full w-auto object-contain select-none"
+                />
               </div>
               <span className="font-serif text-[11px] sm:text-xs md:text-sm tracking-[0.28em] uppercase text-[#a3702c] font-medium">
                 B R I D E

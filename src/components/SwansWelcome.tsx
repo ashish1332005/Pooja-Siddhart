@@ -20,20 +20,13 @@ export function SwansWelcome() {
           We Are Getting Married
         </p>
 
-        {/* Authentic Couple Names - Exact PDF Font (Runethia + Playfair Swash Ampersand) */}
-        <div className="flex items-baseline justify-center gap-2.5 sm:gap-3.5 my-1 sm:my-2">
-          <span className="font-couple text-[#7c2635] text-4xl sm:text-5xl md:text-6xl leading-none font-normal drop-shadow-sm">
-            {WEDDING_CONFIG.couple_name_1}
-          </span>
-          <span
-            style={{ fontFamily: '"Playfair Display", Georgia, serif', fontStyle: "normal" }}
-            className="text-[#b88e44] text-2xl sm:text-3xl md:text-4xl font-normal px-1 leading-none"
-          >
-            &amp;
-          </span>
-          <span className="font-couple text-[#7c2635] text-4xl sm:text-5xl md:text-6xl leading-none font-normal drop-shadow-sm translate-y-[2px]">
-            {WEDDING_CONFIG.couple_name_2}
-          </span>
+        {/* Authentic Couple Names - Exact PDF Font, Equal Size & Baseline Aligned */}
+        <div className="h-10 sm:h-14 md:h-16 flex items-center justify-center my-1.5 sm:my-2.5 px-2 max-w-full">
+          <img
+            src={MEDIA.pdfCouplePerfect}
+            alt={`${WEDDING_CONFIG.couple_name_1} & ${WEDDING_CONFIG.couple_name_2}`}
+            className="h-full w-auto max-w-[88vw] object-contain select-none"
+          />
         </div>
 
         {/* High-Visibility Wedding Dates - Clearly Visible Size & Contrast */}

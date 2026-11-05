@@ -116,30 +116,38 @@ export function IntroHero({
             transition={{ duration: 0.6 }}
           />
 
-          {/* Groom & Bride Names - Visible, Grand & Equal Size */}
+          {/* Groom & Bride Names - Exact PDF Calligraphy, Large & Equal Size */}
           <motion.div
             className="flex flex-col items-center justify-center w-full max-w-sm sm:max-w-md"
             animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             {/* Siddhart */}
-            <h1 className="font-couple text-[#7c2635] text-4xl sm:text-5xl md:text-6xl font-normal leading-tight tracking-wide drop-shadow-sm my-0">
-              {coupleName1}
-            </h1>
+            <div className="h-11 sm:h-14 md:h-16 lg:h-20 flex items-center justify-center my-0.5">
+              <img
+                src={MEDIA.pdfSiddhart}
+                alt={coupleName1}
+                className="h-full w-auto object-contain select-none"
+              />
+            </div>
 
             {/* Gold Ampersand with Lateral Divider Lines */}
-            <div className="flex items-center justify-center w-full max-w-[190px] sm:max-w-[230px] my-1 sm:my-1.5">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[#b88e44]/70 to-[#b88e44]/90" />
+            <div className="flex items-center justify-center w-44 sm:w-56 md:w-64 my-1 sm:my-1.5">
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[#b88e44]/75 to-[#b88e44]" />
               <span className="font-display text-[#b88e44] text-lg sm:text-xl md:text-2xl font-light px-3 leading-none">
                 &amp;
               </span>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent via-[#b88e44]/70 to-[#b88e44]/90" />
+              <div className="h-px flex-1 bg-gradient-to-l from-transparent via-[#b88e44]/75 to-[#b88e44]" />
             </div>
 
             {/* Pooja */}
-            <h1 className="font-couple text-[#7c2635] text-4xl sm:text-5xl md:text-6xl font-normal leading-tight tracking-wide drop-shadow-sm my-0">
-              {coupleName2}
-            </h1>
+            <div className="h-11 sm:h-14 md:h-16 lg:h-20 flex items-center justify-center my-0.5">
+              <img
+                src={MEDIA.pdfPooja}
+                alt={coupleName2}
+                className="h-full w-auto object-contain select-none"
+              />
+            </div>
           </motion.div>
         </div>
 
