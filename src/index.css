@@ -95,7 +95,7 @@ body {
   color: hsl(var(--foreground));
   font-family: var(--font-body);
   font-size: 0.95rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.015em;
   line-height: 1.65;
   font-feature-settings: "liga", "kern", "lnum";
