@@ -25,7 +25,7 @@ export function WeddingEventsSection() {
       id="wedding-events"
       className="relative bg-ivory overflow-hidden py-10 md:py-16"
     >
-      <div className="relative z-10 max-w-md sm:max-w-lg md:max-w-xl mx-auto px-4 sm:px-6">
+      <div className="relative z-10 max-w-md sm:max-w-lg md:max-w-xl mx-auto px-3 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -33,15 +33,15 @@ export function WeddingEventsSection() {
           transition={{ duration: 0.6 }}
           className="relative w-full overflow-hidden"
         >
-          {/* Cropped Clean Background - Ends Gracefully at Hanging Wisteria Tassels */}
+          {/* Complete Venue Frame with Hanging Wisteria Garland at the Bottom Matching Sample */}
           <img
             src={MEDIA.ceremonyReceptionBg}
-            alt="Ceremony and Reception Venue Frame"
+            alt="Ceremony and Reception Venue Frame with Hanging Wisteria"
             className="w-full h-auto block select-none pointer-events-none"
           />
 
-          {/* Details strictly inside the boundary matching reference sample */}
-          <div className="absolute inset-x-[14%] top-[20%] bottom-[20%] sm:inset-x-[16%] flex flex-col items-center justify-center text-center px-2 sm:px-4">
+          {/* Details strictly inside the linen canvas between the top arch and bottom hanging garland */}
+          <div className="absolute inset-x-[14%] top-[15.5%] bottom-[33%] sm:inset-x-[16%] flex flex-col items-center justify-center text-center px-2 sm:px-4">
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-sage-dark tracking-normal leading-[1.15] font-normal mb-1">
               Ceremony<br />&amp; Reception
             </h2>

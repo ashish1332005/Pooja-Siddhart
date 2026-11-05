@@ -214,7 +214,7 @@ export const MEDIA = {
   swansHero: "/media/embroidered-swans-hero-v2.png",
   countdownFrame: "/media/countdown-embroidery-frame.webp",
   countdownPearlMedallion: "/media/countdown-pearl-medallion.webp",
-  ceremonyReceptionBg: "/media/ceremony-reception-clean.webp",
+  ceremonyReceptionBg: "/media/ceremony-with-garland.webp",
   dresscodeHangingGarland: "/media/dresscode-hanging-garland-v2.webp",
   dressCodeIllustration: "/media/dress-code-illustration-v2.webp",
   storyFrame: "/media/story-frame.png",
