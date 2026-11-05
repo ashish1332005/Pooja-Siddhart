@@ -23,7 +23,7 @@ export const WEDDING_CONFIG = {
   bhilwara_venue_name: "Shree Govindam",
   bhilwara_venue_address: "10-B-18, R.C. Vyas Colony, Bhilwara (Raj)",
 
-  rsvp_phones: ["+91 94136 77000", "+91 75979 27000"],
+  rsvp_phones: ["8949-674449"],
 };
 
 export const WEDDING_SCHEDULE = [

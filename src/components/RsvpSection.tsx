@@ -253,7 +253,7 @@ export function RsvpSection() {
               <React.Fragment key={i}>
                 {i > 0 && " · "}
                 <a
-                  href={`tel:${phone.replace(/\s+/g, "")}`}
+                  href={`tel:+91${phone.replace(/[\s-]+/g, "")}`}
                   className="font-digit text-sage-dark hover:text-gold-dark transition-colors"
                 >
                   {phone}
