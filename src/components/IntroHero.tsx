@@ -28,7 +28,7 @@ export function IntroHero({
     if (diff > 40) {
       setStatus("done");
       setShowText(true);
-      document.getElementById("countdown")?.scrollIntoView({ behavior: "smooth" });
+      document.getElementById("swans-welcome")?.scrollIntoView({ behavior: "smooth" });
     }
     touchStartY.current = null;
   };
@@ -182,7 +182,7 @@ export function IntroHero({
                 setStatus("done");
                 setShowText(true);
                 setTimeout(() => {
-                  document.getElementById("countdown")?.scrollIntoView({ behavior: "smooth" });
+                  document.getElementById("swans-welcome")?.scrollIntoView({ behavior: "smooth" });
                 }, 50);
               }}
               className="group flex flex-col items-center gap-1 px-4 py-2 bg-transparent cursor-pointer select-none transition-transform active:scale-95"
