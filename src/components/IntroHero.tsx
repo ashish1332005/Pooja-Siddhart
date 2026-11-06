@@ -122,15 +122,15 @@ export function IntroHero({
           />
         )}
 
-        {/* Monogram, Couple Names & Wedding Date - Positioned Higher for Grand Royal Balance */}
+        {/* Monogram, Couple Names & Wedding Date - Positioned Higher with Elegant Breathing Room */}
         <div
-          className="absolute inset-x-0 top-[10.5%] sm:top-[11%] h-[44%] flex flex-col items-center justify-center text-center px-4 pointer-events-none select-none z-10"
+          className="absolute inset-x-0 top-[10%] sm:top-[10.5%] h-[44%] flex flex-col items-center justify-center text-center px-4 pointer-events-none select-none z-10"
         >
-          {/* Original P S Monogram Logo - Lifted Higher */}
+          {/* Original P S Monogram Logo - Elegant Gap before Couple Name */}
           <motion.img
             src={MEDIA.coupleMonogram}
             alt="Pooja & Siddhart monogram"
-            className="h-[10.5vh] sm:h-[12vh] max-h-[105px] sm:max-h-[130px] w-auto object-contain mb-1 sm:mb-1.5 drop-shadow-sm select-none"
+            className="h-[10vh] sm:h-[11.5vh] max-h-[100px] sm:max-h-[125px] w-auto object-contain mb-3 sm:mb-4 md:mb-5 drop-shadow-sm select-none"
             animate={showText ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 12, scale: 0.95 }}
             transition={{ duration: 0.6 }}
           />
@@ -160,9 +160,12 @@ export function IntroHero({
               {coupleName2}
             </h1>
 
-            {/* Wedding Date directly on 1st Page - Significantly Increased Size & Prominence */}
-            <p className="font-serif text-sm sm:text-base md:text-lg lg:text-xl tracking-[0.25em] uppercase text-[#7c2635] font-bold mt-2.5 sm:mt-3.5 drop-shadow-[0_1px_1px_rgba(255,255,255,0.7)]">
-              03<sup className="text-[10px] sm:text-xs font-semibold align-super ml-0.5">RD</sup> &ndash; 05<sup className="text-[10px] sm:text-xs font-semibold align-super ml-0.5">TH</sup> DECEMBER 2026
+            {/* Wedding Date directly on 1st Page - Natural Spacing & Balanced Proportions */}
+            <p className="font-serif text-xs sm:text-sm md:text-base text-[#7c2635] font-semibold mt-3 sm:mt-4 whitespace-nowrap">
+              <span className="tracking-tight">03</span><sup className="text-[9px] sm:text-[10px] font-normal align-super ml-0.5">RD</sup>
+              <span className="mx-1.5 font-light text-[#b88e44]">&ndash;</span>
+              <span className="tracking-tight">05</span><sup className="text-[9px] sm:text-[10px] font-normal align-super ml-0.5">TH</sup>
+              <span className="tracking-[0.18em] uppercase ml-2.5 sm:ml-3 font-semibold">DECEMBER 2026</span>
             </p>
           </motion.div>
         </div>

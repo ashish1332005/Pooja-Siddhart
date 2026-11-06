@@ -134,13 +134,12 @@ export function WelcomeSection() {
             occasion of the wedding of their children
           </p>
 
-          {/* Date Block with En-Dash & Vertical Separator */}
-          <div className="flex items-center justify-center gap-3 sm:gap-4 pt-1 font-serif text-base sm:text-lg md:text-xl text-[#1e3a2f] font-medium">
-            <span>
-              03<sup className="text-[10px] sm:text-xs font-normal align-super ml-0.5">RD</sup> &ndash; 05<sup className="text-[10px] sm:text-xs font-normal align-super ml-0.5">TH</sup>
-            </span>
-            <span className="h-5 sm:h-6 w-px bg-[#a3702c]/70" />
-            <span className="tracking-[0.06em]">DECEMBER 2026</span>
+          {/* Date Block - Clean Natural Spacing Without Vertical Divider */}
+          <div className="flex items-center justify-center pt-1 font-serif text-sm sm:text-base md:text-lg text-[#1e3a2f] font-medium whitespace-nowrap">
+            <span className="tracking-tight">03</span><sup className="text-[9px] sm:text-[10px] font-normal align-super ml-0.5">RD</sup>
+            <span className="mx-1.5 font-light text-[#a3702c]">&ndash;</span>
+            <span className="tracking-tight">05</span><sup className="text-[9px] sm:text-[10px] font-normal align-super ml-0.5">TH</sup>
+            <span className="tracking-[0.16em] uppercase ml-2.5 sm:ml-3 font-semibold">DECEMBER 2026</span>
           </div>
 
           {/* Venue with Lateral Horizontal Rules on Single Line */}
