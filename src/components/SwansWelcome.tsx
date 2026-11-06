@@ -14,29 +14,29 @@ export function SwansWelcome() {
         className="block h-auto w-full select-none pointer-events-none"
       />
       <div
-        className="absolute left-1/2 -translate-x-1/2 top-[29.5%] h-[36.5%] w-[84%] max-w-md flex flex-col items-center justify-between text-center pointer-events-none select-none z-10 px-2 py-0.5"
+        className="absolute left-1/2 -translate-x-1/2 top-[32%] sm:top-[32.5%] w-[84%] max-w-sm flex flex-col items-center text-center pointer-events-none select-none z-10 px-2 py-0"
       >
-        {/* 1. WE ARE GETTING MARRIED - Positioned higher right below wisteria */}
+        {/* 1. WE ARE GETTING MARRIED - Safely below hanging wisteria vines */}
         <div className="flex flex-col items-center leading-[1.12]">
           <span
-            className="font-serif tracking-[0.18em] uppercase text-[#7c2635] font-semibold"
-            style={{ fontSize: "clamp(15px, 4.4vw, 25px)" }}
+            className="font-serif tracking-[0.16em] uppercase text-[#7c2635] font-semibold"
+            style={{ fontSize: "clamp(13px, 3.8vw, 22px)" }}
           >
             WE ARE GETTING
           </span>
           <span
-            className="font-serif tracking-[0.24em] uppercase text-[#7c2635] font-semibold mt-1"
-            style={{ fontSize: "clamp(17px, 5.2vw, 28px)" }}
+            className="font-serif tracking-[0.22em] uppercase text-[#7c2635] font-semibold mt-1"
+            style={{ fontSize: "clamp(15px, 4.4vw, 25px)" }}
           >
             MARRIED
           </span>
         </div>
 
         {/* 2. Golden Interlocking Wedding Rings Divider with Lateral Lines */}
-        <div className="flex items-center justify-center gap-2.5 w-48 sm:w-60 text-[#b88e44]">
+        <div className="flex items-center justify-center gap-2 w-36 sm:w-48 text-[#b88e44] my-2 sm:my-2.5">
           <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[#b88e44]/80 to-[#b88e44]" />
           <svg
-            className="w-6 h-4 sm:w-7 sm:h-4.5 text-[#b88e44] shrink-0"
+            className="w-5 h-3 sm:w-6 sm:h-3.5 text-[#b88e44] shrink-0"
             viewBox="0 0 32 20"
             fill="none"
             stroke="currentColor"
@@ -50,8 +50,8 @@ export function SwansWelcome() {
 
         {/* 3. With the blessings of - Italic Serif */}
         <p
-          className="font-serif italic text-[#9c6628] font-medium"
-          style={{ fontSize: "clamp(15px, 4.2vw, 23px)" }}
+          className="font-serif italic text-[#9c6628] font-medium mb-1 sm:mb-1.5"
+          style={{ fontSize: "clamp(13px, 3.6vw, 20px)" }}
         >
           With the blessings of
         </p>
@@ -59,23 +59,23 @@ export function SwansWelcome() {
         {/* 4. Elders Names with & - Bold Dignified Serif */}
         <p
           className="font-serif text-[#163328] font-bold leading-[1.28]"
-          style={{ fontSize: "clamp(17px, 5vw, 29px)" }}
+          style={{ fontSize: "clamp(15px, 4.3vw, 24px)" }}
         >
           Late Shri Bankatlal Ji &amp;<br />
           Late Smt. Vidhyadevi Malani
         </p>
 
         {/* 5. Golden Ornate Flourish Divider */}
-        <div className="flex items-center justify-center gap-2.5 w-40 sm:w-52 text-[#b88e44]/85">
+        <div className="flex items-center justify-center gap-2 w-32 sm:w-44 text-[#b88e44]/85 my-2 sm:my-2.5">
           <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#b88e44]" />
-          <span className="text-xs sm:text-sm leading-none">&#10022;</span>
+          <span className="text-[10px] sm:text-xs leading-none">&#10022;</span>
           <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#b88e44]" />
         </div>
 
-        {/* 6. Soliciting your gracious presence and blessings on the occasion of our wedding */}
+        {/* 6. Soliciting your gracious presence and blessings on the occasion of our wedding - Narrower max-width so it never touches side roses */}
         <p
-          className="font-serif italic text-[#163328] leading-[1.38] max-w-[280px] sm:max-w-xs md:max-w-sm mx-auto font-medium"
-          style={{ fontSize: "clamp(13px, 3.8vw, 20px)" }}
+          className="font-serif italic text-[#163328] leading-[1.38] max-w-[245px] sm:max-w-[280px] mx-auto font-medium"
+          style={{ fontSize: "clamp(11.5px, 3.1vw, 16px)" }}
         >
           Soliciting your gracious presence and blessings<br />
           on the occasion of our wedding

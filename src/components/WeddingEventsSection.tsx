@@ -41,51 +41,41 @@ export function WeddingEventsSection() {
               className="w-full h-auto block select-none pointer-events-none"
             />
 
-            {/* Details strictly inside the boundary */}
-            <div className="absolute inset-x-[18%] sm:inset-x-[20%] top-[18%] sm:top-[19%] bottom-[12%] sm:bottom-[13%] flex flex-col items-center justify-between text-center px-1 py-1 sm:py-2 select-none">
-              {/* Eyebrow */}
-              <p className="font-serif text-[10px] sm:text-xs md:text-sm tracking-[0.26em] uppercase text-[#a3702c] font-semibold">
-                WHERE WE CELEBRATE
-              </p>
-
+            {/* Details strictly inside the boundary - Natural Royal Spacing Without Artificial White Boxes */}
+            <div className="absolute inset-x-[12%] sm:inset-x-[16%] top-[20%] sm:top-[22%] bottom-[18%] sm:bottom-[16%] flex flex-col items-center justify-center text-center px-2 select-none space-y-2.5 sm:space-y-3.5">
               {/* Grand Venue Heading */}
               <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#7c2635] tracking-wide leading-tight font-normal">
                 Venue
               </h2>
 
               {/* Golden Flourish Divider */}
-              <div className="flex items-center justify-center gap-2 w-36 sm:w-48 text-[#b88e44]/85">
+              <div className="flex items-center justify-center gap-2 w-32 sm:w-44 text-[#b88e44]/85 py-0.5">
                 <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#b88e44]" />
                 <span className="text-xs sm:text-sm leading-none">&#10022;</span>
                 <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#b88e44]" />
               </div>
 
-              {/* Poetic Subtitle */}
-              <p className="font-serif italic text-xs sm:text-sm md:text-base text-[#9c6628] font-medium leading-relaxed max-w-xs">
-                A serene haven where our love story unfolds
-              </p>
-
-              {/* Resort Name */}
-              <h3 className="font-serif text-xl sm:text-2xl md:text-3xl text-[#1e3a2f] font-bold tracking-wide leading-snug">
+              {/* Resort Name - Large, Prominent & Dignified */}
+              <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl text-[#1e3a2f] font-bold tracking-wide leading-snug">
                 {WEDDING_CONFIG.main_venue_name}
               </h3>
 
-              {/* Address */}
-              <p className="font-serif text-xs sm:text-sm tracking-[0.2em] uppercase text-[#7c2635] font-semibold">
+              {/* Address in Warm Gold */}
+              <p className="font-serif text-xs sm:text-sm tracking-[0.2em] uppercase text-[#a3702c] font-semibold">
                 NH 8, Udaipur (Rajasthan)
               </p>
 
-              {/* Wedding Celebrations Date Badge */}
-              <div className="inline-flex items-center justify-center px-3.5 py-1 sm:py-1.5 rounded-full border border-[#b88e44]/40 bg-[#fbf9f4]/90 text-[#1e3a2f] font-serif text-[11px] sm:text-xs md:text-sm font-semibold tracking-[0.14em] uppercase shadow-xs">
+              {/* Wedding Celebrations Date - Pure Typography Directly on Linen */}
+              <p className="font-serif text-xs sm:text-sm md:text-base text-[#7c2635] font-semibold tracking-[0.16em] uppercase whitespace-nowrap pt-0.5">
                 03RD &ndash; 05TH DECEMBER 2026
-              </div>
+              </p>
 
-              {/* Maps & Calendar Actions */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 w-full max-w-xs sm:max-w-sm pt-0.5">
+              {/* Maps & Calendar Actions - Transparent Elegant Badges Without White Fill */}
+              <div className="flex flex-row items-center justify-center gap-3 sm:gap-4 pt-2">
                 <ActionMenu
                   icon={<MapPin className="w-3.5 h-3.5 text-[#b88e44]" />}
                   label="OPEN IN MAPS"
-                  className="w-full sm:w-auto px-3.5 py-1.5 sm:py-2 rounded-full border border-[#b88e44]/50 bg-ivory/80 text-[10px] sm:text-xs font-serif tracking-[0.18em] text-[#1e3a2f] uppercase hover:bg-[#b88e44] hover:text-ivory transition-all font-semibold shadow-xs"
+                  className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-[#b88e44]/60 bg-transparent text-[10.5px] sm:text-xs font-serif tracking-[0.18em] text-[#1e3a2f] uppercase hover:bg-[#b88e44]/15 hover:text-[#7c2635] transition-all font-semibold"
                   items={[
                     { label: "Google Maps", href: buildGoogleMapsUrl(address) },
                     { label: "Apple Maps", href: buildAppleMapsUrl(address) },
@@ -94,7 +84,7 @@ export function WeddingEventsSection() {
                 <ActionMenu
                   icon={<Calendar className="w-3.5 h-3.5 text-[#b88e44]" />}
                   label="ADD TO CALENDAR"
-                  className="w-full sm:w-auto px-3.5 py-1.5 sm:py-2 rounded-full border border-[#b88e44]/50 bg-ivory/80 text-[10px] sm:text-xs font-serif tracking-[0.18em] text-[#1e3a2f] uppercase hover:bg-[#b88e44] hover:text-ivory transition-all font-semibold shadow-xs"
+                  className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-[#b88e44]/60 bg-transparent text-[10.5px] sm:text-xs font-serif tracking-[0.18em] text-[#1e3a2f] uppercase hover:bg-[#b88e44]/15 hover:text-[#7c2635] transition-all font-semibold"
                   items={[
                     { label: "Google Calendar", href: buildGoogleCalendarUrl(calendarEvent) },
                     {
