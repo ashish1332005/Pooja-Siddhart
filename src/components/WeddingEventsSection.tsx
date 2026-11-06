@@ -43,8 +43,8 @@ export function WeddingEventsSection() {
 
             {/* Details strictly inside the boundary - Natural Royal Spacing Without Artificial White Boxes */}
             <div className="absolute inset-x-[12%] sm:inset-x-[16%] top-[20%] sm:top-[22%] bottom-[18%] sm:bottom-[16%] flex flex-col items-center justify-center text-center px-2 select-none space-y-2.5 sm:space-y-3.5">
-              {/* Grand Venue Heading */}
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#7c2635] tracking-wide leading-tight font-normal">
+              {/* Grand Venue Heading - Enlarged & Dignified */}
+              <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-[#7c2635] tracking-wide leading-none font-normal">
                 Venue
               </h2>
 
@@ -55,9 +55,13 @@ export function WeddingEventsSection() {
                 <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#b88e44]" />
               </div>
 
-              {/* Resort Name - Large, Prominent & Dignified */}
-              <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl text-[#1e3a2f] font-bold tracking-wide leading-snug">
-                {WEDDING_CONFIG.main_venue_name}
+              {/* Resort Name - Two Balanced Lines to Prevent Any Border Overlap */}
+              <h3
+                className="font-serif text-[#1e3a2f] font-bold tracking-wide leading-[1.24] max-w-[240px] sm:max-w-xs md:max-w-sm mx-auto"
+                style={{ fontSize: "clamp(20px, 5.2vw, 32px)" }}
+              >
+                Ramee Royal<br />
+                Resort &amp; Spa
               </h3>
 
               {/* Address in Warm Gold */}
@@ -70,28 +74,15 @@ export function WeddingEventsSection() {
                 03RD &ndash; 05TH DECEMBER 2026
               </p>
 
-              {/* Maps & Calendar Actions - Transparent Elegant Badges Without White Fill */}
-              <div className="flex flex-row items-center justify-center gap-3 sm:gap-4 pt-2">
+              {/* Open in Maps Action Only - Transparent Elegant Badge Without White Fill */}
+              <div className="flex justify-center pt-2">
                 <ActionMenu
-                  icon={<MapPin className="w-3.5 h-3.5 text-[#b88e44]" />}
+                  icon={<MapPin className="w-4 h-4 text-[#b88e44]" />}
                   label="OPEN IN MAPS"
-                  className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-[#b88e44]/60 bg-transparent text-[10.5px] sm:text-xs font-serif tracking-[0.18em] text-[#1e3a2f] uppercase hover:bg-[#b88e44]/15 hover:text-[#7c2635] transition-all font-semibold"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2 sm:px-6 sm:py-2.5 rounded-full border border-[#b88e44]/70 bg-transparent text-xs font-serif tracking-[0.2em] text-[#1e3a2f] uppercase hover:bg-[#b88e44]/15 hover:text-[#7c2635] transition-all font-semibold"
                   items={[
                     { label: "Google Maps", href: buildGoogleMapsUrl(address) },
                     { label: "Apple Maps", href: buildAppleMapsUrl(address) },
-                  ]}
-                />
-                <ActionMenu
-                  icon={<Calendar className="w-3.5 h-3.5 text-[#b88e44]" />}
-                  label="ADD TO CALENDAR"
-                  className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-[#b88e44]/60 bg-transparent text-[10.5px] sm:text-xs font-serif tracking-[0.18em] text-[#1e3a2f] uppercase hover:bg-[#b88e44]/15 hover:text-[#7c2635] transition-all font-semibold"
-                  items={[
-                    { label: "Google Calendar", href: buildGoogleCalendarUrl(calendarEvent) },
-                    {
-                      label: "Apple Calendar",
-                      href: buildIcsDataUrl(calendarEvent),
-                      download: "wedding.ics",
-                    },
                   ]}
                 />
               </div>

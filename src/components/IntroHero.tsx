@@ -16,6 +16,7 @@ export function IntroHero({
   const [showText, setShowText] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const touchStartY = useRef<number | null>(null);
+  const playStartTime = useRef<number>(0);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartY.current = e.touches[0].clientY;
@@ -47,16 +48,16 @@ export function IntroHero({
 
   useEffect(() => {
     if (status === "playing") {
-      // Show text ONLY after curtains have fully opened (at ~6.8s)
+      // Show text ONLY after curtains have fully parted open (at ~7.2s)
       const textTimer = setTimeout(() => {
         setShowText(true);
-      }, 6800);
+      }, 7200);
 
       // Auto-unlock page scroll and finalize view after video ends
       const finishTimer = setTimeout(() => {
         setStatus("done");
         setShowText(true);
-      }, 9800);
+      }, 9900);
 
       return () => {
         clearTimeout(textTimer);
@@ -68,23 +69,34 @@ export function IntroHero({
   const handleTimeUpdate = () => {
     const vid = videoRef.current;
     if (!vid) return;
-    // Curtains fully part at 6.5 seconds
-    if (vid.currentTime >= 6.5) {
+    // Curtains fully part at 7.2 seconds
+    if (vid.currentTime >= 7.2) {
       setShowText(true);
     }
   };
 
-  const handleOpen = () => {
+  const handleOpen = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
     if (status === "idle") {
       setStatus("playing");
-      videoRef.current?.play().catch(() => {
-        setStatus("done");
-        setShowText(true);
-      });
+      setShowText(false);
+      playStartTime.current = Date.now();
+      const vid = videoRef.current;
+      if (vid) {
+        vid.currentTime = 0;
+        vid.play().catch(() => {
+          setTimeout(() => {
+            setStatus("done");
+            setShowText(true);
+          }, 1500);
+        });
+      }
     }
   };
 
   const handleSkip = () => {
+    // Prevent accidental skips within first 2.5 seconds of curtain opening
+    if (Date.now() - playStartTime.current < 2500) return;
     setStatus("done");
     setShowText(true);
   };
@@ -122,50 +134,52 @@ export function IntroHero({
           />
         )}
 
-        {/* Monogram, Couple Names & Wedding Date - Positioned Higher with Royal Breathing Room */}
-        <div
-          className="absolute inset-x-0 top-[8%] sm:top-[8.5%] h-[48%] flex flex-col items-center justify-center text-center px-4 pointer-events-none select-none z-10"
-        >
-          {/* Original P S Monogram Logo - Generous Royal Gap before Couple Name */}
-          <motion.img
-            src={MEDIA.coupleMonogram}
-            alt="Pooja & Siddhart monogram"
-            className="h-[10.5vh] sm:h-[12vh] max-h-[105px] sm:max-h-[130px] w-auto object-contain mb-6 sm:mb-8 md:mb-9 drop-shadow-sm select-none"
-            animate={showText ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 12, scale: 0.95 }}
-            transition={{ duration: 0.6 }}
-          />
+        {/* Monogram, Couple Names & Wedding Date - Fades in ONLY after curtains have fully opened */}
+        <AnimatePresence>
+          {showText && (
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="absolute inset-x-0 top-[8%] sm:top-[8.5%] h-[48%] flex flex-col items-center justify-center text-center px-4 pointer-events-none select-none z-10"
+            >
+              {/* Original P S Monogram Logo - Generous Royal Gap before Couple Name */}
+              <img
+                src={MEDIA.coupleMonogram}
+                alt="Pooja & Siddhart monogram"
+                className="h-[10.5vh] sm:h-[12vh] max-h-[105px] sm:max-h-[130px] w-auto object-contain mb-6 sm:mb-8 md:mb-9 drop-shadow-sm select-none"
+              />
 
-          {/* Groom & Bride Names + Wedding Date */}
-          <motion.div
-            className="flex flex-col items-center justify-center w-full max-w-sm sm:max-w-md"
-            animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            {/* Siddhart */}
-            <h1 className="font-couple text-[#7c2635] text-4xl sm:text-5xl md:text-6xl font-normal leading-[1.08] tracking-wide drop-shadow-sm my-0">
-              {coupleName1}
-            </h1>
+              {/* Groom & Bride Names + Wedding Date */}
+              <div className="flex flex-col items-center justify-center w-full max-w-sm sm:max-w-md">
+                {/* Siddhart */}
+                <h1 className="font-couple text-[#7c2635] text-4xl sm:text-5xl md:text-6xl font-normal leading-[1.08] tracking-wide drop-shadow-sm my-0">
+                  {coupleName1}
+                </h1>
 
-            {/* Gold Ampersand with Lateral Divider Lines */}
-            <div className="flex items-center justify-center w-40 sm:w-52 md:w-60 my-0.5 sm:my-1">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[#b88e44]/75 to-[#b88e44]" />
-              <span className="font-display text-[#b88e44] text-base sm:text-lg md:text-xl font-light px-2.5 leading-none">
-                &amp;
-              </span>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent via-[#b88e44]/75 to-[#b88e44]" />
-            </div>
+                {/* Gold Ampersand with Lateral Divider Lines */}
+                <div className="flex items-center justify-center w-40 sm:w-52 md:w-60 my-0.5 sm:my-1">
+                  <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[#b88e44]/75 to-[#b88e44]" />
+                  <span className="font-display text-[#b88e44] text-base sm:text-lg md:text-xl font-light px-2.5 leading-none">
+                    &amp;
+                  </span>
+                  <div className="h-px flex-1 bg-gradient-to-l from-transparent via-[#b88e44]/75 to-[#b88e44]" />
+                </div>
 
-            {/* Pooja */}
-            <h1 className="font-couple text-[#7c2635] text-4xl sm:text-5xl md:text-6xl font-normal leading-[1.08] tracking-wide drop-shadow-sm my-0">
-              {coupleName2}
-            </h1>
+                {/* Pooja */}
+                <h1 className="font-couple text-[#7c2635] text-4xl sm:text-5xl md:text-6xl font-normal leading-[1.08] tracking-wide drop-shadow-sm my-0">
+                  {coupleName2}
+                </h1>
 
-            {/* Wedding Date directly on 1st Page - Solid Contiguous Text with No Extra Gaps */}
-            <p className="font-serif text-sm sm:text-base md:text-lg text-[#7c2635] font-semibold mt-4 sm:mt-5 tracking-[0.14em] uppercase whitespace-nowrap">
-              03RD &ndash; 05TH DECEMBER 2026
-            </p>
-          </motion.div>
-        </div>
+                {/* Wedding Date directly on 1st Page - Solid Contiguous Text with No Extra Gaps */}
+                <p className="font-serif text-sm sm:text-base md:text-lg text-[#7c2635] font-semibold mt-4 sm:mt-5 tracking-[0.14em] uppercase whitespace-nowrap">
+                  03RD &ndash; 05TH DECEMBER 2026
+                </p>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Prominent Interactive Swipe Up Indicator with Theme Cloud Backdrop at Eye Level */}
         {(showText || status === "done") && (

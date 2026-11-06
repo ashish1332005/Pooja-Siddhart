@@ -48,10 +48,10 @@ export function SwansWelcome() {
           <div className="h-px flex-1 bg-gradient-to-l from-transparent via-[#b88e44]/80 to-[#b88e44]" />
         </div>
 
-        {/* 3. With the blessings of - Italic Serif */}
+        {/* 3. With the blessings of - Larger & Dignified Italic Serif */}
         <p
-          className="font-serif italic text-[#9c6628] font-medium mb-1 sm:mb-1.5"
-          style={{ fontSize: "clamp(13px, 3.6vw, 20px)" }}
+          className="font-serif italic text-[#9c6628] font-medium mb-1.5 sm:mb-2"
+          style={{ fontSize: "clamp(15px, 4.2vw, 22px)" }}
         >
           With the blessings of
         </p>
@@ -59,7 +59,7 @@ export function SwansWelcome() {
         {/* 4. Elders Names with & - Bold Dignified Serif */}
         <p
           className="font-serif text-[#163328] font-bold leading-[1.28]"
-          style={{ fontSize: "clamp(15px, 4.3vw, 24px)" }}
+          style={{ fontSize: "clamp(16px, 4.6vw, 26px)" }}
         >
           Late Shri Bankatlal Ji &amp;<br />
           Late Smt. Vidhyadevi Malani
@@ -72,10 +72,10 @@ export function SwansWelcome() {
           <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#b88e44]" />
         </div>
 
-        {/* 6. Soliciting your gracious presence and blessings on the occasion of our wedding - Narrower max-width so it never touches side roses */}
+        {/* 6. Soliciting your gracious presence and blessings on the occasion of our wedding - Elegantly Enlarged & Safely Clear from Side Roses */}
         <p
-          className="font-serif italic text-[#163328] leading-[1.38] max-w-[245px] sm:max-w-[280px] mx-auto font-medium"
-          style={{ fontSize: "clamp(11.5px, 3.1vw, 16px)" }}
+          className="font-serif italic text-[#163328] leading-[1.38] max-w-[270px] sm:max-w-[310px] mx-auto font-medium"
+          style={{ fontSize: "clamp(13px, 3.6vw, 18px)" }}
         >
           Soliciting your gracious presence and blessings<br />
           on the occasion of our wedding
