@@ -42,26 +42,50 @@ export function WeddingEventsSection() {
             />
 
             {/* Details strictly inside the boundary */}
-            <div className="absolute inset-x-[14%] top-[21%] bottom-[9%] sm:inset-x-[16%] flex flex-col items-center justify-center text-center px-2 sm:px-4">
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-sage-dark tracking-wide leading-[1.15] font-normal mb-2">
+            <div className="absolute inset-x-[18%] sm:inset-x-[20%] top-[18%] sm:top-[19%] bottom-[12%] sm:bottom-[13%] flex flex-col items-center justify-between text-center px-1 py-1 sm:py-2 select-none">
+              {/* Eyebrow */}
+              <p className="font-serif text-[10px] sm:text-xs md:text-sm tracking-[0.26em] uppercase text-[#a3702c] font-semibold">
+                WHERE WE CELEBRATE
+              </p>
+
+              {/* Grand Venue Heading */}
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#7c2635] tracking-wide leading-tight font-normal">
                 Venue
               </h2>
-              <span className="section-rule !my-2.5" />
 
-              {/* Venue from PDF */}
-              <h3 className="font-display text-xl sm:text-2xl md:text-3xl text-sage-dark mt-2 mb-1 tracking-wide font-normal">
+              {/* Golden Flourish Divider */}
+              <div className="flex items-center justify-center gap-2 w-36 sm:w-48 text-[#b88e44]/85">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#b88e44]" />
+                <span className="text-xs sm:text-sm leading-none">&#10022;</span>
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#b88e44]" />
+              </div>
+
+              {/* Poetic Subtitle */}
+              <p className="font-serif italic text-xs sm:text-sm md:text-base text-[#9c6628] font-medium leading-relaxed max-w-xs">
+                A serene haven where our love story unfolds
+              </p>
+
+              {/* Resort Name */}
+              <h3 className="font-serif text-xl sm:text-2xl md:text-3xl text-[#1e3a2f] font-bold tracking-wide leading-snug">
                 {WEDDING_CONFIG.main_venue_name}
               </h3>
-              <p className="font-serif text-xs sm:text-sm tracking-[0.22em] uppercase text-[#b88e44] font-semibold mb-5 sm:mb-6">
+
+              {/* Address */}
+              <p className="font-serif text-xs sm:text-sm tracking-[0.2em] uppercase text-[#7c2635] font-semibold">
                 NH 8, Udaipur (Rajasthan)
               </p>
 
+              {/* Wedding Celebrations Date Badge */}
+              <div className="inline-flex items-center justify-center px-3.5 py-1 sm:py-1.5 rounded-full border border-[#b88e44]/40 bg-[#fbf9f4]/90 text-[#1e3a2f] font-serif text-[11px] sm:text-xs md:text-sm font-semibold tracking-[0.14em] uppercase shadow-xs">
+                03RD &ndash; 05TH DECEMBER 2026
+              </div>
+
               {/* Maps & Calendar Actions */}
-              <div className="flex flex-col items-center gap-2.5 pt-1">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 w-full max-w-xs sm:max-w-sm pt-0.5">
                 <ActionMenu
                   icon={<MapPin className="w-3.5 h-3.5 text-[#b88e44]" />}
                   label="OPEN IN MAPS"
-                  className="text-[11px] sm:text-xs font-serif tracking-[0.22em] text-sage-dark uppercase hover:text-[#b88e44] transition-colors font-semibold"
+                  className="w-full sm:w-auto px-3.5 py-1.5 sm:py-2 rounded-full border border-[#b88e44]/50 bg-ivory/80 text-[10px] sm:text-xs font-serif tracking-[0.18em] text-[#1e3a2f] uppercase hover:bg-[#b88e44] hover:text-ivory transition-all font-semibold shadow-xs"
                   items={[
                     { label: "Google Maps", href: buildGoogleMapsUrl(address) },
                     { label: "Apple Maps", href: buildAppleMapsUrl(address) },
@@ -70,7 +94,7 @@ export function WeddingEventsSection() {
                 <ActionMenu
                   icon={<Calendar className="w-3.5 h-3.5 text-[#b88e44]" />}
                   label="ADD TO CALENDAR"
-                  className="text-[11px] sm:text-xs font-serif tracking-[0.22em] text-sage-dark uppercase hover:text-[#b88e44] transition-colors font-semibold"
+                  className="w-full sm:w-auto px-3.5 py-1.5 sm:py-2 rounded-full border border-[#b88e44]/50 bg-ivory/80 text-[10px] sm:text-xs font-serif tracking-[0.18em] text-[#1e3a2f] uppercase hover:bg-[#b88e44] hover:text-ivory transition-all font-semibold shadow-xs"
                   items={[
                     { label: "Google Calendar", href: buildGoogleCalendarUrl(calendarEvent) },
                     {

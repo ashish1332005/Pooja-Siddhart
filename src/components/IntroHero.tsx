@@ -122,15 +122,15 @@ export function IntroHero({
           />
         )}
 
-        {/* Monogram, Couple Names & Wedding Date - Positioned Higher with Elegant Breathing Room */}
+        {/* Monogram, Couple Names & Wedding Date - Positioned Higher with Royal Breathing Room */}
         <div
-          className="absolute inset-x-0 top-[10%] sm:top-[10.5%] h-[44%] flex flex-col items-center justify-center text-center px-4 pointer-events-none select-none z-10"
+          className="absolute inset-x-0 top-[8%] sm:top-[8.5%] h-[48%] flex flex-col items-center justify-center text-center px-4 pointer-events-none select-none z-10"
         >
-          {/* Original P S Monogram Logo - Elegant Gap before Couple Name */}
+          {/* Original P S Monogram Logo - Generous Royal Gap before Couple Name */}
           <motion.img
             src={MEDIA.coupleMonogram}
             alt="Pooja & Siddhart monogram"
-            className="h-[10vh] sm:h-[11.5vh] max-h-[100px] sm:max-h-[125px] w-auto object-contain mb-3 sm:mb-4 md:mb-5 drop-shadow-sm select-none"
+            className="h-[10.5vh] sm:h-[12vh] max-h-[105px] sm:max-h-[130px] w-auto object-contain mb-6 sm:mb-8 md:mb-9 drop-shadow-sm select-none"
             animate={showText ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 12, scale: 0.95 }}
             transition={{ duration: 0.6 }}
           />
@@ -160,12 +160,9 @@ export function IntroHero({
               {coupleName2}
             </h1>
 
-            {/* Wedding Date directly on 1st Page - Natural Spacing & Balanced Proportions */}
-            <p className="font-serif text-xs sm:text-sm md:text-base text-[#7c2635] font-semibold mt-3 sm:mt-4 whitespace-nowrap">
-              <span className="tracking-tight">03</span><sup className="text-[9px] sm:text-[10px] font-normal align-super ml-0.5">RD</sup>
-              <span className="mx-1.5 font-light text-[#b88e44]">&ndash;</span>
-              <span className="tracking-tight">05</span><sup className="text-[9px] sm:text-[10px] font-normal align-super ml-0.5">TH</sup>
-              <span className="tracking-[0.18em] uppercase ml-2.5 sm:ml-3 font-semibold">DECEMBER 2026</span>
+            {/* Wedding Date directly on 1st Page - Solid Contiguous Text with No Extra Gaps */}
+            <p className="font-serif text-sm sm:text-base md:text-lg text-[#7c2635] font-semibold mt-4 sm:mt-5 tracking-[0.14em] uppercase whitespace-nowrap">
+              03RD &ndash; 05TH DECEMBER 2026
             </p>
           </motion.div>
         </div>
