@@ -212,6 +212,7 @@ export const MEDIA = {
   introDoorsPoster: "/media/intro-doors.jpg",
   introDoorsVideo: "/media/intro-doors-open.mp4",
   introDoorsFinalFrame: "/media/intro-doors-final-frame.jpg",
+  swipeUpCloud: "/media/swipe-up-cloud.svg",
   swansHero: "/media/embroidered-swans-hero-v2.png",
   countdownFrame: "/media/countdown-embroidery-frame.webp",
   countdownPearlMedallion: "/media/countdown-pearl-medallion.webp?v=5",

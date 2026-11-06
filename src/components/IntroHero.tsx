@@ -122,15 +122,15 @@ export function IntroHero({
           />
         )}
 
-        {/* Monogram, Couple Names & Wedding Date - Shifted up for optimal balance */}
+        {/* Monogram, Couple Names & Wedding Date - Positioned Higher for Grand Royal Balance */}
         <div
-          className="absolute inset-x-0 top-[14%] sm:top-[14.5%] h-[42%] flex flex-col items-center justify-center text-center px-4 pointer-events-none select-none z-10"
+          className="absolute inset-x-0 top-[10.5%] sm:top-[11%] h-[44%] flex flex-col items-center justify-center text-center px-4 pointer-events-none select-none z-10"
         >
-          {/* Original P S Monogram Logo */}
+          {/* Original P S Monogram Logo - Lifted Higher */}
           <motion.img
             src={MEDIA.coupleMonogram}
             alt="Pooja & Siddhart monogram"
-            className="h-[9.5vh] sm:h-[11vh] max-h-[95px] sm:max-h-[120px] w-auto object-contain mb-1 sm:mb-1.5 drop-shadow-sm select-none"
+            className="h-[10.5vh] sm:h-[12vh] max-h-[105px] sm:max-h-[130px] w-auto object-contain mb-1 sm:mb-1.5 drop-shadow-sm select-none"
             animate={showText ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 12, scale: 0.95 }}
             transition={{ duration: 0.6 }}
           />
@@ -160,20 +160,20 @@ export function IntroHero({
               {coupleName2}
             </h1>
 
-            {/* Wedding Date directly on 1st Page - Increased Size */}
-            <p className="font-serif text-xs sm:text-sm md:text-base tracking-[0.24em] uppercase text-[#7c2635] font-semibold mt-2.5 sm:mt-3">
-              03<sup className="text-[9px] sm:text-[10px] font-normal align-super ml-0.5">RD</sup> &ndash; 05<sup className="text-[9px] sm:text-[10px] font-normal align-super ml-0.5">TH</sup> DECEMBER 2026
+            {/* Wedding Date directly on 1st Page - Significantly Increased Size & Prominence */}
+            <p className="font-serif text-sm sm:text-base md:text-lg lg:text-xl tracking-[0.25em] uppercase text-[#7c2635] font-bold mt-2.5 sm:mt-3.5 drop-shadow-[0_1px_1px_rgba(255,255,255,0.7)]">
+              03<sup className="text-[10px] sm:text-xs font-semibold align-super ml-0.5">RD</sup> &ndash; 05<sup className="text-[10px] sm:text-xs font-semibold align-super ml-0.5">TH</sup> DECEMBER 2026
             </p>
           </motion.div>
         </div>
 
-        {/* Prominent Interactive Swipe Up Indicator - Exact Reference Design */}
+        {/* Prominent Interactive Swipe Up Indicator with Theme Cloud Backdrop at Eye Level */}
         {(showText || status === "done") && (
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="absolute inset-x-0 bottom-4 sm:bottom-6 flex justify-center z-20 pointer-events-auto"
+            className="absolute inset-x-0 bottom-8 sm:bottom-12 md:bottom-14 flex justify-center z-20 pointer-events-auto"
           >
             <button
               type="button"
@@ -185,43 +185,56 @@ export function IntroHero({
                   document.getElementById("swans-welcome")?.scrollIntoView({ behavior: "smooth" });
                 }, 50);
               }}
-              className="group flex flex-col items-center gap-1 px-4 py-2 bg-transparent cursor-pointer select-none transition-transform active:scale-95"
+              className="group relative flex flex-col items-center justify-center cursor-pointer select-none transition-transform active:scale-95 px-8 py-3.5"
               aria-label="Swipe up to explore invitation"
             >
-              {/* Stacked Double Chevron Up Arrow */}
-              <motion.div
-                animate={{ y: [0, -6, 0], opacity: [0.75, 1, 0.75] }}
-                transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-                className="flex flex-col items-center -space-y-1.5 text-[#544d2e] drop-shadow-sm"
-              >
-                <svg
-                  className="w-5 h-5 sm:w-6 sm:h-6"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="3.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M18 15l-6-6-6 6" />
-                </svg>
-                <svg
-                  className="w-5 h-5 sm:w-6 sm:h-6"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="3.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M18 15l-6-6-6 6" />
-                </svg>
-              </motion.div>
+              {/* Theme-Matching Embroidered Cloud Backdrop */}
+              <div className="absolute inset-0 w-full h-full pointer-events-none select-none">
+                <img
+                  src={MEDIA.swipeUpCloud}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-full h-full object-contain filter drop-shadow-[0_6px_16px_rgba(35,25,15,0.22)]"
+                />
+              </div>
 
-              {/* SWIPE UP Serif Text */}
-              <span className="font-serif text-[11px] sm:text-xs tracking-[0.38em] uppercase text-[#34301d] font-bold drop-shadow-sm mt-0.5">
-                SWIPE UP
-              </span>
+              {/* Interactive Content inside the Cloud */}
+              <div className="relative z-10 flex flex-col items-center pt-1.5 pb-1 px-4">
+                {/* Stacked Double Chevron Up Arrow */}
+                <motion.div
+                  animate={{ y: [0, -5, 0], opacity: [0.8, 1, 0.8] }}
+                  transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                  className="flex flex-col items-center -space-y-1.5 text-[#544d2e]"
+                >
+                  <svg
+                    className="w-5 h-5 sm:w-6 sm:h-6"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="3.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M18 15l-6-6-6 6" />
+                  </svg>
+                  <svg
+                    className="w-5 h-5 sm:w-6 sm:h-6"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="3.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M18 15l-6-6-6 6" />
+                  </svg>
+                </motion.div>
+
+                {/* SWIPE UP Serif Text */}
+                <span className="font-serif text-[11px] sm:text-xs tracking-[0.38em] uppercase text-[#34301d] font-bold drop-shadow-sm mt-0.5">
+                  SWIPE UP
+                </span>
+              </div>
             </button>
           </motion.div>
         )}
