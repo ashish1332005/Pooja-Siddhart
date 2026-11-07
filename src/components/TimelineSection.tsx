@@ -33,22 +33,6 @@ export function TimelineSection() {
 
   const events = [
     {
-      date: "Tuesday, 01 Dec 2026",
-      time: "10:15 AM",
-      title: "Hathdhan",
-      note: "Followed by Lunch · Shree Govindam, Bhilwara",
-      image: MEDIA.timelineRings,
-      alt: "Painted gold wedding rings with blossoms",
-    },
-    {
-      date: "Tuesday, 01 Dec 2026",
-      time: "07:15 PM",
-      title: "Dine, Dance & Dazzle",
-      note: "Followed by Dinner · Shree Govindam, Bhilwara",
-      image: MEDIA.timelineDisco,
-      alt: "Painted disco ball with stars",
-    },
-    {
       date: "Thursday, 03 Dec 2026",
       time: "03:15 PM",
       title: "Vinayak Sthapna & Mangal Kalash",

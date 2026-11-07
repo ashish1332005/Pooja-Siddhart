@@ -28,27 +28,6 @@ export const WEDDING_CONFIG = {
 
 export const WEDDING_SCHEDULE = [
   {
-    dayNumber: "01",
-    dayName: "Tuesday",
-    dateFull: "01st December 2026",
-    title: "Wedding Rituals",
-    location: 'Venue: "SHREE GOVINDAM", 10-B-18, R.C. Vyas Colony, Bhilwara',
-    events: [
-      {
-        name: "Hathdhan",
-        time: "10:15 AM",
-        note: "(FOLLOWED BY LUNCH)",
-        venue: "Shree Govindam, Bhilwara",
-      },
-      {
-        name: "Dine, Dance & Dazzle",
-        time: "07:15 PM ONWARDS",
-        note: "(FOLLOWED BY DINNER)",
-        venue: "Shree Govindam, Bhilwara",
-      },
-    ],
-  },
-  {
     dayNumber: "03",
     dayName: "Thursday",
     dateFull: "03rd December 2026",
