@@ -4,17 +4,7 @@ import { FAMILY_DETAILS, MEDIA } from "../data/weddingConfig";
 
 export function FamilySection() {
   return (
-    <section id="family-blessings" className="bg-ivory pt-8 pb-16 md:pb-24 relative z-0 overflow-hidden">
-      {/* Decorative Hanging Garland at Top */}
-      <div className="max-w-2xl mx-auto px-4 -mb-4 sm:-mb-6 pointer-events-none select-none">
-        <img
-          src={MEDIA.dresscodeHangingGarland}
-          alt=""
-          aria-hidden="true"
-          className="w-full h-auto object-contain opacity-90"
-        />
-      </div>
-
+    <section id="family-blessings" className="bg-ivory pt-6 sm:pt-10 pb-16 md:pb-24 relative z-0 overflow-hidden">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center space-y-10 sm:space-y-12 relative z-10">
         {/* Section Main Heading in Runiga Font */}
         <motion.div

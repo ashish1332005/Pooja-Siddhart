@@ -15,12 +15,13 @@ export default {
       fontFamily: {
         serif: ["Cormorant Garamond", "adobe-caslon-pro", "Playfair Display", "Georgia", "serif"],
         couple: ["var(--font-couple)"],
-        display: ["var(--font-display)"],
+        display: ["Runiga", "var(--font-display)", "Georgia", "serif"],
+        runiga: ["Runiga", "Georgia", "serif"],
         body: ["var(--font-body)"],
         digit: ["var(--font-digit)"],
         hindi: ["var(--font-hindi)"],
         script: ["var(--font-couple)"],
-        subtitle: ["var(--font-display)"],
+        subtitle: ["Runiga", "var(--font-display)", "Georgia", "serif"],
         adorn: ["var(--font-adorn)"],
       },
       colors: {

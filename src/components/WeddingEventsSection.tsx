@@ -43,8 +43,8 @@ export function WeddingEventsSection() {
 
             {/* Details strictly inside the boundary - Natural Royal Spacing Without Artificial White Boxes */}
             <div className="absolute inset-x-[12%] sm:inset-x-[16%] top-[20%] sm:top-[22%] bottom-[18%] sm:bottom-[16%] flex flex-col items-center justify-center text-center px-2 select-none space-y-2.5 sm:space-y-3.5">
-              {/* Grand Venue Heading - Enlarged & Dignified */}
-              <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-[#7c2635] tracking-wide leading-none font-normal">
+              {/* Grand Venue Heading - Runiga Font Matching All Section Titles */}
+              <h2 className="font-display font-runiga text-4xl sm:text-5xl md:text-6xl text-[#7c2635] tracking-wide leading-none font-normal">
                 Venue
               </h2>
 
