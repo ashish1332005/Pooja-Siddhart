@@ -77,6 +77,7 @@ export function IntroHero({
 
   const handleOpen = (e?: React.MouseEvent) => {
     e?.stopPropagation();
+    window.dispatchEvent(new CustomEvent("play-wedding-music"));
     if (status === "idle") {
       setStatus("playing");
       setShowText(false);

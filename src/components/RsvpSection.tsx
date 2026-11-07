@@ -314,7 +314,7 @@ export function RsvpSection() {
             loading="lazy"
             className="w-[55%] max-w-[260px] md:max-w-[300px] mx-auto mt-0 mb-4 select-none pointer-events-none"
           />
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-sage-dark font-normal tracking-wide pt-2">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-sage-dark font-normal tracking-wide pt-2">
             {t("rsvp.title")}
           </h2>
           <span className="section-rule !my-2.5" />

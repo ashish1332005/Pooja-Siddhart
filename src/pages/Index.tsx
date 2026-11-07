@@ -10,10 +10,14 @@ import { RecoveryDaySection } from "../components/RecoveryDaySection";
 import { FamilySection } from "../components/FamilySection";
 import { RsvpSection } from "../components/RsvpSection";
 import { FooterSection } from "../components/FooterSection";
+import { MusicPlayer } from "../components/MusicPlayer";
 
 export function Index() {
   return (
     <main className="bg-background overflow-x-hidden">
+      {/* Background Wedding Music Player */}
+      <MusicPlayer />
+
       {/* 1. Gate Opening Interactive Video (with Original Monogram, Couple Names, Date & Scroll Down) */}
       <IntroHero
         coupleName1={WEDDING_CONFIG.couple_name_1}

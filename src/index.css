@@ -59,12 +59,12 @@
 
   /* Authentic Embroidered Garden Typography System */
   --font-couple: "Great Vibes", "Blackendy", "Runethia", cursive, Georgia, serif;
-  --font-display: "novantique-serif-display", "adobe-caslon-pro", Georgia, serif;
+  --font-display: "Runiga", "novantique-serif-display", Georgia, serif;
   --font-body: "adobe-caslon-pro", Georgia, serif;
   --font-digit: "novantique-serif-display", "adobe-caslon-pro", Georgia, serif;
   --font-hindi: "Rozha One", "Noto Serif Devanagari", serif;
   --font-script: "Runethia", cursive, serif;
-  --font-subtitle: "adobe-caslon-pro", Georgia, serif;
+  --font-subtitle: "Runiga", "adobe-caslon-pro", Georgia, serif;
   --font-adorn: "adorn-garland", "novantique-serif-display", Georgia, serif;
 
   --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -115,6 +115,10 @@ body {
   font-family: var(--font-display) !important;
 }
 
+.font-runiga {
+  font-family: "Runiga", var(--font-display) !important;
+}
+
 .font-body {
   font-family: var(--font-body) !important;
 }
@@ -131,9 +135,9 @@ body {
 
 .section-heading {
   font-family: var(--font-display);
-  font-size: clamp(1.6rem, 3.8vw, 2.35rem);
+  font-size: clamp(2.1rem, 5.2vw, 2.9rem);
   font-weight: 400;
-  line-height: 1.25;
+  line-height: 1.2;
   letter-spacing: 0.02em;
   color: hsl(var(--sage-dark));
 }

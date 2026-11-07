@@ -27,7 +27,7 @@ export function RecoveryDaySection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-6"
         >
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-sage-dark font-normal tracking-wide pt-6">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-sage-dark font-normal tracking-wide pt-6">
             Pre-Wedding Rituals
           </h2>
           <span className="section-rule !my-2.5" />

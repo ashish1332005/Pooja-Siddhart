@@ -122,7 +122,7 @@ export function TimelineSection() {
             transition={{ duration: 0.6 }}
             className="relative z-10 text-center mb-10 sm:mb-14"
           >
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-sage-dark font-normal tracking-wide">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-sage-dark font-normal tracking-wide">
               Timeline
             </h2>
             <span className="section-rule !my-2.5" />

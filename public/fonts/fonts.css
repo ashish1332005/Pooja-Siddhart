@@ -158,3 +158,11 @@
   font-weight: 700;
   font-stretch: normal;
 }
+
+@font-face {
+  font-family: "Runiga";
+  src: url("/fonts/Runiga.otf") format("opentype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}

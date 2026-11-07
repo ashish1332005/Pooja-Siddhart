@@ -73,8 +73,8 @@ export function WelcomeSection() {
 
               <div className="space-y-3.5 pt-1 w-full">
                 <div>
-                  <span className="font-serif text-[10px] sm:text-xs tracking-[0.2em] uppercase text-[#a3702c] font-medium block mb-0.5">
-                    G S / O
+                  <span className="font-serif text-[11px] sm:text-xs tracking-wider uppercase text-[#a3702c] font-semibold block mb-0.5">
+                    GS/O
                   </span>
                   <div className="font-serif text-[11px] sm:text-sm md:text-base text-[#1e3a2f] font-medium">
                     {formatLineageColumn(WEDDING_CONFIG.groom_grand_parents)}
@@ -82,8 +82,8 @@ export function WelcomeSection() {
                 </div>
 
                 <div>
-                  <span className="font-serif text-[10px] sm:text-xs tracking-[0.2em] uppercase text-[#a3702c] font-medium block mb-0.5">
-                    S / O
+                  <span className="font-serif text-[11px] sm:text-xs tracking-wider uppercase text-[#a3702c] font-semibold block mb-0.5">
+                    S/O
                   </span>
                   <div className="font-serif text-[11px] sm:text-sm md:text-base text-[#1e3a2f] font-medium">
                     {formatLineageColumn(WEDDING_CONFIG.groom_parents)}
@@ -100,8 +100,8 @@ export function WelcomeSection() {
 
               <div className="space-y-3.5 pt-1 w-full">
                 <div>
-                  <span className="font-serif text-[10px] sm:text-xs tracking-[0.2em] uppercase text-[#a3702c] font-medium block mb-0.5">
-                    G D / O
+                  <span className="font-serif text-[11px] sm:text-xs tracking-wider uppercase text-[#a3702c] font-semibold block mb-0.5">
+                    GD/O
                   </span>
                   <div className="font-serif text-[11px] sm:text-sm md:text-base text-[#1e3a2f] font-medium">
                     {formatLineageColumn(WEDDING_CONFIG.bride_grand_parents)}
@@ -109,8 +109,8 @@ export function WelcomeSection() {
                 </div>
 
                 <div>
-                  <span className="font-serif text-[10px] sm:text-xs tracking-[0.2em] uppercase text-[#a3702c] font-medium block mb-0.5">
-                    D / O
+                  <span className="font-serif text-[11px] sm:text-xs tracking-wider uppercase text-[#a3702c] font-semibold block mb-0.5">
+                    D/O
                   </span>
                   <div className="font-serif text-[11px] sm:text-sm md:text-base text-[#1e3a2f] font-medium">
                     {formatLineageColumn(WEDDING_CONFIG.bride_parents)}
