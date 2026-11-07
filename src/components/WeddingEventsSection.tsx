@@ -91,7 +91,7 @@ export function WeddingEventsSection() {
 
           {/* User-Uploaded Floral Hanging Garland - Seamlessly Attached to Cropped Frame Bottom */}
           <motion.div
-            className="relative -mt-[18%] sm:-mt-[20%] w-full mx-auto pointer-events-none select-none z-20"
+            className="relative -mt-[14%] sm:-mt-[15%] w-full mx-auto pointer-events-none select-none z-20"
             style={{ transformOrigin: "50% 0%" }}
             animate={{
               rotate: [-1.4, 1.4, -1.4],
@@ -104,7 +104,7 @@ export function WeddingEventsSection() {
             }}
           >
             <img
-              src={MEDIA.ceremonyBottomGarland}
+              src={MEDIA.dresscodeHangingGarland}
               alt="Floral hanging garland"
               className="w-full h-auto block drop-shadow-sm"
             />
