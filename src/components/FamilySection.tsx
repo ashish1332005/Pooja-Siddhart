@@ -75,11 +75,11 @@ export function FamilySection() {
             The Maternal Family
           </h3>
           <div className="font-serif text-sm sm:text-base md:text-lg text-[#7c2635] font-medium leading-relaxed space-y-1">
-            <p className="font-semibold text-[#1e3a2f]">
+            <p className="font-semibold text-[#7c2635]">
               {FAMILY_DETAILS.maternal_side.elders.replace(/-/g, " \u2013 ")}
             </p>
             <p>{FAMILY_DETAILS.maternal_side.family}</p>
-            <p className="text-xs sm:text-sm text-[#1e3a2f]/80 pt-0.5">
+            <p className="text-xs sm:text-sm text-[#7c2635]/85 pt-0.5">
               {FAMILY_DETAILS.maternal_side.others.join("  \u2022  ")}
             </p>
           </div>
@@ -112,7 +112,7 @@ export function FamilySection() {
           <h3 className="font-display text-2xl sm:text-3xl md:text-4xl text-[#7d6736] tracking-wide font-normal">
             Sharing The Joy
           </h3>
-          <p className="font-serif text-sm sm:text-base md:text-lg text-[#1e3a2f] font-medium leading-relaxed">
+          <p className="font-serif text-sm sm:text-base md:text-lg text-[#7c2635] font-medium leading-relaxed">
             {FAMILY_DETAILS.sharing_the_joy.join("  \u2022  ")}
           </p>
         </motion.div>
@@ -128,7 +128,7 @@ export function FamilySection() {
           <h3 className="font-display text-2xl sm:text-3xl md:text-4xl text-[#7d6736] tracking-wide font-normal">
             Warm Regards
           </h3>
-          <p className="font-serif text-sm sm:text-base md:text-lg text-[#1e3a2f] font-medium leading-relaxed">
+          <p className="font-serif text-sm sm:text-base md:text-lg text-[#7c2635] font-medium leading-relaxed">
             {FAMILY_DETAILS.warm_regards.join(", ")}
           </p>
         </motion.div>
