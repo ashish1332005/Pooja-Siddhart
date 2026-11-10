@@ -451,10 +451,10 @@ export function RsvpSection() {
             </div>
 
             {formData.attendance === "yes" && (
-              <div className="space-y-6 pt-1 border-t border-sage-dark/15">
+              <div className="space-y-6 pt-5 border-t border-sage-dark/20">
                 {/* Mode of Travel */}
                 <div>
-                  <label className="text-sage-dark font-medium text-sm leading-none block mb-2.5">
+                  <label className="text-sage-dark font-medium text-sm leading-normal block mb-2.5">
                     Mode of Travel to Udaipur
                   </label>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
