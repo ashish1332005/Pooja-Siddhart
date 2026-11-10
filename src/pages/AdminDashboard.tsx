@@ -343,6 +343,18 @@ export function AdminDashboard() {
                                   : "-"}
                               </span>
                             </div>
+                            {(guest.travel_mode || guest.arrival_date) && (
+                              <div>
+                                <span className="text-xs text-muted-foreground uppercase tracking-wide block">
+                                  Travel &amp; Arrival Schedule
+                                </span>
+                                <span className="font-medium">
+                                  Mode: {guest.travel_mode || "N/A"} | Arrival: {guest.arrival_date || "N/A"}{" "}
+                                  {guest.arrival_time ? `@ ${guest.arrival_time}` : ""} | Departure:{" "}
+                                  {guest.departure_date || "N/A"}
+                                </span>
+                              </div>
+                            )}
                             <div>
                               <span className="text-xs text-muted-foreground uppercase tracking-wide block">
                                 Dietary requirements

@@ -16,6 +16,10 @@ export interface StoredGuestRsvp {
   children_count: number;
   dietary_requirements?: string;
   transportation?: "shuttle" | "valet";
+  travel_mode?: "flight" | "train" | "car" | "other";
+  arrival_date?: string;
+  arrival_time?: string;
+  departure_date?: string;
   message?: string;
   responded_at: string;
 }
@@ -208,6 +212,10 @@ export function RsvpSection() {
     message: string;
     website: string;
     transportation: "shuttle" | "valet";
+    travelMode: "flight" | "train" | "car" | "other";
+    arrivalDate: string;
+    arrivalTime: string;
+    departureDate: string;
   }>({
     attendance: "yes",
     fullName: "",
@@ -215,6 +223,10 @@ export function RsvpSection() {
     message: "",
     website: "",
     transportation: "shuttle",
+    travelMode: "flight",
+    arrivalDate: "2026-12-03",
+    arrivalTime: "12:00",
+    departureDate: "2026-12-05",
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -233,6 +245,10 @@ export function RsvpSection() {
         formData.attendance === "yes" && formData.dietary ? formData.dietary : undefined,
       message: formData.message || undefined,
       transportation: formData.attendance === "yes" ? formData.transportation : undefined,
+      travel_mode: formData.attendance === "yes" ? formData.travelMode : undefined,
+      arrival_date: formData.attendance === "yes" ? formData.arrivalDate : undefined,
+      arrival_time: formData.attendance === "yes" ? formData.arrivalTime : undefined,
+      departure_date: formData.attendance === "yes" ? formData.departureDate : undefined,
     };
 
     saveGuestRsvp(rsvpEntry);
@@ -254,6 +270,12 @@ export function RsvpSection() {
 
     // Build pre-formatted WhatsApp RSVP message for 8949-674449
     const rsvpPhone = (WEDDING_CONFIG.rsvp_phones[0] || "8949-674449").replace(/\D/g, "");
+    const modeLabelMap = {
+      flight: "Flight (Air)",
+      train: "Train (Rail)",
+      car: "Personal / Rental Car",
+      other: "Bus / Other",
+    };
     const lines = [
       `*Wedding RSVP – Siddhart & Pooja (3rd–5th Dec 2026)*`,
       `• *Name:* ${guestName}`,
@@ -261,7 +283,10 @@ export function RsvpSection() {
     ];
     if (formData.attendance === "yes") {
       lines.push(
-        `• *Transport in Udaipur:* ${
+        `• *Travel Mode:* ${modeLabelMap[formData.travelMode]}`,
+        `• *Arrival Date & Time:* ${formData.arrivalDate || "3 Dec 2026"} at ${formData.arrivalTime || "TBD"}`,
+        `• *Departure Date:* ${formData.departureDate || "5 Dec 2026"}`,
+        `• *Local Transport:* ${
           formData.transportation === "shuttle"
             ? "Station / Airport Pickup & Resort Transfers"
             : "Arriving by Own Vehicle (Valet Parking)"
@@ -424,6 +449,100 @@ export function RsvpSection() {
                 </div>
               </div>
             </div>
+
+            {formData.attendance === "yes" && (
+              <div className="space-y-6 pt-1 border-t border-sage-dark/15">
+                {/* Mode of Travel */}
+                <div>
+                  <label className="text-sage-dark font-medium text-sm leading-none block mb-2.5">
+                    Mode of Travel to Udaipur
+                  </label>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                    {[
+                      { id: "flight", label: "Flight" },
+                      { id: "train", label: "Train" },
+                      { id: "car", label: "By Car" },
+                      { id: "other", label: "Bus / Other" },
+                    ].map((mode) => (
+                      <button
+                        key={mode.id}
+                        type="button"
+                        onClick={() =>
+                          setFormData({
+                            ...formData,
+                            travelMode: mode.id as "flight" | "train" | "car" | "other",
+                          })
+                        }
+                        className={`py-2 px-3 rounded-md text-xs sm:text-sm font-serif border text-center transition-all ${
+                          formData.travelMode === mode.id
+                            ? "bg-sage-dark text-white border-sage-dark font-semibold shadow-xs"
+                            : "bg-ivory/80 text-sage-dark border-sage-dark/30 hover:border-sage-dark"
+                        }`}
+                      >
+                        {mode.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Arrival Date & Time + Departure Date */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div>
+                    <label
+                      htmlFor="arrivalDate"
+                      className="text-sage-dark font-medium text-xs leading-none block mb-1.5"
+                    >
+                      Arrival Date
+                    </label>
+                    <input
+                      id="arrivalDate"
+                      type="date"
+                      value={formData.arrivalDate}
+                      onChange={(e) =>
+                        setFormData({ ...formData, arrivalDate: e.target.value })
+                      }
+                      className="flex h-10 w-full rounded-md border bg-ivory px-3 py-2 text-xs sm:text-sm border-sage-dark/30 text-sage-dark focus:outline-none focus:border-sage-dark"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="arrivalTime"
+                      className="text-sage-dark font-medium text-xs leading-none block mb-1.5"
+                    >
+                      Arrival Time
+                    </label>
+                    <input
+                      id="arrivalTime"
+                      type="time"
+                      value={formData.arrivalTime}
+                      onChange={(e) =>
+                        setFormData({ ...formData, arrivalTime: e.target.value })
+                      }
+                      className="flex h-10 w-full rounded-md border bg-ivory px-3 py-2 text-xs sm:text-sm border-sage-dark/30 text-sage-dark focus:outline-none focus:border-sage-dark"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="departureDate"
+                      className="text-sage-dark font-medium text-xs leading-none block mb-1.5"
+                    >
+                      Departure Date
+                    </label>
+                    <input
+                      id="departureDate"
+                      type="date"
+                      value={formData.departureDate}
+                      onChange={(e) =>
+                        setFormData({ ...formData, departureDate: e.target.value })
+                      }
+                      className="flex h-10 w-full rounded-md border bg-ivory px-3 py-2 text-xs sm:text-sm border-sage-dark/30 text-sage-dark focus:outline-none focus:border-sage-dark"
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
 
             {formData.attendance === "yes" && (
               <div>
